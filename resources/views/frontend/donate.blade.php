@@ -3,6 +3,62 @@
 @section('content')
 
 
+<style>
+
+    .donate-section{padding:40px 0}
+    .donation-card{
+      display:flex;flex-direction:column; /* default stacked on small screens */
+      width:100%;
+      border-radius:12px;
+      outline:3px dotted rgba(108,117,125,0.45); /* dotted border outside card */
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 6px 18px rgba(33,37,41,0.06);
+      margin-bottom:24px;
+    }
+
+    /* Inner segments share equal height and have no visible borders/gaps */
+    .donation-card .segment{flex:1; padding:20px; display:flex; align-items:center; justify-content:center}
+    .donation-card .segment.text{min-height:130px}
+
+    /* Middle image segment styles */
+    .donation-card .segment.image{padding:0}
+    .donation-card .segment.image img{width:100%; height:100%; display:block; object-fit:cover}
+
+    /* Layout for medium+ screens: three columns horizontally with no gap */
+    @media(min-width:768px){
+      .donation-card{flex-direction:row}
+      .donation-card .segment{padding:28px}
+      .donation-card .segment.text{flex:1 1 30%}
+      .donation-card .segment.image{flex:0 0 40%}
+      .donation-card .segment.text.right{flex:1 1 30%}
+    }
+
+    /* Tighter spacing for very small devices */
+    @media(max-width:420px){
+      .donation-card .segment{padding:16px}
+    }
+
+    /* Decorative headline */
+    .donation-title{font-weight:700; margin-bottom:6px}
+    .donation-sub{color:var(--muted); font-size:0.95rem}
+
+    /* CTA */
+    .btn-donate{background:linear-gradient(90deg,var(--accent),#375aeb); border:0; color:#fff}
+
+    /* Simple hover interaction */
+    .donation-card:hover{transform:translateY(-4px); transition:transform .18s ease-out}
+    .donation-card .segment.image img{transition:transform .4s ease}
+    .donation-card:hover .segment.image img{transform:scale(1.04)}
+
+    /* Accessibility focus ring for keyboard users */
+    .donation-card:focus-within{box-shadow:0 0 0 3px rgba(13,110,253,0.12)}
+
+    /* Small helper for text blocks to ensure no gaps */
+    .no-gap{border:0}
+
+</style>
+
 
 @php
     $bgImage = $banner && $banner->feature_image
@@ -27,40 +83,80 @@
 
 
 <!-- Main content -->
-<main class="content-wrap">
-  <div class="container">
+  <main class="container donate-section">
+    <header class="d-flex align-items-center justify-content-between mb-4">
+      <div>
+        <h1 class="h3 mb-1">Donate</h1>
+        <h5 class="text-muted small mb-0">
+          Your donation will enable us to provide our vital services to those who require them. Because we believe that every child can flourish. They just need the opportunities.</h5>
+      </div>
+      {{-- <div class="text-end d-none d-md-block">
+        <a href="#" class="btn btn-outline-secondary">How donations are used</a>
+      </div> --}}
+    </header>
 
-    {!! $fees->long_description !!}
+    <!-- Card 1 -->
+    <article class="donation-card" tabindex="0" aria-labelledby="d1-title">
+      <div class="segment text no-gap">
+        <div>
+          <h2 id="d1-title" class="donation-title">BACS PAYMENT</h2>
+          {{-- <p class="donation-sub">Providing safe drinking water to rural communities. Your small gift gives big hope.</p> --}}
+        </div>
+      </div>
 
-    
+      <div class="segment image no-gap">
+        <img src="{{ asset('resources/frontend/images/bacs.png')}}" alt="BACS PAYMENT">
+      </div>
+
+      <div class="segment text right no-gap">
+        <div class="w-100 d-flex flex-column align-items-center align-items-md-end">
+          <div class="text-md-end mb-3">
+            <div>
+              <span class="btn btn-donate">BACS PAYMENT</span>
+            </div>
+            <p class="mb-1 fw-semibold">Bank Name: <span class="text-muted">Lloyds</span></p>
+            <p class="mb-1 fw-semibold">Acc Name: <span class="text-muted">Blooming Blossoms Trust</span></p>
+            <p class="mb-1 fw-semibold">Account No: <span class="text-muted">19219168</span></p>
+            <p class="mb-1 fw-semibold">Sort Code: <span class="text-muted">30-99-50</span></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="donation-card" tabindex="0" aria-labelledby="d1-title">
+      <div class="segment text no-gap">
+        <div>
+          <h2 id="d1-title" class="donation-title">POSTAL DONATION</h2>
+          {{-- <p class="donation-sub">Providing safe drinking water to rural communities. Your small gift gives big hope.</p> --}}
+        </div>
+      </div>
+
+      <div class="segment image no-gap">
+        <img src="{{ asset('resources/frontend/images/postal.jpg')}}" alt="BACS PAYMENT">
+      </div>
+
+      <div class="segment text right no-gap">
+        <div class="w-100 d-flex flex-column align-items-center align-items-md-end">
+          <div class="text-md-end mb-3">
+            <div>
+              <span class="btn btn-donate">Postal Donations</span>
+            </div>
+            <p class="mb-1 fw-semibold">Blooming Blossoms Trust <br>
+                79 Gladesmore Road <br>
+                London N15 6TL</p>
+          </div>
+        </div>
+      </div>
+    </article>
 
 
 
-  </div>
-</main>
+  </main>
 
 
 @endsection
 
 @section('script')
 
-<script>
-    $(document).ready(function() {
-        let num1 = Math.floor(Math.random() * 10) + 1;
-        let num2 = Math.floor(Math.random() * 10) + 1;
-        let correctAnswer = num1 + num2;
-        $('#captcha-question').text(`What is ${num1} + ${num2}? *`);
-
-        $('.php-email-form').on('submit', function(e) {
-            let userAnswer = parseInt($('#captcha-answer').val());
-            if(userAnswer !== correctAnswer) {
-                e.preventDefault();
-                $('#captcha-error').removeClass('d-none').text('Incorrect answer');
-            } else {
-                $('#captcha-error').addClass('d-none');
-                $('#sending-text').removeClass('d-none');
-            }
-        });
-    });
-</script>
 @endsection

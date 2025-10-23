@@ -533,8 +533,8 @@
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
-        <div class="small-title text-uppercase text-muted mb-2">Our Gallery</div>
-        <h2 class="big-title">A glimpse of our nursery</h2>
+        {{-- <div class="small-title text-uppercase text-muted mb-2">Our Gallery</div> --}}
+        <h2 class="big-title">Our Gallery</h2>
         <p class="text-muted">Click any image to view it full size. Swipe or use the arrows to navigate.</p>
       </div>
     </div>

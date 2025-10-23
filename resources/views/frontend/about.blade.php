@@ -217,58 +217,14 @@
 
 
 
-<section class="process-section">
-<div class="text-center mb-4">
-<span class="sub-title">Work Process</span>
-<h2 class="sec-title">How We Manage Our Kids Education</h2>
-</div>
-<div class="process-area d-flex flex-wrap justify-content-center gap-4">
-<div class="process-box-body">
-<span class="process-number">01</span>
-<div class="process-content">
-<div class="process-icon"><img src="https://wordpress.vecurosoft.com/knirpse/wp-content/uploads/2023/03/process2-1.png" alt="Find a service"></div>
-<h5 class="process-name"><a href="https://angelinasdaycare.co.uk/contact/">Find A Service Now</a></h5>
-</div>
-</div>
-<div class="process-box-body">
-<span class="process-number">02</span>
-<div class="process-content">
-<div class="process-icon"><img src="https://wordpress.vecurosoft.com/knirpse/wp-content/uploads/2023/03/process2-2.png" alt="Appointment"></div>
-<h5 class="process-name"><a href="https://angelinasdaycare.co.uk/contact/">Appointment With Us</a></h5>
-</div>
-</div>
-<div class="process-box-body">
-<span class="process-number">03</span>
-<div class="process-content">
-<div class="process-icon"><img src="https://wordpress.vecurosoft.com/knirpse/wp-content/uploads/2023/03/process2-3.png" alt="Start Learning"></div>
-<h5 class="process-name"><a href="https://angelinasdaycare.co.uk/contact/">Start Learning Your Kids</a></h5>
-</div>
-</div>
-<div class="process-box-body">
-<span class="process-number">04</span>
-  <div class="process-content">
-    <div class="process-icon">
-      <img src="https://wordpress.vecurosoft.com/knirpse/wp-content/uploads/2023/03/process2-4.png" alt="Get the establish kids">
-    </div>
-    <h5 class="process-name"><a href="https://angelinasdaycare.co.uk/contact/">Get The Establish Kids</a></h5>
-  </div>
-</div>
-</div>
-    <div class="process-line">
-      <img src="https://wordpress.vecurosoft.com/knirpse/wp-content/uploads/2023/03/dashed-line-1.png" alt="Process line">
-    </div>
-</section>
-
-
-
 
 <!-- ===== Smart Full-Width Gallery ===== -->
 <section id="smart-gallery" class="py-5 bg-white">
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
-        <div class="small-title text-uppercase text-muted mb-2">Our Gallery</div>
-        <h2 class="big-title">A glimpse of our nursery</h2>
+        {{-- <div class="small-title text-uppercase text-muted mb-2">Our Gallery</div> --}}
+        <h2 class="big-title">Our Gallery</h2>
         <p class="text-muted">Click any image to view it full size. Swipe or use the arrows to navigate.</p>
       </div>
     </div>

@@ -471,22 +471,22 @@ class FrontendController extends Controller
 
     public function getOurDonors()
     {
-        $foodChoice = Master::firstOrCreate(['name' => 'foodChoice']);
-        $banner = Banner::where('page', 'Food & Choice')->first();
+        $donors = Master::firstOrCreate(['name' => 'foodChoice']);
+        $banner = Banner::where('page', 'Donors')->first();
 
-        if($foodChoice){
+        if($donors){
             $this->seo(
-                $foodChoice->meta_title,
-                $foodChoice->meta_description,
-                $foodChoice->meta_keywords,
-                $foodChoice->meta_image ? asset('images/meta_image/' . $foodChoice->meta_image) : null
+                $donors->meta_title,
+                $donors->meta_description,
+                $donors->meta_keywords,
+                $donors->meta_image ? asset('images/meta_image/' . $donors->meta_image) : null
             );
         }
         $features = Cache::remember('active_features', now()->addDay(), function () {
             return Service::orderByRaw('sl = 0, sl ASC')->orderBy('id', 'desc')->where('type', 2)->where('status', 1)->get();
         });
       $company = CompanyDetails::select('address1', 'phone1', 'email1')->first();
-      return view('frontend.foodChoice', compact('foodChoice', 'company', 'features','banner'));
+      return view('frontend.donors', compact('donors', 'company', 'features','banner'));
     }
 
     public function donate()
