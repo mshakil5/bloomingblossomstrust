@@ -163,7 +163,7 @@
                   <p class="text-muted mb-3">
                     {{$project->long_title}}
                   </p>
-                  <a href="#" class="btn btn-primary btn-lg rounded-pill px-4">Read More</a>
+                  <a href="{{ route('agegroup', $project->slug) }}" class="btn btn-primary btn-lg rounded-pill px-4">Read More</a>
                 </div>
               </div>
             </div>
@@ -656,7 +656,7 @@
     }
 
     .client-logo img {
-      max-height: 70px;
+      max-height: 185px;
       width: auto;
     }
 
@@ -710,24 +710,12 @@
       <h2>Our Funders</h2>
       <div class="clients-slider">
         <!-- Client Logos -->
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Microsoft_logo_%282012%29.svg" alt="Microsoft"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samsung_Logo.svg" alt="Samsung"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Intel_logo_%282020%29.svg" alt="Intel"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Facebook_logo_new.svg" alt="Meta"></div>
+        
+        @foreach (\App\Models\Service::orderByRaw('sl = 0, sl ASC')->orderBy('id', 'desc')->where('type', 2)->where('status', 1)->get(); as $donor)
+        <div class="client-logo"><img src="{{asset('images/service/' .$donor->image )}}" alt="{{ $donor->title }}"></div>
+        @endforeach
+        
 
-        <!-- Duplicate set for seamless infinite scroll -->
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Microsoft_logo_%282012%29.svg" alt="Microsoft"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samsung_Logo.svg" alt="Samsung"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Intel_logo_%282020%29.svg" alt="Intel"></div>
-        <div class="client-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Facebook_logo_new.svg" alt="Meta"></div>
       </div>
     </div>
   </section>

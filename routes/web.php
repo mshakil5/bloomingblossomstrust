@@ -44,7 +44,7 @@ Route::post('/contact', [FrontendController::class, 'storeContact'])->name('cont
 Route::get('/our-donors', [FrontendController::class, 'getOurDonors'])->name('getOurDonors');
 Route::get('/donate', [FrontendController::class, 'donate'])->name('donate');
 Route::get('/about-us', [FrontendController::class, 'aboutUs'])->name('aboutUs');
-Route::get('/age-group/{slug}', [FrontendController::class, 'agegroup'])->name('agegroup');
+Route::get('/project/{slug}', [FrontendController::class, 'agegroup'])->name('agegroup');
 
 
 Route::get('/job', [FrontendController::class, 'job'])->name('job');

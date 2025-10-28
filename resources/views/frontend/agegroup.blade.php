@@ -121,15 +121,20 @@
 
       <!-- LEFT CONTENT -->
       <div class="col-lg-6 mb-4 mb-lg-0">
-        
         {!! $agegroup->long_description !!}
       </div>
 
       <!-- RIGHT IMAGE -->
-      <div class="col-lg-6 text-center">
-        <img  src="{{ asset('images/content/' . $agegroup->feature_image) }}"
-            alt="{{ $agegroup->short_title }}"  
-             class="img-fluid rounded shadow-sm">
+      
+      @php
+        $longDescText = $agegroup->long_description ?? '';
+        $longDescWords = str_word_count(strip_tags($longDescText));
+      @endphp
+
+      <div class="@if($longDescWords >= 5) col-lg-6 text-center @else col-lg-12 text-center @endif">
+        <img src="{{ asset('images/content/' . $agegroup->feature_image) }}"
+           alt="{{ $agegroup->short_title }}"
+           class="img-fluid rounded shadow-sm">
       </div>
     </div>
   </div>

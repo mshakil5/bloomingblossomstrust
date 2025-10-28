@@ -146,6 +146,8 @@ class ContentController extends Controller
 
     public function update(Request $request, $type)
     {
+        $alldata = $request->all();
+
         $validator = Validator::make($request->all(), [
             'short_title' => [
                 'required',
@@ -158,9 +160,9 @@ class ContentController extends Controller
             'long_title' => 'nullable|string|max:255',
             'short_description' => 'nullable|string',
             'long_description' => 'nullable|string',
-            'category_id' => 'required|exists:content_categories,id',
-            'feature_image' => 'nullable|image|mimes:jpeg,png,webp|max:2048',
-            'images.*' => 'nullable|image|mimes:jpeg,png,webp|max:2048',
+            'category_id' => 'nullable|exists:content_categories,id',
+            'feature_image' => 'nullable|image|mimes:jpeg,png,webp,jpg|max:2048',
+            'images.*' => 'nullable|image|mimes:jpeg,png,webp,jpg|max:2048',
             'meta_image' => 'nullable|image|mimes:jpeg,png,webp|max:2048',
             'tags' => 'nullable|array',
             'tags.*' => 'exists:tags,id'
@@ -247,7 +249,7 @@ class ContentController extends Controller
             Cache::forget($typeMap[$type]);
         }
 
-        return response()->json(['status'=>200,'message'=>'Content updated successfully']);
+        return response()->json(['status'=>200,'message'=>'Content updated successfully', 'data'=> $alldata]);
     }
 
     public function delete($type,$id){
@@ -274,7 +276,7 @@ class ContentController extends Controller
         if(isset($typeMap[$type])){
             Cache::forget($typeMap[$type]);
         }
-        return response()->json(['status'=>200,'message'=>'Content deleted successfully']);
+        return response()->json(['status'=>200,'message'=>'Content deleted successfully' ]);
     }
 
     public function toggleStatus(Request $request, $type){

@@ -25,7 +25,7 @@
               @csrf
               <input type="hidden" id="codeid" name="codeid">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 d-none">
                   <div class="form-group">
                     <label>Category <span class="text-danger">*</span></label>
                     <select class="form-control select2" id="category_id" name="category_id">
@@ -36,13 +36,13 @@
                     </select>
                   </div>  
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <div class="form-group">
                     <label>Short Title <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="short_title" name="short_title" placeholder="">
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <div class="form-group">
                     <label>Publishing Date <span class="text-danger">*</span></label>
                     <input type="date" class="form-control" id="publishing_date" name="publishing_date" value="{{ date('Y-m-d') }}" min= "{{ date('Y-m-d') }}">
@@ -58,22 +58,14 @@
                 @endif
                 <div class="col-md-12">
                     <div class="form-group">
-                      <label>@if ($type == 3)
-                          Top Content
-                      @else
-                          Short Description
-                      @endif</label>
+                      <label> Top Content</label>
                       <textarea class="form-control summernote" id="short_description" name="short_description" placeholder=""></textarea>
                     </div>
                 </div>
                 @if($type != 1)
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label>@if ($type == 3)
-                          Middle Content
-                      @else
-                          Long Description
-                      @endif</label>
+                      <label> Middle Content</label>
                     <textarea class="form-control summernote" id="long_description" name="long_description" placeholder=""></textarea>
                   </div>
                 </div>
@@ -95,7 +87,7 @@
                     <label>Feature Image (1000x700) <span style="color:red">*</span></label>
                     <input type="file" class="filepond" id="feature_image" name="feature_image" required>
                   </div>
-                  @if($type == 1 || $type == 3)
+                  @if($type == 1 || $type == 3 || $type == 2)
                   <div class="form-group">
                     <label>Additional Images</label>
                     <input type="file" class="filepond" id="images" name="images[]" multiple>
@@ -273,7 +265,7 @@ $(document).ready(function () {
               console.log(res);
                 clearform();
                 success(res.message);
-                reloadTable();
+                reloadTable(); 
             },
             error: function(xhr){
                 console.error(xhr.responseText);
