@@ -76,56 +76,58 @@
 
       <!-- LEFT: Images area (no header title as requested) -->
         <div class="col-lg-5">
-          <br><br>
-          <div class="about-images" aria-hidden="true">
-              <div class="about-left">
-                <!-- large left image -->
-                <div class="single">
-                  <img src="{{asset('images/service/' .$toddlers->image )}}" alt="{{$toddlers->title}}">
-                </div>
-
-              </div>
+            <div class="about-images text-center position-relative">
+                @foreach ($services as $key => $service)
+                    <div class="tab-image {{ $key == 0 ? 'active' : '' }}" id="image-{{ $service->id }}">
+                        <img src="{{ asset('images/service/' . $service->image) }}" alt="{{ $service->title }}" class="img-fluid rounded shadow">
+                    </div>
+                @endforeach
             </div>
         </div>
+
 
       <!-- RIGHT: Text + small title + big title + centered tabs -->
       <div class="col-lg-7">
         <div class="px-md-3">
           <!-- Centered tabs -->
           <ul class="nav nav-tabs mt-4 pb-3" id="ageTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="toddlers-tab" data-bs-toggle="tab" data-bs-target="#toddlers" type="button" role="tab" aria-controls="toddlers" aria-selected="true" style="background-color: #4af396;">
-                Toddlers
-              </button>
-            </li>
 
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two" type="button" role="tab" aria-controls="two" aria-selected="false"  style="background-color: #f0f8ff;">
-                Two to Three’s
-              </button>
-            </li>
+            @php
+                $icons = [
+                          0 => '#9b59b6',
+                          1 => '#e67e22',
+                          2 => '#3498db',
+                          3 => '#2ecc71',
+                          4 => '#e74c3c',
+                          5 => '#f1c40f',
+                  ];
+            @endphp
 
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="preschool-tab" data-bs-toggle="tab" data-bs-target="#preschool" type="button" role="tab" aria-controls="preschool" aria-selected="false"  style="background-color: #ffc1ab;">
-                Pre school
-              </button>
-            </li>
+            @foreach ($services as $key => $service)
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link {{ $key == 0 ? 'active' : '' }}" id="{{$service->id}}-tab" data-bs-toggle="tab" data-bs-target="#{{$service->id}}" type="button" role="tab" aria-controls="{{$service->id}}" aria-selected="true" style="background-color: {{$icons[$key] ?? ''}};">
+                    {{$service->title}}
+                  </button>
+                </li>
+            @endforeach
+
+          
           </ul>
 
           <!-- Tab panes -->
           <div class="tab-content mt-3" id="ageTabsContent">
-            <div class="tab-pane fade show active" id="toddlers" role="tabpanel" aria-labelledby="toddlers-tab">
-              {!! $toddlers->long_desc !!}
-            </div>
 
-            <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
-                {!! $twothrees->long_desc !!}
-            </div>
+            @foreach ($services as $key => $service)
+                <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }} " id="{{$service->id}}" role="tabpanel" aria-labelledby="{{$service->id}}-tab">
+                  {!! $service->long_desc !!}
+                </div>
+            @endforeach
 
-            <div class="tab-pane fade" id="preschool" role="tabpanel" aria-labelledby="preschool-tab">
-              {!! $preschool->long_desc !!}
-            </div>
           </div>
+
+
+
+
 
         </div>
       </div>
@@ -847,14 +849,20 @@ $(document).ready(function () {
 });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
-    flatpickr("#dob", {
-        dateFormat: "Y-m-d", // Format for the submitted value
-        altInput: true, // Show a human-readable format
-        altFormat: "F j, Y", // Display format (e.g., "October 22, 2025")
-        placeholder: "Date of Birth" // Custom placeholder
+  $(document).ready(function() {
+    $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var targetId = $(e.target).attr('data-bs-target').replace('#', '');
+        
+        // Hide all images
+        $('.tab-image').removeClass('active');
+        
+        // Show the image with the same id
+        $('#image-' + targetId).addClass('active');
     });
+  });
 </script>
+
+
 
 @endsection

@@ -32,7 +32,7 @@
             <p>Subscriptions</p>
         </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item d-none">
         <a href="{{ route('allplans') }}" class="nav-link {{ Route::is('allplans') ? 'active' : '' }}">
             <i class="nav-icon fas fa-layer-group"></i>
             <p>Plans</p>
@@ -41,8 +41,7 @@
     <li class="nav-item">
         <a href="{{ route('allservice') }}" class="nav-link {{ Route::is('allservice') ? 'active' : '' }}">
             <i class="nav-icon fas fa-tools"></i>
-            {{-- <p>Services</p> --}}
-            <p>Age Group Homepage</p>
+            <p>About Homepage</p>
         </a>
     </li>
     <li class="nav-item">
@@ -84,7 +83,7 @@
                     <p>Project</p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none">
                 <a href="{{ route('content.index', 3) }}" class="nav-link {{ request()->routeIs('content.index') && request()->route('type') == 3 ? 'active' : '' }}">
                     <i class="fas fa-list nav-icon"></i>
                     <p>Homepage About</p>
@@ -136,7 +135,7 @@
                     <p>About Us</p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none">
                 <a href="{{ route('admin.foodChoice') }}" class="nav-link {{ Route::is('admin.foodChoice') ? 'active' : '' }}">
                     <i class="fas fa-info-circle nav-icon"></i>
                     <p>Food Choice</p>

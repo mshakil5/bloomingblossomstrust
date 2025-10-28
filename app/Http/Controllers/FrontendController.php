@@ -58,8 +58,6 @@ class FrontendController extends Controller
             return Service::orderByRaw('sl = 0, sl ASC')->orderBy('id', 'desc')->where('type', 1)->where('status', 1)->get();
         });
 
-        $service = Master::firstOrCreate(['name' => 'service']);
-
         $reviews = Cache::remember('active_reviews', now()->addDay(), function () {
             return ClientReview::where('status', 1)->latest()->get();
         });
@@ -85,7 +83,7 @@ class FrontendController extends Controller
             $company?->meta_keywords ?? '',
             $company?->meta_image ? asset('images/company/meta/' . $company->meta_image) : null
         );
-      return view('frontend.index', compact('sliders', 'services', 'blogs', 'service', 'reviews', 'sections', 'galleries', 'faqs' ,'toddlers','twothrees','preschool','projects','company'));
+      return view('frontend.index', compact('sliders', 'services', 'blogs', 'reviews', 'sections', 'galleries', 'faqs' ,'toddlers','twothrees','preschool','projects','company'));
     }
 
     public function type($slug)
@@ -492,7 +490,7 @@ class FrontendController extends Controller
     public function donate()
     {
         $fees = Master::firstOrCreate(['name' => 'fees']);
-        $banner = Banner::where('page', 'Fees')->first();
+        $banner = Banner::where('page', 'Donate')->first();
 
       if($fees){
           $this->seo(
@@ -532,7 +530,7 @@ class FrontendController extends Controller
     {
         
         $agegroup = Content::with('category','images')->where('type', 2)->where('slug', $slug)->first();
-        $banner = Banner::where('page', 'Age Group')->first();
+        $banner = Banner::where('page', 'Projects')->first();
 
       if($agegroup){
           $this->seo(

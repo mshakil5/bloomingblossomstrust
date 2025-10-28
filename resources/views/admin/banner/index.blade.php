@@ -32,11 +32,9 @@
                   <option value="">Select</option>
                   <option value="About">About</option>
                   <option value="Donors">Our Donors</option>
-                  <option value="Age Group">Projects</option>
+                  <option value="Projects">Projects</option>
                   <option value="Contact">Contact</option>
-                  <option value="Fees">Donate</option>
-                  {{-- <option value="Job">Job</option>
-                  <option value="User Dashboard">User Dashboard</option> --}}
+                  <option value="Donate">Donate</option>
                   <option value="Others">Others</option>
                 </select>
               </div>
