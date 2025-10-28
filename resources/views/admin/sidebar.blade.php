@@ -189,12 +189,6 @@
                     <p>Banner</p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="{{ route('documents.index') }}" class="nav-link {{ Route::is('documents.index') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-sliders-h"></i>
-                    <p>Document</p>
-                </a>
-            </li>
         </ul>
     </li>
 
