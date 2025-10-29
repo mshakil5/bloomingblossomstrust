@@ -14,7 +14,7 @@
         </a>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item d-none">
         <a href="{{ route('user.index') }}" class="nav-link {{ Route::is('user.index') ? 'active' : '' }}">
             <i class="nav-icon fas fa-users"></i>
             <p>Users</p>
