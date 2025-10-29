@@ -18,7 +18,7 @@
                 <form id="createThisForm">
                     <div class="card card-secondary">
                         <div class="card-header">
-                            <h3 class="card-title" id="cardTitle">Add new User</h3>
+                            <h3 class="card-title" id="cardTitle">Add new</h3>
                         </div>
                         <div class="card-body">
                             <input type="hidden" id="id" name="id">
@@ -69,7 +69,7 @@
 <section class="content" id="contentContainer">
     <div class="container-fluid">
         <div class="card card-secondary">
-            <div class="card-header"><h3 class="card-title">Users</h3></div>
+            <div class="card-header"><h3 class="card-title">Admin list</h3></div>
             <div class="card-body">
                 <table id="userTable" class="table table-striped">
                     <thead>
@@ -108,7 +108,7 @@ $(document).ready(function () {
 
     function clearForm(){
         $('#createThisForm')[0].reset();
-        $("#cardTitle").text('Add new User');
+        $("#cardTitle").text('Add new');
         $("#addBtn").val('Create').html('Create');
         $("#addThisFormContainer").hide();  // hide the form
         $("#newBtnSection").show(); 
@@ -162,7 +162,7 @@ $(document).ready(function () {
             $("#id").val(user.id);
             $("#password, #password_confirmation").prop('required', false);
             $("#addBtn").val('Update').html('Update');
-            $("#cardTitle").text('Update User');
+            $("#cardTitle").text('Update');
             $("#addThisFormContainer").show();
             $("#newBtnSection").hide();
         });
@@ -174,6 +174,11 @@ $(document).ready(function () {
         var id = $(this).data('id');
         $.get("{{ url('/admin/user') }}/"+id+"/delete", function(res){
             table.ajax.reload(null, false);
+        }).fail(function(xhr){
+            if(xhr.status === 400) {
+                alert(xhr.responseJSON.message);
+                console.log(xhr.responseJSON.message);
+            }
         });
     });
 

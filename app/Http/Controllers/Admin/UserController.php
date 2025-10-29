@@ -8,6 +8,7 @@ use App\Models\Document;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\UserDocumentCompletion;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -93,6 +94,11 @@ class UserController extends Controller
 
     public function destroy($id)
     {
+
+        if ($id == Auth::user()->id) {
+        return response()->json(['status' => 400, 'message' => 'This user not possible to delete!!']);
+        }
+
         $user = User::findOrFail($id);
         $user->delete();
         return response()->json(['status' => 200, 'message' => 'User deleted successfully']);
