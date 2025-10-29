@@ -16,8 +16,8 @@
         {!! OpenGraph::generate() !!}
         {!! Twitter::generate() !!}
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Angelinas Day Care offers outstanding childcare and early years education in Colchester. OFSTED rated, qualified staff, and age-specific learning programmes for 3 months to 5 years.">
-    <meta name="keywords" content="nursery, childcare, early years, preschool, daycare, Colchester, Essex">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     
     
     @if($company->google_site_verification)
@@ -27,15 +27,15 @@
 
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Angelinas Day Care - Top Rated Childcare in Colchester">
-    <meta property="og:description" content="Outstanding childcare and early years education in Colchester. OFSTED rated with qualified staff.">
+    <meta property="og:title" content="">
+    <meta property="og:description" content=".">
     <meta property="og:image" content="{{ asset('images/company/' . $company->fav_icon) }}">
-    <meta property="og:url" content="https://Angelinas Day Care.co.uk">
+    <meta property="og:url" content="">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Angelinas Day Care Colchester">
-    <meta name="twitter:description" content="Outstanding childcare and early years education in Colchester. OFSTED rated.">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
     <meta name="twitter:image" content="{{ asset('images/company/' . $company->fav_icon) }}">
 
     <!-- Favicon -->

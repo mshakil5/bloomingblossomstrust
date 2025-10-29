@@ -20,7 +20,7 @@
     <div class="report-card card shadow-sm border-0" id="printArea">
         <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-3 px-4">
             <div>
-                <h4 class="mb-0 fw-bold">Angelina's Day Care</h4>
+                <h4 class="mb-0 fw-bold"></h4>
                 <small>Employee Commencement Report</small>
             </div>
             <div class="text-end">

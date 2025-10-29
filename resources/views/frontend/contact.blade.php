@@ -85,26 +85,7 @@
                       @enderror
                     </div>
 
-                    <div class="col-12 col-md-6">
-                      <label class="form-label visually-hidden" for="prefTime">Preferred time</label>
-                      <select id="prefTime" name="prefTime" class="form-select form-select-lg" required>
-                        <option value="" disabled selected>Preferred time</option>
-                        <option>Morning (9:00 - 11:00)</option>
-                        <option>Midday (11:00 - 14:00)</option>
-                        <option>Afternoon (14:00 - 16:00)</option>
-                        <option>Evening (16:00 - 18:00)</option>
-                      </select>
-                    </div>
 
-                    <div class="col-12 col-md-6">
-                      <label class="form-label visually-hidden" for="nursery">Choose Nursery</label>
-                      <select id="nursery" name="nursery" class="form-select form-select-lg" required>
-                        <option value="" disabled selected>Choose nursery</option>
-                        <option>Angelinas Day Care — Colchester</option>
-                        <option>Angelinas Day Care — Central</option>
-                        <option>Angelinas Day Care — North</option>
-                      </select>
-                    </div>
 
                     <div class="col-12">
                       <label class="form-label visually-hidden" for="message">Message</label>

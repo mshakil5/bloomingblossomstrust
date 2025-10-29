@@ -1,7 +1,7 @@
 <article class="card form-card">
                   <div class="form-header d-flex align-items-center justify-content-between p-4">
                     <div>
-                      <h1 class="form-title">Angelina's Day Care — Employee Commencement Details</h1>
+                      <h1 class="form-title"></h1>
                       <p class="mb-0 lead-muted">Please complete the details below. Fields marked with <span class="text-danger">*</span> are required.</p>
                     </div>
                     <div class="text-end d-none d-md-block">
