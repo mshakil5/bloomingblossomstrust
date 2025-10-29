@@ -213,7 +213,7 @@
             <div class="col-lg-12">
               <div class="p-5 h-100 d-flex flex-column justify-content-center">
                 <div class="mb-3">
-                  <div class="small-title text-uppercase text-muted mb-1">Get in touch</div>
+                  {{-- <div class="small-title text-uppercase text-muted mb-1">Get in touch</div> --}}
                   <h3 class="fw-bold">GET IN TOUCH</h3>
                   <p class="text-muted mb-0">We are passionate about improving the futures of disadvantaged children and young people. Want to learn more about the extent of our services? Get in touch with us today and swing by for a visit!</p>
                 </div>
