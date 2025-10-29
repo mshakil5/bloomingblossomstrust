@@ -29,7 +29,7 @@
     <li class="nav-item">
         <a href="{{ route('allsubscriptions') }}" class="nav-link {{ Route::is('allsubscriptions') ? 'active' : '' }}">
             <i class="nav-icon fas fa-donate"></i>
-            <p>Subscriptions</p>
+            <p>Admin</p>
         </a>
     </li>
     <li class="nav-item d-none">
@@ -141,7 +141,7 @@
                     <p>Food Choice</p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none">
                 <a href="{{ route('admin.fees') }}" class="nav-link {{ Route::is('admin.fees') ? 'active' : '' }}">
                     <i class="fas fa-info-circle nav-icon"></i>
                     <p>Fees & Terms</p>

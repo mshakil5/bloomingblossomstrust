@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <style>
   /* container tweak */
     .about-section{
@@ -233,24 +232,26 @@
     <div class="gallery-wrap">
       <div class="container">
         <div id="galleryGrid" class="row g-3">
-
-
+          @php $index = 0; @endphp
           @foreach ($galleries as $gallery)
+            @foreach ($gallery->images as $item)
               <div class="col-6 col-md-3">
-                <div class="gallery-item" data-index="0" tabindex="0">
-                  <img src="{{ asset('images/content/'.$gallery->feature_image)}}" alt="{{$gallery->short_title}}" loading="lazy" data-full="{{ asset('images/content/'.$gallery->feature_image)}}">
+                <div class="gallery-item {{ $index >= 4 ? 'hidden' : '' }}" data-index="{{ $index }}" tabindex="0">
+                  <img src="{{ asset('images/content/' . $item->image) }}" alt="{{ $item->short_title }}" loading="lazy" data-full="{{ asset('images/content/' . $item->image) }}">
                   <div class="thumb-overlay"><span>View</span></div>
                 </div>
               </div>
+              @php $index++; @endphp
+            @endforeach
           @endforeach
-
-          
-
-
         </div> <!-- /.row -->
       </div> <!-- /.container -->
     </div> <!-- /.gallery-wrap -->
 
+    <!-- See more button -->
+    <div class="container text-center mt-4">
+      <button id="galleryToggleBtn" class="btn btn-primary btn-lg rounded-pill px-4" style="{{ $index <= 4 ? 'display: none;' : '' }}">See more</button>
+    </div>
   </div>
 
   <!-- LIGHTBOX / OVERLAY -->
@@ -267,29 +268,36 @@
 
 
 
+<style>
+  .hidden {
+    display: none !important;
+  }
+</style>
+
 
 
 @endsection
 
 @section('script')
 
-<script>
-    $(document).ready(function() {
-        let num1 = Math.floor(Math.random() * 10) + 1;
-        let num2 = Math.floor(Math.random() * 10) + 1;
-        let correctAnswer = num1 + num2;
-        $('#captcha-question').text(`What is ${num1} + ${num2}? *`);
 
-        $('.php-email-form').on('submit', function(e) {
-            let userAnswer = parseInt($('#captcha-answer').val());
-            if(userAnswer !== correctAnswer) {
-                e.preventDefault();
-                $('#captcha-error').removeClass('d-none').text('Incorrect answer');
-            } else {
-                $('#captcha-error').addClass('d-none');
-                $('#sending-text').removeClass('d-none');
-            }
-        });
-    });
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+  // Handle "See more" button click
+  $('#galleryToggleBtn').on('click', function () {
+    // Select the next 4 hidden gallery items
+    const hiddenItems = $('.gallery-item.hidden').slice(0, 4);
+    
+    // Show the next 4 items with a fade-in effect
+    hiddenItems.removeClass('hidden').hide().fadeIn(500);
+    
+    // Hide the button if no more hidden items remain
+    if ($('.gallery-item.hidden').length === 0) {
+      $('#galleryToggleBtn').fadeOut(300);
+    }
+  });
+
+});
 </script>
 @endsection

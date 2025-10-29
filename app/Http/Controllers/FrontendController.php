@@ -510,7 +510,7 @@ class FrontendController extends Controller
     public function aboutUs()
     {
         $about1 = Master::firstOrCreate(['name' => 'about1']);
-        $galleries = Content::with('category')->where('type', 1)->latest()->get();
+        $galleries = Content::with('category','images')->where('type', 1)->latest()->get();
         $banner = Banner::where('page', 'About')->first();
 
       if($about1){
