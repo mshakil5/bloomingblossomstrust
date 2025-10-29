@@ -14,10 +14,10 @@
         </a>
     </li>
 
-    <li class="nav-item d-none">
+    <li class="nav-item">
         <a href="{{ route('user.index') }}" class="nav-link {{ Route::is('user.index') ? 'active' : '' }}">
             <i class="nav-icon fas fa-users"></i>
-            <p>Users</p>
+            <p>Admin</p>
         </a>
     </li>
     <li class="nav-item">
@@ -26,10 +26,10 @@
             <p>Sliders</p>
         </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item d-none">
         <a href="{{ route('allsubscriptions') }}" class="nav-link {{ Route::is('allsubscriptions') ? 'active' : '' }}">
             <i class="nav-icon fas fa-donate"></i>
-            <p>Admin</p>
+            <p>Subscriptions</p>
         </a>
     </li>
     <li class="nav-item d-none">

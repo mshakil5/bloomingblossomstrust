@@ -60,6 +60,19 @@
     </svg> --}}
   </header>
 
+
+
+  
+  <!-- Butterfly top-left -->
+<img src="{{ asset('resources/frontend/images/butterfly-left.png') }}" 
+      alt="Butterfly Left" 
+      style="position: absolute; top: 200px; left: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
+
+<!-- Butterfly top-right -->
+<img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" 
+      alt="Butterfly Right" 
+      style="position: absolute; top: 220px; right: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
+
   <!-- =======================
        About section (two-column)
        ======================= -->
