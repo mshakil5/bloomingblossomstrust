@@ -471,6 +471,7 @@ class FrontendController extends Controller
     {
         $donors = Master::firstOrCreate(['name' => 'foodChoice']);
         $banner = Banner::where('page', 'Donors')->first();
+        $projects = Content::with('category')->where('type', 2)->latest()->get();
 
         if($donors){
             $this->seo(
@@ -484,13 +485,14 @@ class FrontendController extends Controller
             return Service::orderByRaw('sl = 0, sl ASC')->orderBy('id', 'desc')->where('type', 2)->where('status', 1)->get();
         });
       $company = CompanyDetails::select('address1', 'phone1', 'email1')->first();
-      return view('frontend.donors', compact('donors', 'company', 'features','banner'));
+      return view('frontend.donors', compact('donors', 'company', 'features','banner','projects'));
     }
 
     public function donate()
     {
         $fees = Master::firstOrCreate(['name' => 'fees']);
         $banner = Banner::where('page', 'Donate')->first();
+        $projects = Content::with('category')->where('type', 2)->latest()->get();
 
       if($fees){
           $this->seo(
@@ -502,7 +504,7 @@ class FrontendController extends Controller
       }
       
       $company = CompanyDetails::select('address1', 'phone1', 'email1')->first();
-      return view('frontend.donate', compact('fees', 'company', 'banner'));
+      return view('frontend.donate', compact('fees', 'company', 'banner','projects'));
     }
 
 

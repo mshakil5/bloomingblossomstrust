@@ -68,7 +68,44 @@
       </div>
   </section>
 
+<!-- ===== Our Projects Section ===== -->
+<section id="our-rooms" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      {{-- <h3 class="h5 text-uppercase text-muted mb-2">Excellent Nursery Environment</h3> --}}
+      <h2 class="fw-bold">Our Projects</h2>
+    </div>
 
+    <!-- Swiper container -->
+    <div class="swiper roomSwiper">
+      <div class="swiper-wrapper">
+
+        @foreach ($projects as $project)
+            <div class="swiper-slide">
+              <div class="room-card">
+                <div class="room-img">
+                  <img src="{{asset('images/content/'. $project->feature_image)}}" alt="{{$project->short_title}}">
+                </div>
+                <div class="room-icon">
+                  {{ ['💬', '🌟', '🧸', '🏅', '👶', '🎨', '🌈', '🎭','🐻'][array_rand(['💬', '🌟', '🧸', '🏅', '👶', '🎨', '🌈', '🎭','🐻'])] }}
+                </div>
+                <div class="room-content text-center">
+                  <h4 class="fw-bold mb-2">{{$project->short_title}}</h4>
+                  <p class="text-muted mb-3">
+                    {{$project->long_title}}
+                  </p>
+                  <a href="{{ route('agegroup', $project->slug) }}" class="btn btn-primary btn-lg rounded-pill px-4">Read More</a>
+                </div>
+              </div>
+            </div>
+        @endforeach                
+
+      </div>
+      <!-- Swiper controls -->
+      <div class="swiper-pagination mt-4"></div>
+    </div>
+  </div>
+</section>
 
 
 

@@ -34,7 +34,7 @@
         
         <li class="nav-item dropdown mx-2">
           <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="ageDropdown" data-bs-toggle="dropdown">
-            <i class="fas fa-baby" style="color: #9b59b6; font-size: 28px;"></i>
+            <i class="fas fa-project-diagram" style="color: #6c5ce7; font-size: 28px;"></i>
             <span>Projects</span>
           </a>
           <ul class="dropdown-menu text-center">

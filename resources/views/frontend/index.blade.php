@@ -214,8 +214,8 @@
               <div class="p-5 h-100 d-flex flex-column justify-content-center">
                 <div class="mb-3">
                   <div class="small-title text-uppercase text-muted mb-1">Get in touch</div>
-                  <h3 class="fw-bold">Call Back Request</h3>
-                  <p class="text-muted mb-0">Enter your details and a preferred time — one of our team will call you back to discuss enrolment and answer questions.</p>
+                  <h3 class="fw-bold">GET IN TOUCH</h3>
+                  <p class="text-muted mb-0">We are passionate about improving the futures of disadvantaged children and young people. Want to learn more about the extent of our services? Get in touch with us today and swing by for a visit!</p>
                 </div>
 
                 
@@ -746,10 +746,11 @@
       <!-- Left side: Info -->
       <div class="col-lg-5">
         <div class="p-4 p-lg-0">
-          <div class="small-title text-uppercase text-muted mb-1">Find us</div>
-          <h3 class="fw-bold mb-3">Our Location</h3>
+          {{-- <div class="small-title text-uppercase text-muted mb-1">Find us</div> --}}
+          <h3 class="fw-bold mb-3">Get in touch</h3>
           <p class="text-muted mb-4">
-            Come visit our nursery or contact us to arrange a tour. We’d love to welcome you and show you our warm, friendly learning spaces.
+            
+              We'd love to hear from you.
           </p>
 
           <ul class="list-unstyled">
@@ -785,7 +786,7 @@
           </ul>
 
           <div class="mt-4">
-            <a href="#callback" class="btn btn-primary btn-lg rounded-pill px-4">Request a Call Back</a>
+            <a href="#callback" class="btn btn-primary btn-lg rounded-pill px-4">Submit your Query</a>
           </div>
         </div>
       </div>
