@@ -42,6 +42,12 @@
     </ul>
 
     <ul class="navbar-nav ml-auto">
+      <li class="nav-item mt-1 px-2">
+        <a class="btn btn-sm btn-secondary" href="{{ route('clear.cache') }}">
+          Cache Clear
+        </a>
+      </li>
+
       <li class="nav-item mt-1">
         <a class="btn btn-sm btn-secondary" href="{{ route('logout') }}"
            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

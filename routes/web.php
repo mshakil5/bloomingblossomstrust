@@ -14,7 +14,7 @@ Route::get('/clear', function() {
   Artisan::call('config:cache');
   Artisan::call('view:clear');
   return "Cleared!";
-});
+})->name('clear.cache');
 
 //  Route::fallback(function () {
 //     return redirect('/');

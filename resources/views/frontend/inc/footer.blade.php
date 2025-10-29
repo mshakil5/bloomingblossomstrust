@@ -56,6 +56,8 @@
   <!-- bottom: copyright, small links -->
   <div class="footer-bottom py-3" style="background:#031826; color:#9cc9ff;">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        {!! $company->copyright !!}
+
     </div>
   </div>
 </footer>

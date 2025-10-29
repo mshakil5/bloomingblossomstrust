@@ -47,11 +47,11 @@
     <li class="nav-item">
         <a href="{{ route('allfeature') }}" class="nav-link {{ Route::is('allfeature') ? 'active' : '' }}">
             <i class="nav-icon fas fa-gem"></i>
-            <p>Food Menu</p>
+            <p>Donor List</p>
             {{-- <p>Features</p> --}}
         </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item d-none">
         <a href="{{ route('team-members.index') }}" class="nav-link {{ request()->routeIs('team-members.index') ? 'active' : '' }}">
             <i class="fas fa-users nav-icon"></i>
             <p>Team</p>
