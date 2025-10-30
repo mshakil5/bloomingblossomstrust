@@ -720,9 +720,11 @@
   </style>
 
 
+
   <section class="clients-section text-center">
     <div class="container">
       <h2>Our Funders</h2>
+      <p><strong>"Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence."</strong></p>
       <div class="clients-slider">
         <!-- Client Logos -->
         
