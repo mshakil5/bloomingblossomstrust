@@ -168,7 +168,7 @@
       <div class="col-lg-6 order-1 order-lg-0">
         <div class="img-box-2 fadeInLeft" style="animation-delay:.15s">
           <!-- use decoding=async and loading=lazy for perf -->
-          <img loading="lazy" decoding="async" src="{{ asset('images/about/'. $about1->image)}}" alt="{!! $about1->long_title !!}">
+          <img loading="lazy" decoding="async" src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust">
         </div>
       </div>
       <!-- Right: Content -->
