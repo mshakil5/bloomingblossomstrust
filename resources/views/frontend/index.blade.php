@@ -83,7 +83,7 @@
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="fw-bold">About Us</h2>
-      <p class="text-muted">Blooming Blossoms Trust stood up and said no more. We know that different species of plants require diverse settings, climates and care. We wouldn`t squash our plants into neat boxes and command them to sit still and grow. We can not expect this of children. As teachers and parents we see the pain of SEN children squashed in mainstream boxes; or of bright and gifted children expected to toe the line and supress their ideas and questions. So many children don`t fit the box and we exist to contain them. To be with them where they are; to help them break free from barriers and source their own strengths to soar.</p>
+      <p class="text-muted">Blooming Blossoms Trust sprouted the first seeds of hope in 2007, rising  beyond the stigma involved. As teachers and parents we saw the pain of SEN children trapped in mainstream cocoons, of bright and gifted children expected to toe the line and suppress their ideas and questions. Ever since, we remain committed to helping SEN and neurodivergent children and young people flourish. We are here to be with them where they are, to help them break free from barriers and source their own strengths. We are here to help them Soar. Beyond their potential.</p>
     </div>
     <div class="row g-4 align-items-start">
 
