@@ -117,10 +117,10 @@
 
             @php
                 $icons = [
-                          0 => '#9b59b6',
-                          1 => '#e67e22',
-                          2 => '#3498db',
-                          3 => '#2ecc71',
+                          0 => '#fe6bb5',
+                          1 => '#97b766',
+                          2 => '#212121',
+                          3 => '#8ce500',
                           4 => '#e74c3c',
                           5 => '#f1c40f',
                   ];
@@ -128,7 +128,7 @@
 
             @foreach ($services as $key => $service)
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link {{ $key == 0 ? 'active' : '' }}" id="{{$service->id}}-tab" data-bs-toggle="tab" data-bs-target="#{{$service->id}}" type="button" role="tab" aria-controls="{{$service->id}}" aria-selected="true" style="background-color: {{$icons[$key] ?? ''}};">
+                  <button class="nav-link {{ $key == 0 ? 'active' : '' }}" id="{{$service->id}}-tab" data-bs-toggle="tab" data-bs-target="#{{$service->id}}" type="button" role="tab" aria-controls="{{$service->id}}" aria-selected="true" style="background-color: {{$icons[$key] ?? ''}}; color:#fff">
                     {{$service->title}}
                   </button>
                 </li>
@@ -140,8 +140,20 @@
           <!-- Tab panes -->
           <div class="tab-content mt-3" id="ageTabsContent">
 
+            
+            @php
+                $icons = [
+                          0 => '#fe6bb5',
+                          1 => '#97b766',
+                          2 => '#212121',
+                          3 => '#8ce500',
+                          4 => '#e74c3c',
+                          5 => '#f1c40f',
+                  ];
+            @endphp
+
             @foreach ($services as $key => $service)
-                <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }} " id="{{$service->id}}" role="tabpanel" aria-labelledby="{{$service->id}}-tab">
+                <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }} " id="{{$service->id}}" role="tabpanel" aria-labelledby="{{$service->id}}-tab" style="background-color: {!! $icons[$key] ?? '' !!}">
                   {!! $service->long_desc !!}
                 </div>
             @endforeach
@@ -179,9 +191,6 @@
               <div class="room-card">
                 <div class="room-img">
                   <img src="{{asset('images/content/'. $project->feature_image)}}" alt="{{$project->short_title}}">
-                </div>
-                <div class="room-icon">
-                  {{ ['💬', '🌟', '🧸', '🏅', '👶', '🎨', '🌈', '🎭','🐻'][array_rand(['💬', '🌟', '🧸', '🏅', '👶', '🎨', '🌈', '🎭','🐻'])] }}
                 </div>
                 <div class="room-content text-center">
                   <h4 class="fw-bold mb-2">{{$project->short_title}}</h4>

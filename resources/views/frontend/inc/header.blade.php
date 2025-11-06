@@ -16,17 +16,15 @@
 
     <!-- Menu -->
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center text-center text-lg-start">
+      <ul class="navbar-nav ms-auto align-items-lg-center text-center text-lg-start text-uppercase">
 
         <li class="nav-item mx-2">
           <a class="nav-link d-flex flex-column align-items-center" href="{{ route('home') }}">
-            <i class="fas fa-home" style="color: #ffa500; font-size: 28px;"></i>
             <span>Home</span>
           </a>
         </li>
         <li class="nav-item mx-2">
           <a class="nav-link d-flex flex-column align-items-center" href="{{ route('aboutUs') }}">
-            <i class="fas fa-info-circle" style="color: #3498db; font-size: 28px;"></i>
             <span>About</span>
           </a>
         </li>
@@ -34,24 +32,13 @@
         
         <li class="nav-item dropdown mx-2">
           <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="ageDropdown" data-bs-toggle="dropdown">
-            <i class="fas fa-project-diagram" style="color: #6c5ce7; font-size: 28px;"></i>
             <span>Projects</span>
           </a>
           <ul class="dropdown-menu text-center">
-            @php
-                $icons = [
-                           0 => '<i class="fas fa-flask me-2" style="color:#16a085; font-size:16px;"></i>',
-                          1 => '<i class="fas fa-child me-2" style="color:#e67e22; font-size:16px;"></i>',
-                          2 => '<i class="fas fa-school me-2" style="color:#3498db; font-size:16px;"></i>',
-                          3 => '<i class="fas fa-running me-2" style="color:#2ecc71; font-size:16px;"></i>',
-                          4 => '<i class="fas fa-graduation-cap me-2" style="color:#e74c3c; font-size:16px;"></i>',
-                          5 => '<i class="fas fa-user-graduate me-2" style="color:#f1c40f; font-size:16px;"></i>',
-                  ];
-            @endphp
             @foreach (\App\Models\Content::with('category')->where('type', 2)->orderby('id', 'ASC')->get() as $key => $projects)
               <li>
                 <a class="dropdown-item d-flex align-items-center" href="{{ route('agegroup', $projects->slug) }}">
-                  {!! $icons[$key] ?? '' !!} {{ $projects->short_title }}
+               {{ $projects->short_title }}
                 </a>
               </li>
             @endforeach
@@ -60,7 +47,6 @@
 
         <li class="nav-item mx-2">
           <a class="nav-link d-flex flex-column align-items-center " href="{{ route('home') }}#contact">
-            <i class="fas fa-phone-alt" style="color: #2ecc71; font-size: 28px;"></i>
             <span>Contact</span>
           </a>
         </li>
@@ -68,7 +54,6 @@
         
         <li class="nav-item mx-2">
           <a class="nav-link d-flex flex-column align-items-center" href="{{ route('getOurDonors') }}">
-            <i class="fas fa-book" style="color: #e74c3c; font-size: 28px;"></i>
             <span>Funders</span>
           </a>
         </li>
@@ -76,7 +61,6 @@
 
         <li class="nav-item mx-2">
           <a class="nav-link d-flex flex-column align-items-center" href="{{ route('donate') }}">
-            <i class="fas fa-coins" style="color: #f39c12; font-size: 28px;"></i>
             <span>Donate</span>
           </a>
         </li>

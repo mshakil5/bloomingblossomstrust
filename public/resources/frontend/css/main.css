@@ -150,7 +150,11 @@
   
 /* Our Rooms section styling */
 #our-rooms {
-  background: linear-gradient(180deg, #fbfbff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #fbfbff 0%, #98b867 100%);
+}
+
+#smart-gallery {
+  background: linear-gradient(180deg, #fbfbff 0%, #fd7ec0 100%);
 }
 
 .room-card {
@@ -315,7 +319,7 @@
 
 
 /* Gallery styles */
-.gallery-wrap { background:#fff; padding-top:10px; }
+.gallery-wrap { padding-top:10px; }
 .gallery-item {
   position: relative;
   overflow: hidden;
@@ -633,22 +637,53 @@
 
     /* new nav css  */
 .nav-link {
-  font-weight: 600;
-  color: #444 !important;
+  font-size: 18px;    
+  font-weight: 700;
+  color: #fe6bb5;
   transition: all 0.3s ease;
 }
-.nav-link:hover {
-  color: #000 !important;
+.navbar-nav .nav-link:hover {
+  color: #97b766 !important;
   transform: translateY(-3px);
 }
 .navbar-nav .nav-item i {
   margin-bottom: 5px;
 }
 .navbar-nav .dropdown-menu {
+  color: #fe6bb5;
   border-radius: 12px;
   padding: 10px;
 }
 
+.navbar-nav .dropdown-item{
+  color: #fe6bb5;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #97b766 !important;
+}
+
+.navbar-nav .dropdown-item.active, .dropdown-item:active {
+    color: #fe6bb5;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #ceebce;
+    border-radius: 7px;
+}
+
+.navbar-nav .dropdown-item:focus, .dropdown-item:hover {
+    font-weight: 500;
+    font-size: 18px; 
+    border-radius: 7px;
+    color: var(--bs-dropdown-link-hover-color);
+    background-color: #ceebce;
+}
+
+
+.nav-link:hover {
+  color: #ffffff !important;
+  transform: translateY(-3px);
+}
 
 /* new css  */
     /* Base style for all tab panes */
