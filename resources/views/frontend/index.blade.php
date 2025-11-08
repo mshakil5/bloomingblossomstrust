@@ -1,6 +1,54 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+
+<style>
+  
+    /* --- Butterfly Animation --- */
+    .butterfly {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-image: url('butterfly2.gif'); /* Butterfly icon */
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: flyAcross 10s linear infinite;
+      opacity: 0.9;
+    }
+
+    /* Animation Path */
+    @keyframes flyAcross {
+      0% {
+        left: -10%;
+        top: 60%;
+        transform: scale(0.8) rotate(10deg);
+      }
+      25% {
+        top: 30%;
+        transform: scale(1) rotate(-10deg);
+      }
+      50% {
+        top: 50%;
+        transform: scale(1.1) rotate(15deg);
+      }
+      75% {
+        top: 20%;
+        transform: scale(1) rotate(-5deg);
+      }
+      100% {
+        left: 110%;
+        top: 40%;
+        transform: scale(0.9) rotate(10deg);
+      }
+    }
+
+    /* Slightly different speeds for each butterfly */
+    .butterfly:nth-child(1) { animation-duration: 12s; top: 40%; }
+    .butterfly:nth-child(2) { animation-duration: 15s; animation-delay: 3s; top: 55%; width: 100px; }
+    .butterfly:nth-child(3) { animation-duration: 18s; animation-delay: 6s; top: 30%; width: 50px; }
+</style>
+
+
 <!-- Include Flatpickr CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <!-- =======================
@@ -28,6 +76,13 @@
                     @if($slider->link)<p><a class="btn btn-primary btn-lg" href="{{ $slider->link ?? '' }}">Learn more</a></p>@endif
                 </div>
             </div>
+
+            
+            <!-- Butterflies -->
+            <div class="butterfly"></div>
+            <div class="butterfly"></div>
+            <div class="butterfly"></div>
+
         @endforeach
       </div>
 
