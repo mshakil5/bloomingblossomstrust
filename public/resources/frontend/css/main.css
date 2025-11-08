@@ -118,7 +118,13 @@
 
     /* Small aesthetic */
     .btn-primary {
-      background: linear-gradient(90deg,var(--brand),#ff6b88);
+      background: linear-gradient(90deg,var(--brand),#fd6cb4);
+      border: none;
+      box-shadow: 0 6px 18px rgba(255,139,148,0.12);
+    }
+
+    .btn-success {
+      background: #96b667;
       border: none;
       box-shadow: 0 6px 18px rgba(255,139,148,0.12);
     }
@@ -132,7 +138,7 @@
     .feature-icon {
         width:44px; height:44px;
         background: linear-gradient(180deg, rgba(255,139,148,0.12), rgba(255,139,148,0.04));
-        color: #ff6b88;
+        color: #fd6cb4;
         font-weight:700;
     }
 
@@ -424,19 +430,19 @@
 }
 
 .accordion-button {
-  background-color: #fff7ef;
+  background-color: #fe6bb5;
   border: none;
   font-weight: 600;
   font-size: 1rem;
-  color: #333;
+  color: #fff;
   padding: 1rem 1.2rem;
   border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #ffe7d1;
-  color: #ff7a00;
+  background-color: #fe6bb5;
+  color: #fff;
   box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
 }
 
@@ -454,8 +460,8 @@
   outline: none;
 }
 .accordion-button:hover {
-  background-color: #fff2e5;
-  color: #ff7a00;
+  background-color: #97b766;
+  color: #fff;
 }
 
 /* Icons for + / - toggle */
@@ -732,7 +738,7 @@
   text-align: center;
   font-size: 2.2rem;
   font-weight: 800;
-  color: #123456;
+  color: #97b766;
   margin-bottom: 40px;
 }
 
@@ -934,7 +940,7 @@
 }
 
 .food-choice h2 {
-  color: #2a4d69;
+  color: #97b766;
   font-weight: 700;
   font-size: 1.8rem;
   padding-left: 10px;
@@ -1088,4 +1094,8 @@
     .breadcrumb-title {
       font-size: 1.9rem;
     }
+  }
+
+  h2 {
+    color: #97b766;
   }

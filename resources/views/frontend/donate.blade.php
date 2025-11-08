@@ -86,9 +86,9 @@
   <main class="container donate-section">
     <header class="d-flex align-items-center justify-content-between mb-4">
       <div>
-        <h1 class="h3 mb-1">Donate</h1>
+        <h1 class="h3 mb-1">Ripples and Waves.</h1>
         <h5 class="text-muted small mb-0">
-          Your donation will enable us to provide our vital services to those who require them. Because we believe that every child can flourish. They just need the opportunities.</h5>
+          We need your pebble in the pond. </h5>
       </div>
       {{-- <div class="text-end d-none d-md-block">
         <a href="#" class="btn btn-outline-secondary">How donations are used</a>

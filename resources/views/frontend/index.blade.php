@@ -113,7 +113,7 @@
       <div class="col-lg-7">
         <div class="px-md-3">
           <!-- Centered tabs -->
-          <ul class="nav nav-tabs mt-4 pb-3" id="ageTabs" role="tablist">
+          <ul class="nav nav-tabs pb-3" id="ageTabs" role="tablist">
 
             @php
                 $icons = [
@@ -595,7 +595,7 @@
 
     <!-- See more button -->
     <div class="container text-center mt-4">
-      <button id="galleryToggleBtn" class="btn btn-primary btn-lg rounded-pill px-4" style="{{ $index <= 4 ? 'display: none;' : '' }}">See more</button>
+      <button id="galleryToggleBtn" class="btn btn-success btn-lg rounded-pill px-4" style="{{ $index <= 4 ? 'display: none;' : '' }}">See more</button>
     </div>
   </div>
 
@@ -742,7 +742,7 @@
 
   <section class="clients-section text-center">
     <div class="container">
-      <h2>Our Funders</h2>
+      <h2 style="color: #97b766"> Our Funders </h2>
       <p><strong>"Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence."</strong></p>
       <div class="clients-slider">
         <!-- Client Logos -->

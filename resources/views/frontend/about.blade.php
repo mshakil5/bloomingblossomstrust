@@ -52,7 +52,7 @@
     .vs-btn{
     display:inline-flex;align-items:center;gap:.6rem;
     padding:10px 18px;border-radius:10px;font-weight:700;
-    background:linear-gradient(90deg,var(--accent),#ff8a80);
+    background:linear-gradient(90deg, #98b86b, #96b766);
     color:white;text-decoration:none;border:none;
     box-shadow:0 8px 18px rgba(255,107,107,0.18);
     transition:transform .18s ease,box-shadow .18s ease;
@@ -250,7 +250,7 @@
 
     <!-- See more button -->
     <div class="container text-center mt-4">
-      <button id="galleryToggleBtn" class="btn btn-primary btn-lg rounded-pill px-4" style="{{ $index <= 4 ? 'display: none;' : '' }}">See more</button>
+      <button id="galleryToggleBtn" class="btn btn-success btn-lg rounded-pill px-4" style="{{ $index <= 4 ? 'display: none;' : '' }}">See more</button>
     </div>
   </div>
 
