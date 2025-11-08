@@ -193,7 +193,7 @@
                   <img src="{{asset('images/content/'. $project->feature_image)}}" alt="{{$project->short_title}}">
                 </div>
                 <div class="room-content text-center">
-                  <h4 class="fw-bold mb-2">{{$project->short_title}}</h4>
+                  <h4 class="fw-bold mb-2" style="color: #97b766">{{$project->short_title}}</h4>
                   <p class="text-muted mb-3">
                     {{$project->long_title}}
                   </p>
@@ -789,21 +789,18 @@
 
           <ul class="list-unstyled">
             <li class="d-flex align-items-start mb-3">
-              <div class="icon-wrap me-3"><i class="bi bi-geo-alt-fill"></i></div>
               <div>
                 <strong>Address</strong><br>
                 {{$company->address1}}
               </div>
             </li>
             <li class="d-flex align-items-start mb-3">
-              <div class="icon-wrap me-3"><i class="bi bi-telephone-fill"></i></div>
               <div>
                 <strong>Phone</strong><br>
                 <a href="tel:{{$company->phone1}}" class="text-decoration-none text-dark">{{$company->phone1}}</a>
               </div>
             </li>
             <li class="d-flex align-items-start mb-3">
-              <div class="icon-wrap me-3"><i class="bi bi-envelope-fill"></i></div>
               <div>
                 <strong>Email</strong><br>
                 <a href="mailto:{{$company->email1}}" class="text-decoration-none text-dark">{{$company->email1}}</a>

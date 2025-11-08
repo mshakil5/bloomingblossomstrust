@@ -489,7 +489,7 @@
 
   /* Left form area */
   #callback .small-title { color: #ff8b94; letter-spacing: .6px; }
-  #callback h3 { color: #1f2937; }
+  #callback h3 { color: #97b766; }
 
   form#callbackForm .form-control, form#callbackForm .form-select {
     border-radius: 10px;
@@ -548,7 +548,7 @@
 }
 
 #location h3 {
-  color: #1f2937;
+  color: #97b766;
 }
 
 .icon-wrap {

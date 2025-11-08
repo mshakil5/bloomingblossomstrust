@@ -60,7 +60,7 @@
 
               <div class="menu-card {{ ['bg1','bg2','bg3','bg4'][array_rand(['bg1','bg2','bg3','bg4'])] }}">
                 <img src="{{asset('images/service/' .$feature->image )}}" alt="{{ $feature->title }}">
-                <div class="week-title">{{ $feature->title }}</div>
+                <div class="week-title" style="color: #97b766">{{ $feature->title }}</div>
               </div>
 
           @endforeach
@@ -86,11 +86,8 @@
                 <div class="room-img">
                   <img src="{{asset('images/content/'. $project->feature_image)}}" alt="{{$project->short_title}}">
                 </div>
-                <div class="room-icon">
-                  {{ ['💬', '🌟', '🧸', '🏅', '👶', '🎨', '🌈', '🎭','🐻'][array_rand(['💬', '🌟', '🧸', '🏅', '👶', '🎨', '🌈', '🎭','🐻'])] }}
-                </div>
                 <div class="room-content text-center">
-                  <h4 class="fw-bold mb-2">{{$project->short_title}}</h4>
+                  <h4 class="fw-bold mb-2" style="color:#97b766">{{$project->short_title}}</h4>
                   <p class="text-muted mb-3">
                     {{$project->long_title}}
                   </p>

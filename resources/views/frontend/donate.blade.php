@@ -44,7 +44,7 @@
     .donation-sub{color:var(--muted); font-size:0.95rem}
 
     /* CTA */
-    .btn-donate{background:linear-gradient(90deg,var(--accent),#375aeb); border:0; color:#fff}
+    .btn-donate{background:#fe6bb5; border:0; color:#fff}
 
     /* Simple hover interaction */
     .donation-card:hover{transform:translateY(-4px); transition:transform .18s ease-out}
@@ -127,7 +127,7 @@
   }
 
   .donation h1 .accent {
-    color: var(--accent);
+    color: #97b766;
   }
 
   .donation p.lead {
@@ -326,7 +326,7 @@
                   {{ ['💬', '🌟', '🧸', '🏅', '👶', '🎨', '🌈', '🎭','🐻'][array_rand(['💬', '🌟', '🧸', '🏅', '👶', '🎨', '🌈', '🎭','🐻'])] }}
                 </div>
                 <div class="room-content text-center">
-                  <h4 class="fw-bold mb-2">{{$project->short_title}}</h4>
+                  <h4 class="fw-bold mb-2" style="color: #97b766">{{$project->short_title}}</h4>
                   <p class="text-muted mb-3">
                     {{$project->long_title}}
                   </p>
