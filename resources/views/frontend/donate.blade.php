@@ -60,6 +60,115 @@
 </style>
 
 
+<style>
+  :root {
+    --donation-min-h: 60vh;
+    --donation-max-w: 1200px;
+    --donation-text-bg: rgba(255, 255, 255, 0.85);
+    --donation-text-color: #0b1320;
+    --accent: #0f62fe;
+  }
+
+  .donation {
+    position: relative;
+    min-height: var(--donation-min-h);
+    display: grid;
+    place-items: center;
+    padding-block: clamp(2rem, 4vw, 4rem);
+    overflow: hidden;
+  }
+
+  .donation__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: url('{{ asset('donatebg.png') }}');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .donation__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(60% 80% at 20% 40%, rgba(255,255,255,.75) 0%, rgba(255,255,255,.35) 40%, rgba(255,255,255,0) 100%),
+                linear-gradient(to bottom, rgba(255,255,255,.35), rgba(255,255,255,.05));
+  }
+
+  .donation__inner {
+    width: 100%;
+    max-width: var(--donation-max-w);
+    padding-inline: 1rem;
+  }
+
+  .donation__panel {
+    background: var(--donation-text-bg);
+    color: var(--donation-text-color);
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    backdrop-filter: blur(6px);
+    padding: clamp(1rem, 2vw + .5rem, 2rem);
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 700;
+    font-size: .875rem;
+    color: #354154;
+    margin-bottom: .5rem;
+  }
+
+  .donation h1 {
+    font-weight: 800;
+    line-height: 1.1;
+    font-size: clamp(1.8rem, 4.5vw, 3.25rem);
+    margin-bottom: .7rem;
+  }
+
+  .donation h1 .accent {
+    color: var(--accent);
+  }
+
+  .donation p.lead {
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .donation .can-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .donation .can-list li {
+    display: flex;
+    align-items: start;
+    gap: .6rem;
+    padding: .35rem 0;
+    font-size: clamp(.975rem, 1.5vw, 1.125rem);
+  }
+
+  .donation .check {
+    width: 1.15em;
+    height: 1.15em;
+    border-radius: .35em;
+    outline: 2px solid var(--accent);
+    display: grid;
+    place-items: center;
+    font-size: .75em;
+    font-weight: 800;
+  }
+
+  @media(max-width: 575.98px) {
+    .donation__panel {
+      background: rgba(255,255,255,0.92);
+    }
+  }
+</style>
+
+
+
 @php
     $bgImage = $banner && $banner->feature_image
         ? asset('images/banner/' . $banner->feature_image)
@@ -153,6 +262,47 @@
 
 
   </main>
+
+
+  <!-- DONATION SECTION -->
+<section class="donation" aria-label="Donation Section">
+  <div class="donation__bg" ></div>
+  <div class="donation__overlay"></div>
+
+  <div class="donation__inner container">
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-lg-8">
+
+        <div class="donation__panel">
+          <div class="eyebrow">Blooming Blossoms Trust</div>
+
+          <h1>
+            Giving is not just about making a <span class="accent">donation</span>.<br>
+            It is about making a <span class="accent">difference</span>!
+          </h1>
+
+          <p class="lead">
+            At Blooming Blossoms Trust we see <strong>abilities</strong>, not disabilities.
+            We work to remove the barrier called “No” or “Can’t” for children with (dis)<strong>abilities</strong>.
+            With your support, we help every child see that they <em>can</em>.
+          </p>
+
+          <ul class="can-list">
+            <li><span class="check">✓</span> <strong>Can</strong> learn.</li>
+            <li><span class="check">✓</span> <strong>Can</strong> have control over their lives.</li>
+            <li><span class="check">✓</span> <strong>Can</strong> have friends, fun and a future.</li>
+            <li><span class="check">✓</span> <strong>Can</strong> blossom despite the turbulent environment.</li>
+          </ul>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- ===== Our Projects Section ===== -->
 <section id="our-rooms" class="py-5 bg-light">
