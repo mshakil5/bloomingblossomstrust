@@ -56,6 +56,7 @@ class ContentController extends Controller
             'long_title' => 'nullable|string|max:255',
             'short_description' => 'nullable|string',
             'long_description' => 'nullable|string',
+            'quote' => 'nullable|string',
             'category_id' => 'nullable|exists:content_categories,id',
             'feature_image' => 'nullable|image|mimes:jpeg,png,webp,jpg|max:2048',
             'images.*' => 'nullable|image|mimes:jpeg,png,webp|max:4048',
@@ -76,6 +77,7 @@ class ContentController extends Controller
         $content->long_title = $request->long_title;
         $content->short_description = $request->short_description;
         $content->long_description = $request->long_description;
+        $content->quote = $request->quote;
         $content->slug = $type . '-' . Str::slug($request->short_title);
         $content->type = $type;
         $content->created_by = auth()->id();
@@ -160,6 +162,7 @@ class ContentController extends Controller
             'long_title' => 'nullable|string|max:255',
             'short_description' => 'nullable|string',
             'long_description' => 'nullable|string',
+            'quote' => 'nullable|string',
             'category_id' => 'nullable|exists:content_categories,id',
             'feature_image' => 'nullable|image|mimes:jpeg,png,webp,jpg|max:2048',
             'images.*' => 'nullable|image|mimes:jpeg,png,webp,jpg|max:2048',
@@ -180,6 +183,7 @@ class ContentController extends Controller
         $content->publishing_date = $request->publishing_date;
         $content->short_description = $request->short_description;
         $content->long_description = $request->long_description;
+        $content->quote = $request->quote;
         $content->slug = $type . '-' . Str::slug($request->short_title);
         $content->updated_by = auth()->id();
         $content->meta_title = $request->meta_title;

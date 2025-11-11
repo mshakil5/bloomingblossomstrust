@@ -69,6 +69,12 @@
                     <textarea class="form-control summernote" id="long_description" name="long_description" placeholder=""></textarea>
                   </div>
                 </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                      <label> Quote </label>
+                    <textarea class="form-control summernote" id="quote" name="quote"></textarea>
+                  </div>
+                </div>
                 <div class="col-12">
                     <div class="form-group">
                         <label>Tags</label>
@@ -237,6 +243,7 @@ $(document).ready(function () {
         form_data.append("category_id", $("#category_id").val());
         form_data.append("short_description", $("#short_description").val());
         form_data.append("long_description", $("#long_description").length ? $("#long_description").val() : '');
+        form_data.append("quote", $("#quote").length ? $("#quote").val() : '');
         form_data.append("meta_title", $("#meta_title").val());
         form_data.append("meta_description", $("#meta_description").val());
         form_data.append("meta_keywords", $("#meta_keywords").val());
@@ -290,6 +297,7 @@ $(document).ready(function () {
             $("#category_id").val(d.category_id).trigger('change');
             $('#short_description').summernote('code', d.short_description);
             $('#long_description').summernote('code', d.long_description);
+            $('#quote').summernote('code', d.quote);
             $("#meta_title").val(d.meta_title);
             $("#meta_description").val(d.meta_description);
             $("#meta_keywords").val(d.meta_keywords);
