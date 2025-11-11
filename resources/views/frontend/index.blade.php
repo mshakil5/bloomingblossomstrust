@@ -56,22 +56,22 @@
        ======================= -->
   <header class="hero_area position-relative">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
+      {{-- <div class="carousel-indicators">
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
           aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
           aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
           aria-label="Slide 3"></button>
-      </div>
+      </div> --}}
 
       <div class="carousel-inner">
 
         @foreach ($sliders as $key => $slider)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                <img src="{{'images/slider/'.$slider->image}}" class="d-block w-100" alt="Play area">
-                <div class="carousel-caption text-start text-white">
-                    @if ($slider->title)<h1 class="display-5 fw-bold">{{ $slider->title ?? '' }}</h1>@endif
+                {{-- <img src="{{'images/slider/'.$slider->image}}" class="d-block w-100" alt="Play area"> --}}
+                <div class="carousel-caption text-center">
+                    @if ($slider->title)<h1 class="display-5 fw-bold " style="color:#f53399">{{ $slider->title ?? '' }}</h1>@endif
                     @if($slider->description)<p class="lead">{{ $slider->description ?? '' }}</p>@endif
                     @if($slider->link)<p><a class="btn btn-primary btn-lg" href="{{ $slider->link ?? '' }}">Learn more</a></p>@endif
                 </div>
@@ -86,7 +86,7 @@
         @endforeach
       </div>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      {{-- <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
@@ -94,7 +94,7 @@
       <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-      </button>
+      </button> --}}
     </div>
 
     <!-- ===== Waves ===== -->

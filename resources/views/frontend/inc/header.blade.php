@@ -2,7 +2,19 @@
        Header / Navbar
        ======================= -->
 <!-- Header Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+
+<style>
+
+  .navbar-scroll {
+    background: #fff !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+</style>
+
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
   <div class="container">
     <!-- Logo -->
     <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
@@ -69,3 +81,15 @@
     </div>
   </div>
 </nav>
+
+
+<script>
+document.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 20) {
+        navbar.classList.add("navbar-scroll");
+    } else {
+        navbar.classList.remove("navbar-scroll");
+    }
+});
+</script>
