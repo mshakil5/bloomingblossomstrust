@@ -131,7 +131,15 @@
   <!-- =======================
        About section (two-column)
        ======================= -->
+<style>
+  .accent {
+    color: #97b766;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
 
+</style>
 
 <section id="about" class="about-section py-5 position-relative" style="font-family: Tahoma, sans-serif; color: #000000;">
 
@@ -144,7 +152,9 @@
         As teachers and parents we saw the pain of SEN children trapped in mainstream cocoons, of bright and gifted children expected to toe the line and suppress their ideas and questions. 
         Ever since, we remain committed to helping SEN and neurodivergent children and young people flourish. 
         We are here to be with them where they are, to help them break free from barriers and source their own strengths. 
-        We are here to help them Soar. Beyond their potential.
+        <br>
+        <span class="accent">We are here to help them Soar. Beyond their potential.</span>
+        
       </p>
     </div>
 
@@ -798,7 +808,7 @@
   <section class="clients-section text-center">
     <div class="container">
       <h2 style="color: #97b766"> Our Funders </h2>
-      <p><strong>"Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence."</strong></p>
+      <p><strong>Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.</strong></p>
       <div class="clients-slider">
         <!-- Client Logos -->
         

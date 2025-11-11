@@ -76,14 +76,14 @@
 </button> -->
 
 
-<a
+{{-- <a
   href="https://wa.me/{{ preg_replace('/\D/', '', $company->phone1) }}"
   class="whatsapp-float"
   target="_blank"
   aria-label="Chat on WhatsApp"
 >
   <i class="bi bi-whatsapp"></i>
-</a>
+</a> --}}
 
 
 
