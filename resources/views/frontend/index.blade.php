@@ -60,7 +60,7 @@
 
 </style>
 
-<section id="about" class="about-section py-5 position-relative" style="color: #000000;">
+<section id="about" class="about-section position-relative" style="color: #000000;">
 
   <div class="container">
       <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
@@ -168,7 +168,7 @@
 </section>
 
 <!-- ===== Our Projects Section ===== -->
-<section id="our-rooms" class="py-5 bg-light">
+<section id="our-rooms" class="pb-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
       {{-- <h3 class="h5 text-uppercase text-muted mb-2">Excellent Nursery Environment</h3> --}}

@@ -177,7 +177,7 @@
             <div class="carousel-item active">
                 <div class="carousel-caption text-center">
                   <h1 class="display-5 fw-bold"
-                      style="color:#8fad60; font-size:5rem; font-family:'Roboto', sans-serif;">
+                      style="color:#8fad60; font-size:3rem; font-family:'Roboto', sans-serif;">
                       Donate
                   </h1>
                 </div>

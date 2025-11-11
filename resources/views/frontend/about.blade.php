@@ -134,7 +134,7 @@
             <div class="carousel-item active">
                 <div class="carousel-caption text-center">
                   <h1 class="display-5 fw-bold"
-                      style="color:#8fad60; font-size:5rem; font-family:'Roboto', sans-serif;">
+                      style="color:#8fad60; font-size:3rem; font-family:'Roboto', sans-serif;">
                       About Us
                   </h1>
                 </div>
@@ -172,15 +172,15 @@
 </section>
 
 
-<section class="about-section" aria-labelledby="about-heading">
-  <div class="">
-    <div class="row align-item-center justify-content-center g-4">
+<section class="about-section">
+  <div class="container">
+    <div class="row">
 
       <!-- Left: Image -->
       <div class="col-lg-6">
         <div class="" >
           <!-- use decoding=async and loading=lazy for perf -->
-          <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust">
+          <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust" style="width: 100%;">
         </div>
       </div>
       <!-- Right: Content -->
@@ -193,8 +193,6 @@
       </div>
     </div>
   </div>
-  
-
 </section>
 
 

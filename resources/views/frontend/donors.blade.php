@@ -36,20 +36,24 @@
 @endphp
 
 
-<section class="breadcrumb-section text-center text-white d-flex align-items-center justify-content-center"
-    style="background-image: url('{{ $bgImage }}');">
-  <div class="container d-none">
-    <h1 class="breadcrumb-title mb-3">Food Choice</h1>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb justify-content-center mb-0">
-        <li class="breadcrumb-item">
-          <a href="{{ route('home') }}" class="text-white text-decoration-none">Home</a>
-        </li>
-        <li class="breadcrumb-item active text-white" aria-current="page">Food Choice</li>
-      </ol>
-    </nav>
-  </div>
-</section>
+
+  <header class="hero_area position-relative">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption text-center">
+                  <h1 class="display-5 fw-bold"
+                      style="color:#8fad60; font-size:3rem; font-family:'Roboto', sans-serif;">
+                      Our Funders
+                  </h1>
+                </div>
+            </div>
+            <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
+            <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
+            <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
+      </div>
+    </div>
+  </header>
 
 
   <section class=" py-5 position-relative">

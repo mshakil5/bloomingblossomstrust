@@ -62,7 +62,7 @@
             <div class="carousel-item active">
                 <div class="carousel-caption text-center">
                   <h1 class="display-5 fw-bold"
-                      style="color:#8fad60; font-size:5rem; font-family:'Roboto', sans-serif;">
+                      style="color:#8fad60; font-size:3rem; font-family:'Roboto', sans-serif;">
                       {{ $agegroup->short_title }}
                   </h1>
                 </div>
@@ -90,15 +90,9 @@
 
 
       
-<section class="age-group pt-5">
+<section class="age-group">
   <div class="container">
     <div class="row align-items-center">
-
-      
-      <div class="text-center mb-5">
-        <h2>{{ $agegroup->short_title }}</h2>
-      </div>
-      
       <!-- LEFT CONTENT -->
       <div class="col-lg-12 mb-4 mb-lg-0">
         
