@@ -4,20 +4,9 @@
 
 <style>
 
-  .about-section{
-      max-width:var(--max-width);
-      margin:0 auto;
-      background:var(--card-bg);
-      border-radius:24px;
-      /* box-shadow:0 10px 30px rgba(18,24,33,0.06); */
-      overflow:hidden;
-      position:relative;
-      padding:10px;
-    }
-
 
   .age-group {
-  background-color: #f8f9fa; /* Soft background tone */
+  background-color: #fff9f3; /* Soft background tone */
 }
 
 .age-group p {
@@ -50,14 +39,6 @@
   font-weight: bold;
 }
 
-.age-group img {
-  max-width: 90%;
-  transition: transform 0.3s ease;
-}
-
-.age-group img:hover {
-  transform: scale(1.03);
-}
 
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
@@ -74,25 +55,26 @@
 
 </style>
 
-@php
-    $bgImage = $banner && $banner->feature_image
-        ? asset('images/banner/' . $banner->feature_image)
-        : asset('resources/frontend/images/page-banner2.jpg');
-@endphp
+
+  <header class="hero_area position-relative">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption text-center">
+                  <h1 class="display-5 fw-bold"
+                      style="color:#8fad60; font-size:5rem; font-family:'Roboto', sans-serif;">
+                      {{ $agegroup->short_title }}
+                  </h1>
+                </div>
+            </div>
+            <div class="butterfly" style="background-image: url('../butterfly2.gif')"></div>
+            <div class="butterfly" style="background-image: url('../butterfly2.gif')"></div>
+            <div class="butterfly" style="background-image: url('../butterfly2.gif')"></div>
+      </div>
+    </div>
+  </header>
 
 
-<section class="breadcrumb-section text-center text-white d-flex align-items-center justify-content-center"
-    style="background-image: url('{{ $bgImage }}');">
-  <div class="container  d-none">
-    <h1 class="breadcrumb-title mb-3">{{ $agegroup->short_title }}</h1>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb justify-content-center mb-0">
-        <li class="breadcrumb-item"><a href="{{route('home')}}" class="text-white text-decoration-none">Home</a></li>
-        <li class="breadcrumb-item active text-white" aria-current="page">{{ $agegroup->short_title }}</li>
-      </ol>
-    </nav>
-  </div>
-</section>
 
 
 
@@ -147,7 +129,7 @@
       <div class="@if($longDescWords >= 5) col-lg-6 text-center @else col-lg-12 text-center @endif">
         <img src="{{ asset('images/content/' . $agegroup->feature_image) }}"
            alt="{{ $agegroup->short_title }}"
-           class="img-fluid rounded shadow-sm">
+           class="img-fluid">
       </div>
     </div>
   </div>
