@@ -3,15 +3,6 @@
        ======================= -->
 <!-- Header Navbar -->
 
-<style>
-
-  .navbar-scroll {
-    background: #fff !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-  }
-
-</style>
 
 
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
@@ -63,14 +54,6 @@
           </a>
         </li>
 
-        
-        <li class="nav-item mx-2">
-          <a class="nav-link d-flex flex-column align-items-center" href="{{ route('getOurDonors') }}">
-            <span>Funders</span>
-          </a>
-        </li>
-
-
         <li class="nav-item mx-2">
           <a class="nav-link d-flex flex-column align-items-center" href="{{ route('donate') }}">
             <span>Donate</span>
@@ -82,6 +65,16 @@
   </div>
 </nav>
 
+
+<style>
+
+  .navbar-scroll {
+    background: #fff !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+</style>
 
 <script>
 document.addEventListener("scroll", function () {

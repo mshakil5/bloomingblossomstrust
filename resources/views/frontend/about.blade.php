@@ -162,20 +162,31 @@
 
 <section class="about-section" aria-labelledby="about-heading">
   <div class="container">
-    <div class="row g-4">
+    <div class="row g-4 align-items-center">
+      <!-- Right: Content -->
+      <div class="col-lg-12 col-xl-12 order-0 order-lg-1">
+          {!! $about1->long_description !!}
+      </div>
+  </div>
+</section>
+
+
+<section class="about-section" aria-labelledby="about-heading">
+  <div class="">
+    <div class="row align-item-center justify-content-center g-4">
 
       <!-- Left: Image -->
-      <div class="col-lg-6 order-1 order-lg-0">
-        <div class="img-box-2 fadeInLeft" style="animation-delay:.15s">
+      <div class="col-lg-6">
+        <div class="" >
           <!-- use decoding=async and loading=lazy for perf -->
-          <img loading="lazy" decoding="async" src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust">
+          <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust">
         </div>
       </div>
       <!-- Right: Content -->
-      <div class="col-lg-6 col-xl-5 order-0 order-lg-1">
-        <div class="ps-lg-4 pe-lg-2 fadeInRight" style="animation-delay:.2s">
+      <div class="col-lg-6 col-xl-5">
+        <div class="ps-lg-4 pe-lg-2" >
           
-          {!! $about1->long_description !!}
+          {!! $about1->short_description !!}
 
         </div>
       </div>
@@ -187,15 +198,6 @@
 
 
 
-<section class="about-section" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-      <!-- Right: Content -->
-      <div class="col-lg-12 col-xl-12 order-0 order-lg-1">
-          {!! $about1->short_description !!}
-      </div>
-  </div>
-</section>
 
 
 

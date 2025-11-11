@@ -51,68 +51,26 @@
 
 <!-- Include Flatpickr CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <!-- =======================
-       Slider / Hero Area
-       ======================= -->
+
+
+
   <header class="hero_area position-relative">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-      {{-- <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div> --}}
-
       <div class="carousel-inner">
-
         @foreach ($sliders as $key => $slider)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                {{-- <img src="{{'images/slider/'.$slider->image}}" class="d-block w-100" alt="Play area"> --}}
                 <div class="carousel-caption text-center">
-                    @if ($slider->title)<h1 class="display-5 fw-bold " style="color:#f53399">{{ $slider->title ?? '' }}</h1>@endif
+                    @if ($slider->title)<h1 class="display-5 fw-bold " style="color:#8fad60; font-size: 5rem;">{{ $slider->title ?? '' }}</h1>@endif
                     @if($slider->description)<p class="lead">{{ $slider->description ?? '' }}</p>@endif
                     @if($slider->link)<p><a class="btn btn-primary btn-lg" href="{{ $slider->link ?? '' }}">Learn more</a></p>@endif
                 </div>
             </div>
-
-            
-            <!-- Butterflies -->
             <div class="butterfly"></div>
             <div class="butterfly"></div>
             <div class="butterfly"></div>
-
         @endforeach
       </div>
-
-      {{-- <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button> --}}
     </div>
-
-    <!-- ===== Waves ===== -->
-    {{-- <svg class="waves" xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-      <defs>
-        <path id="gentle-wave"
-          d="M-160 44c30 0 58-18 88-18s58 18 88 18
-           58-18 88-18 58 18 88 18v44h-352z" />
-      </defs>
-      <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-      </g>
-    </svg> --}}
   </header>
 
 
@@ -144,6 +102,7 @@
 <section id="about" class="about-section py-5 position-relative" style="font-family: Tahoma, sans-serif; color: #000000;">
 
   <div class="container">
+            <div class="butterfly"></div>
 
     <div class="text-center mb-5">
       <h2 class="fw-bold">About Us</h2>
@@ -153,7 +112,8 @@
         Ever since, we remain committed to helping SEN and neurodivergent children and young people flourish. 
         We are here to be with them where they are, to help them break free from barriers and source their own strengths. 
         <br>
-        <span class="accent">We are here to help them Soar. Beyond their potential.</span>
+        <span class="accent">We are here to help them Soar.</span> <br>
+        <span class="accent">Beyond their potential.</span> <br>
         
       </p>
     </div>
@@ -167,7 +127,7 @@
             <div class="about-images text-center position-relative">
                 @foreach ($services as $key => $service)
                     <div class="tab-image {{ $key == 0 ? 'active' : '' }}" id="image-{{ $service->id }}">
-                        <img src="{{ asset('images/service/' . $service->image) }}" alt="{{ $service->title }}" class="img-fluid rounded shadow">
+                        <img src="{{ asset('images/service/' . $service->image) }}" alt="{{ $service->title }}" class="img-fluid">
                     </div>
                 @endforeach
             </div>
@@ -237,7 +197,14 @@
 
 
 
-
+<section class="py-5" style="
+  background: linear-gradient(
+    180deg,
+    #fff9f4 0%,
+    #fafbfd 100%
+  );
+">
+</section>
 
 <!-- ===== Our Projects Section ===== -->
 <section id="our-rooms" class="py-5 bg-light">
@@ -275,7 +242,14 @@
   </div>
 </section>
 
-
+{{-- <section class="py-5" style="
+  background: linear-gradient(
+    180deg,
+    #fff9f4 0%,
+    #fafbfd 100%
+  );
+">
+</section> --}}
 
 <!-- ===== Call Back Request Section ===== -->
 <section id="callback" class="py-5 position-relative">
@@ -304,7 +278,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-xl-10 col-lg-11">
-        <div class="card callback-card shadow-lg overflow-hidden">
+        <div class="card callback-card overflow-hidden">
           <div class="row g-0">
             <!-- Left: form content -->
             <div class="col-lg-12">
@@ -469,158 +443,6 @@
 </section>
 
 
-
-
-
-  <!-- ===== Facilities / Features Section ===== -->
-<section id="facilities" class="py-5 bg-white d-none">
-  <div class="container">
-    <div class="row align-items-center g-4">
-      <!-- LEFT: Title + feature list -->
-      <div class="col-lg-6 position-relative">
-        <!-- Butterfly background image (centered, behind content) -->
-        <div style="
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 0;
-          opacity: 0.50;
-          pointer-events: none;
-          width: 250px;
-          height: 250px;
-          background: url('images/butterfly.jpg') center center/contain no-repeat;
-        " aria-hidden="true"></div>
-        <div class="pe-lg-4 position-relative" style="z-index:1;">
-          <!-- Main heading (adapted from Busy Bees wording) -->
-          <h3 class="h5 text-uppercase text-muted mb-2">About Title</h3>
-          <h2 class="fw-bold mb-4">About page title here</h2>
-
-          <p class="text-muted mb-4">
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-          </p>
-          <p class=" text-muted mb-4">
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-          </p>
-          <p class=" text-muted mb-4">
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-          </p>
-          <p class=" text-muted mb-4">
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-              Here's a snapshot of some of the facilities and services we offer. Click or tap any item to learn more or ask during your visit.
-          </p>
-
-          <!-- Feature grid (icons + label + short) -->
-          <div class="row d-none g-3">
-            <!-- Feature item -->
-            <div class="col-6">
-              <div class="feature-card p-3 rounded-3 h-100 d-flex align-items-start gap-3">
-                <div class="feature-icon rounded-circle d-flex align-items-center justify-content-center">
-              <!-- change to any icon you prefer -->
-              <span class="bi bi-car-fill fs-5" aria-hidden="true"></span>
-                </div>
-                <div>
-              <div class="fw-semibold">Parking</div>
-              <small class="text-muted d-block">Ample on-site parking for families.</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="feature-card p-3 rounded-3 h-100 d-flex align-items-start gap-3">
-                <div class="feature-icon rounded-circle d-flex align-items-center justify-content-center">
-              <span class="bi bi-basket3-fill fs-5" aria-hidden="true"></span>
-                </div>
-                <div>
-              <div class="fw-semibold">Meals & Snacks</div>
-              <small class="text-muted d-block">NHS accredited meals prepared on-site.</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="feature-card p-3 rounded-3 h-100 d-flex align-items-start gap-3">
-                <div class="feature-icon rounded-circle d-flex align-items-center justify-content-center">
-              <span class="bi bi-droplet-fill fs-5" aria-hidden="true"></span>
-                </div>
-                <div>
-              <div class="fw-semibold">Nappies & Wipes</div>
-              <small class="text-muted d-block">Included in fees where appropriate.</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="feature-card p-3 rounded-3 h-100 d-flex align-items-start gap-3">
-                <div class="feature-icon rounded-circle d-flex align-items-center justify-content-center">
-              <span class="bi bi-shield-lock-fill fs-5" aria-hidden="true"></span>
-                </div>
-                <div>
-              <div class="fw-semibold">Secure Access</div>
-              <small class="text-muted d-block">Intercom and secure entry systems.</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="feature-card p-3 rounded-3 h-100 d-flex align-items-start gap-3">
-                <div class="feature-icon rounded-circle d-flex align-items-center justify-content-center">
-              <span class="bi bi-phone-fill fs-5" aria-hidden="true"></span>
-                </div>
-                <div>
-              <div class="fw-semibold">Parent App</div>
-              <small class="text-muted d-block">Daily updates: photos, naps, meals & messaging.</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="feature-card p-3 rounded-3 h-100 d-flex align-items-start gap-3">
-                <div class="feature-icon rounded-circle d-flex align-items-center justify-content-center">
-              <span class="bi bi-tree-fill fs-5" aria-hidden="true"></span>
-                </div>
-                <div>
-              <div class="fw-semibold">Outdoor Play</div>
-              <small class="text-muted d-block">Age-appropriate gardens and play spaces.</small>
-                </div>
-              </div>
-            </div>
-
-               
-
-
-          </div>       <!-- CTA -->
-          <div class="mt-4">
-            <a href="#visit" class="btn btn-primary btn-lg rounded-pill px-4">Arrange a Visit</a>
-            <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4">Contact Us</a>
-            <a class="btn btn-primary btn-lg rounded-pill px-4" target="_blank" href="https://app.famly.co/#/customInquiryForm/c6ae31a7-6348-4f58-89df-fd12ca88e5d7/to/eb08598d-c195-4399-acdf-9ed715df343e/submit">Enroll Now</a>
-          </div>
-
-          <!-- CTA -->
-          <!-- <div class="mt-4">
-        <a href="#visit" class="btn btn-outline-primary me-2">Book a Tour</a>
-        <a href="#contact" class="btn btn-link">Contact Us</a>
-          </div> -->
-        </div>
-      </div>
-
-      <!-- RIGHT: Image / gallery -->
-      <div class="col-lg-6">
-        <div class="position-relative">
-          <img src="{{ asset('resources/frontend/images/facilities.jpeg')}}" alt="Nursery facilities" class="img-fluid rounded-3 w-100 shadow-sm">
-
-        </div>
-      </div>
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-</section>
 
 
 
@@ -889,7 +711,7 @@
 
       <!-- Right side: Map -->
       <div class="col-lg-7">
-        <div class="map-wrapper rounded-4 overflow-hidden shadow-sm">
+        <div class="map-wrapper rounded-4 overflow-hidden">
           <!-- Replace src with your actual Google Map embed URL -->
           <iframe
             src="{{$company->google_map}}"
