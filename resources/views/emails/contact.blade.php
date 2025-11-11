@@ -8,7 +8,7 @@
         body, table, td, a { margin:0; padding:0; border-collapse: collapse; }
         img { border:0; height:auto; line-height:100%; outline:none; text-decoration:none; }
         a { text-decoration:none; }
-        body { height:100% !important; width:100% !important; font-family:Arial, Helvetica, sans-serif; background:#f8f8f8; }
+        body { height:100% !important; width:100% !important; font-family: "Raleway", Inter, system-ui, -apple-system, "Helvetica Neue", Arial; background:#f8f8f8; }
 
         @media (max-width: 600px) {
             .container { width:100% !important; }

@@ -41,7 +41,7 @@
         transform: scale(0.9) rotate(10deg);
       }
     }
-
+    
     /* Slightly different speeds for each butterfly */
     .butterfly:nth-child(1) { animation-duration: 12s; top: 40%; }
     .butterfly:nth-child(2) { animation-duration: 15s; animation-delay: 3s; top: 55%; width: 100px; }
@@ -60,7 +60,13 @@
         @foreach ($sliders as $key => $slider)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                 <div class="carousel-caption text-center">
-                    @if ($slider->title)<h1 class="display-5 fw-bold " style="color:#8fad60; font-size: 5rem;">{{ $slider->title ?? '' }}</h1>@endif
+                  @if ($slider->title)
+                  <h1 class="display-5 fw-bold"
+                      style="color:#8fad60; font-size:5rem; font-family:'Roboto', sans-serif;">
+                      {{ $slider->title ?? '' }}
+                  </h1>
+                  @endif
+
                     @if($slider->description)<p class="lead">{{ $slider->description ?? '' }}</p>@endif
                     @if($slider->link)<p><a class="btn btn-primary btn-lg" href="{{ $slider->link ?? '' }}">Learn more</a></p>@endif
                 </div>
@@ -99,7 +105,7 @@
 
 </style>
 
-<section id="about" class="about-section py-5 position-relative" style="font-family: Tahoma, sans-serif; color: #000000;">
+<section id="about" class="about-section py-5 position-relative" style="color: #000000;">
 
   <div class="container">
             <div class="butterfly"></div>

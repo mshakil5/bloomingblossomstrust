@@ -31,8 +31,12 @@
       --brand:#ff8b94;
       --accent:#ffd36b;
     }
+    
+    body {
+      font-family: "Raleway", Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
+      color: #222;
+    }
 
-    body { font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial; color:#222; }
 
     .hero_area {
       height: 45vh;

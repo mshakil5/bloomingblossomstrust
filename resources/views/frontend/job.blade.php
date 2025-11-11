@@ -34,7 +34,7 @@
 
   /* ===== JOB PAGE STYLE ===== */
     .job {
-      font-family: 'Poppins', sans-serif;
+      font-family: "Raleway", Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
       color: #333;
     }
 
