@@ -7,7 +7,6 @@
     .about-section{
       max-width:var(--max-width);
       margin:0 auto;
-      background:var(--card-bg);
       border-radius:24px;
       /* box-shadow:0 10px 30px rgba(18,24,33,0.06); */
       overflow:hidden;
