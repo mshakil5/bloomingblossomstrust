@@ -205,7 +205,7 @@
 }
 
 .room-content {
-  padding: 80px 25px 30px;
+  padding: 40px 25px 10px;
   position: relative;
   transition: all 0.4s ease;
 }
@@ -815,7 +815,8 @@
   background: linear-gradient(180deg,#fff 0%, #138946 100%);
   position: relative;
   margin-top: 48px;
-  color: #1f2937;
+  color: #fe6bb5;
+  font-weight: 600;
 }
 
 /* Grass SVG container */

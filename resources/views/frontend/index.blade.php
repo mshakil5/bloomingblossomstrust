@@ -249,9 +249,9 @@
                 </div>
                 <div class="room-content text-center">
                   <h4 class="fw-bold mb-2" style="color: #97b766">{{$project->short_title}}</h4>
-                  <p class="text-muted mb-3">
+                  {{-- <p class="text-muted mb-3">
                     {{$project->long_title}}
-                  </p>
+                  </p> --}}
                   <a href="{{ route('agegroup', $project->slug) }}" class="btn btn-primary btn-lg rounded-pill px-4">Read More</a>
                 </div>
               </div>

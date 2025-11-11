@@ -1,5 +1,5 @@
 <footer class="site-footer mt-5">
-  <div class="footer-top py-5" style="background:linear-gradient(180deg,#0b3b65 0%, #06304f 100%); color:#e6f5ff;">
+  <div class="footer-top py-5">
     <div class="container">
       <div class="row gy-4 align-items-start">
         <!-- Brand + short -->
@@ -14,22 +14,22 @@
           <div class="row gy-3">
             <!-- Use collapse on xs for nicer UX -->
             <div class="col-6 col-lg-4">
-              <h6 class="mb-3 text-light">Quick Links</h6>
+              <h6 class="mb-3">Quick Links</h6>
               <ul class="list-unstyled footer-links mb-0">
-                <li><a href="{{ route('aboutUs') }}" class="text-white-50">About Us</a></li>
-                <li><a href="{{ route('getOurDonors') }}" class="text-white-50">Funders</a></li>
-                <li><a href="{{ route('donate') }}" class="text-white-50">Donate</a></li>
-                <li><a href="{{ route('home') }}#contact" class="text-white-50">Contact</a></li>
+                <li><a href="{{ route('aboutUs') }}" class="">About Us</a></li>
+                <li><a href="{{ route('getOurDonors') }}" class="">Funders</a></li>
+                <li><a href="{{ route('donate') }}" class="">Donate</a></li>
+                <li><a href="{{ route('home') }}#contact" class="">Contact</a></li>
               </ul>
             </div>
 
             <div class="col-6 col-lg-4">
-              <h6 class="mb-3 text-light">Projects</h6>
+              <h6 class="mb-3">Projects</h6>
               <ul class="list-unstyled footer-links mb-0">
                 
                 @foreach (\App\Models\Content::with('category')->where('type', 2)->orderby('id', 'ASC')->get() as $key => $projects)
 
-                <li><a href="{{ route('agegroup', $projects->slug) }}" class="text-white-50">{{ $projects->short_title }}</a></li>
+                <li><a href="{{ route('agegroup', $projects->slug) }}" class="">{{ $projects->short_title }}</a></li>
                     
                 @endforeach
 
@@ -37,12 +37,12 @@
             </div>
 
             <div class="col-12 col-lg-4">
-              <h6 class="mb-3 text-light">Contact</h6>
-              <address class="text-white-50 mb-3" style="font-style:normal;">
+              <h6 class="mb-3">Contact</h6>
+              <address class=" mb-3" style="font-style:normal;">
                 {{$company->address1}}<br>
-                <a href="mailto:{{$company->email1}}" class="text-white-50">{{$company->email1}}</a><br>
-                <a href="tel:{{$company->phone1}}" class="text-white-50">{{$company->phone1}}</a>
               </address>
+                <a href="mailto:{{$company->email1}}" class="" style="color: #f86bb5; text-decoration: none; " >{{$company->email1}}</a><br>
+                <a href="tel:{{$company->phone1}}" class="" style=" text-decoration: none; color: #f86bb5" >{{$company->phone1}}</a>
 
             </div>
           </div> <!-- /.row inside right side -->
@@ -64,8 +64,8 @@
 
 <!-- Optional small inline styles to tune the footer look -->
 <style>
-  .site-footer .footer-links a { text-decoration: none; }
-  .site-footer .footer-links a:hover { color: #fff !important; }
+  .site-footer .footer-links a { text-decoration: none; color: #fe6bb5;font-weight: 600; }
+  .site-footer .footer-links a:hover { color: #000000 !important;font-weight: 700; }
   .site-footer .btn-outline-light { border-color: rgba(255,255,255,0.14); }
   .site-footer .footer-top .footer-brand img { filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25)); }
   /* subtle hover */
