@@ -277,14 +277,12 @@
           <div class="eyebrow">Blooming Blossoms Trust</div>
 
           <h1>
-            Giving is not just about making a <span class="accent">donation</span>.<br>
-            It is about making a <span class="accent">difference</span>!
+            Ripples and Waves.<br>
+            We need your pebble in the <span class="accent">pond</span>.
           </h1>
 
           <p class="lead">
-            At Blooming Blossoms Trust we see <strong>abilities</strong>, not disabilities.
-            We work to remove the barrier called “No” or “Can’t” for children with (dis)<strong>abilities</strong>.
-            With your support, we help every child see that they <em>can</em>.
+            At Blooming Blossoms Trust we see abilities, not disabilities. We work to remove the barrier called “No” or “Can’t” for children with (dis)abilities. With your support, we help every child see that they can.
           </p>
 
           <ul class="can-list">

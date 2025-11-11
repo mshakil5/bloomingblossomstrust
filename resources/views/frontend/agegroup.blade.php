@@ -3,6 +3,19 @@
 @section('content')
 
 <style>
+
+  .about-section{
+      max-width:var(--max-width);
+      margin:0 auto;
+      background:var(--card-bg);
+      border-radius:24px;
+      /* box-shadow:0 10px 30px rgba(18,24,33,0.06); */
+      overflow:hidden;
+      position:relative;
+      padding:10px;
+    }
+
+
   .age-group {
   background-color: #f8f9fa; /* Soft background tone */
 }
@@ -144,9 +157,8 @@
 
 
 
-
-
-
+@if ($agegroup->images->count() > 0 )
+  
   <!-- ===== Smart Full-Width Gallery ===== -->
 <section id="smart-gallery" class="py-5 bg-white">
   <div class="container-fluid px-0">
@@ -194,10 +206,54 @@
       <img id="lbImage" src="" alt="Full size image">
     </div>
   </div>
+</section>  
+
+@endif
+
+<style>
+  .accent {
+    color: #97b766;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+</style>
+
+
+<section class="about-section pt-5" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="text-center mb-5">
+        <h2>Quotes</h2>
+      </div>
+      <!-- Right: Content -->
+      <div class="col-lg-12 col-xl-12 order-0 order-lg-1">
+          <p> <span class="accent">Spare a Pair:</span> <br>
+          Emma, single mom of 2 wrote to us: ‘I couldn’t believe my eyes. I know that expression is very cliché, but there’s no better way for me to describe how I felt. The clothing package felt like a warm hug; somebody cared about us and thought about my kids. They will now finally have the much-needed underwear and beautiful new coats. A god-send literally. Toby and Sarah were dancing for joy. They were delighted with the purple coats, the pockets and snug fur. How did you know that purple’s their favourite colour? Thank you. Thank you. Thank you.’
+          </p>
+
+          <p> <span class="accent">Feeling Talking Walking Garden:</span> <br>
+          The leaves are turning brown now and falling of the trees. I hate them. I can’t take the sound and feel of there crunch. But at the garden the therapist is helping me touch them with my little pinkie finger. I think by next year I won’t be scared of them anymore. – Rachel 7 
+          </p>
+
+          <p> <span class="accent">Literally Literacy:</span> <br>
+          It’s still hard for me to write correctly, but you totally deserve that effort. Blossoms, thank you so very much for the wonderful reading and literacy program. I used to feel like a foreigner in the classroom despite being born and bred British for several generations. I now feel like I belong. I can read and write! I never thought that I’ll be able to. Thank you! Thank you! – Joseph, age 11
+          </p>
+
+          <p> <span class="accent">Feel Blue? Go Green:</span> <br>
+          I was terrified of falling into the same black whole that swallowed me last winter. The park cleaning and spending time outdoors in the daylight kept me afloat literally! Thank you! – Estelle, age 16
+          </p>
+
+          <p> <span class="accent">Nutribridge:</span> <br>
+          Thank you so much for the yummy suppers. I wait by the window for my sister to bring them home. We can’t believe she cooked them herself, cause they’re just too delicious! – Ray, 6
+          </p>
+          
+          
+
+
+      </div>
+  </div>
 </section>
-
-
-
 
 
 
