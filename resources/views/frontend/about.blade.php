@@ -27,7 +27,6 @@
 /* Section 2 background */
 .section-2 .bg-theme{
   background: #fffff4;
-  font-weight: 600;
   color: #000000;
 }
 
