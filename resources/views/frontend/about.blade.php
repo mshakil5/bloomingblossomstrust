@@ -15,7 +15,7 @@
 /* Section 1 background */
 .about-section.section-1 {
   background: #fff9f3;
-  color: #cd286a;
+  color: #fe6bb5;
   font-weight: 600;
   font-size: 24px;
 }
@@ -26,7 +26,7 @@
 
 /* Section 2 background */
 .section-2 .bg-theme{
-  background: #61b0838c;
+  background: #fffff4;
   font-weight: 600;
   color: #ffffff;
 }
@@ -37,7 +37,7 @@
 
 /* Section 3 background */
 .section-3 .bg-theme{
-  background: #0dcaf029;
+  background: #a1dbe729;
 }
 
 .section-4 {
@@ -45,7 +45,7 @@
 }
 
 .section-4 .bg-theme{
-  background: #a6c27e73;
+  background-color: #fffbf8;
   color: #000000;
 }
 
@@ -125,14 +125,14 @@
 <section class="section-2">
   <div class="container">
     <div class="row  p-3">
-      <div class="col-lg-8 col-xl-8  p-3  bg-theme">
-        <div class="ps-lg-4 pe-lg-2  p-3" >
-          {!! $about1->long_title !!}
-        </div>
-      </div>
       <div class="col-lg-4">
         <div class="" >
           <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust" style="width: 100%;">
+        </div>
+      </div>
+      <div class="col-lg-8 col-xl-8  p-3  bg-theme">
+        <div class="ps-lg-4 pe-lg-2  p-3" >
+          {!! $about1->long_title !!}
         </div>
       </div>
 
