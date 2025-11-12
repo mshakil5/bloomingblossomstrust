@@ -20,6 +20,10 @@
   font-size: 24px;
 }
 
+.section-2 {
+  background-color: #fff9f4;
+}
+
 /* Section 2 background */
 .section-2 .bg-theme{
   background: #61b0838c;
@@ -27,9 +31,17 @@
   color: #ffffff;
 }
 
+.section-3 {
+  background-color: #fff9f4;
+}
+
 /* Section 3 background */
 .section-3 .bg-theme{
   background: #0dcaf029;
+}
+
+.section-4 {
+  background-color: #fff9f4;
 }
 
 .section-4 .bg-theme{
@@ -92,12 +104,12 @@
 <section class="section-4">
   <div class="container">
     <div class="row p-3">
-      <div class="col-lg-6 col-xl-5  bg-theme">
+      <div class="col-lg-8 col-xl-8  bg-theme">
         <div class="ps-lg-4 pe-lg-2  p-3" >
           {!! $about1->short_description !!}
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-4">
         <div class="" >
           <img src="{{ asset('images/about/'. $about1->photo)}}" alt="blooming blossoms trust" style="width: 100%;">
         </div>
@@ -113,12 +125,12 @@
 <section class="section-2">
   <div class="container">
     <div class="row  p-3">
-      <div class="col-lg-6 col-xl-5  p-3  bg-theme">
+      <div class="col-lg-8 col-xl-8  p-3  bg-theme">
         <div class="ps-lg-4 pe-lg-2  p-3" >
           {!! $about1->long_title !!}
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-4">
         <div class="" >
           <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust" style="width: 100%;">
         </div>
