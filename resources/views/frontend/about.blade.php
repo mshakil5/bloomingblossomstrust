@@ -92,7 +92,7 @@
   <div class="container">
     <div class="row p-3">
       <div class="col-lg-6 col-xl-5  bg-theme">
-        <div class="ps-lg-4 pe-lg-2" >
+        <div class="ps-lg-4 pe-lg-2  p-3" >
           {!! $about1->short_description !!}
         </div>
       </div>
@@ -111,9 +111,9 @@
 <!-- Section-1 Start-->
 <section class="section-2">
   <div class="container">
-    <div class="row p-3">
-      <div class="col-lg-6 col-xl-5  bg-theme">
-        <div class="ps-lg-4 pe-lg-2" >
+    <div class="row  p-3">
+      <div class="col-lg-6 col-xl-5  p-3  bg-theme">
+        <div class="ps-lg-4 pe-lg-2  p-3" >
           {!! $about1->long_title !!}
         </div>
       </div>
@@ -133,8 +133,8 @@
 <!-- Section-2 Start-->
 <section class="section-3">
   <div class="container">
-    <div class="row p-3">
-      <div class="col-lg-12 col-xl-12 order-0 order-lg-1 bg-theme">
+    <div class="row  p-3">
+      <div class="col-lg-12 col-xl-12 order-0 order-lg-1 bg-theme  p-3">
           {!! $about1->long_description !!}
       </div>
   </div>
