@@ -7,7 +7,6 @@
 /* ===== Section Background + Gradient Blend ===== */
 
 .about-section {
-  color: #ffffff;
   padding: 40px 0;
   position: relative;
   isolation: isolate;
@@ -15,17 +14,26 @@
 
 /* Section 1 background */
 .about-section.section-1 {
-  background: #8fad60;
+  background: #fe6bb53b;
+  color: #000000;
+  font-weight: 600;
 }
 
 /* Section 2 background */
-.about-section.section-2 {
-  background: #cb1d62;
+.section-2 .bg-theme{
+  background: #61b0838c;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 /* Section 3 background */
-.about-section.section-3 {
-  background: #63b184;
+.section-3 .bg-theme{
+  background: #0dcaf029;
+}
+
+.section-4 .bg-theme{
+  background: #a6c27e73;
+  color: #000000;
 }
 
 /* Remove any sharp edges between sections */
@@ -70,48 +78,70 @@
   </div>
 </header>
 
-
-<!-- Section-1 Start-->
 <section class="about-section section-1">
   <div class="container">
     <div class="row g-4 align-items-center">
-      <div class="col-lg-12 col-xl-12 order-0 order-lg-1">
-          {!! $about1->long_title !!}
+      <div class="col-lg-12 col-xl-12 order-0 order-lg-1 text-center">
+          {{ $about1->short_title }}
       </div>
   </div>
 </section>
+
+<!-- Section-3 Start-->
+<section class="section-4">
+  <div class="container">
+    <div class="row p-3">
+      <div class="col-lg-6 col-xl-5  bg-theme">
+        <div class="ps-lg-4 pe-lg-2" >
+          {!! $about1->short_description !!}
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="" >
+          <img src="{{ asset('images/about/'. $about1->photo)}}" alt="blooming blossoms trust" style="width: 100%;">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Section-3 End-->
+
+
+<!-- Section-1 Start-->
+<section class="section-2">
+  <div class="container">
+    <div class="row p-3">
+      <div class="col-lg-6 col-xl-5  bg-theme">
+        <div class="ps-lg-4 pe-lg-2" >
+          {!! $about1->long_title !!}
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="" >
+          <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust" style="width: 100%;">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- Section-1 End-->
 
 
 <!-- Section-2 Start-->
-<section class="about-section section-2">
+<section class="section-3">
   <div class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-12 col-xl-12 order-0 order-lg-1">
+    <div class="row p-3">
+      <div class="col-lg-12 col-xl-12 order-0 order-lg-1 bg-theme">
           {!! $about1->long_description !!}
       </div>
   </div>
 </section>
 <!-- Section-2 End-->
 
-<!-- Section-3 Start-->
-<section class="about-section section-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="" >
-          <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust" style="width: 100%;">
-        </div>
-      </div>
-      <div class="col-lg-6 col-xl-5">
-        <div class="ps-lg-4 pe-lg-2" >
-          {!! $about1->short_description !!}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Section-3 End-->
+
 
 <section class="about-section" aria-labelledby="about-heading">
   <div class="container">
