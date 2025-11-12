@@ -411,9 +411,7 @@
   overflow: hidden;
 } */
 
-.faq-section {
-  margin-bottom: 55px;
-}
+
 
 .faq-section::before {
   content: "";
@@ -835,9 +833,8 @@
 
 /* Footer base */
 .site-footer {
-  background: linear-gradient(180deg,#fff 0%, #138946 100%);
+  background: linear-gradient(180deg,#fffaf6 0%, #138946 100%);
   position: relative;
-  margin-top: 48px;
   color: #fe6bb5;
   font-weight: 600;
 }

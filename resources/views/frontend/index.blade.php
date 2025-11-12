@@ -2,7 +2,22 @@
 
 @section('content')
 
+<style>
+  @media (max-width: 767.98px) { 
+    .hero_area h1 {
+      font-size: 2rem !important;
+    }
 
+    .right-butterfly {
+      right: 0 !important;
+    }
+
+    .left-butterfly {
+      top: 130px !important;
+      left: 0px !important;
+    }
+  }
+</style>
 
 <!-- Include Flatpickr CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -38,12 +53,12 @@
 
   
   <!-- Butterfly top-left -->
-<img src="{{ asset('resources/frontend/images/butterfly-left.png') }}" 
+<img src="{{ asset('resources/frontend/images/butterfly-left.png') }}" class="left-butterfly"
       alt="Butterfly Left" 
       style="position: absolute; top: 200px; left: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
 
 <!-- Butterfly top-right -->
-<img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" 
+<img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" class="right-butterfly"
       alt="Butterfly Right" 
       style="position: absolute; top: 220px; right: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
 
@@ -507,8 +522,6 @@
   <style>
     /* --- Section Styling --- */
     .clients-section {
-      background: #f8f9fa;
-      padding: 80px 0;
       overflow: hidden;
       position: relative;
     }
@@ -532,9 +545,9 @@
     .client-logo {
       display: inline-block;
       margin: 0 40px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+      /* transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
       filter: grayscale(100%);
-      opacity: 0.8;
+      opacity: 0.8; */
     }
 
     .client-logo img {
@@ -572,7 +585,7 @@
         margin: 0 25px;
       }
       .client-logo img {
-        max-height: 55px;
+        max-height: 130px;
       }
     }
 
@@ -581,7 +594,7 @@
         padding: 60px 0;
       }
       .client-logo img {
-        max-height: 45px;
+        max-height: 130px;
       }
     }
   </style>
@@ -591,7 +604,9 @@
   <section class="clients-section text-center">
     <div class="container">
       <h2 style="color: #97b766"> Our Funders </h2>
-      <p><strong>Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.</strong></p>
+      <p>
+        Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.
+      </p>
       <div class="clients-slider">
         <!-- Client Logos -->
         

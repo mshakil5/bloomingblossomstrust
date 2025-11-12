@@ -39,6 +39,10 @@
   font-weight: bold;
 }
 
+.right-butterfly {
+  right: 0 !important;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
@@ -50,6 +54,18 @@
   }
   .age-group img {
     max-width: 100%;
+  }
+  .hero_area h1 {
+    font-size: 2rem !important;
+  }
+
+  .right-butterfly {
+    right: 0 !important;
+  }
+
+  .left-butterfly {
+    top: 130px !important;
+    left: 0px !important;
   }
 }
 
@@ -79,12 +95,12 @@
 
 
   <!-- Butterfly top-left -->
-<img src="{{ asset('resources/frontend/images/butterfly-left.png') }}" 
+<img src="{{ asset('resources/frontend/images/butterfly-left.png') }}"  class="left-butterfly"
       alt="Butterfly Left" 
       style="position: absolute; top: 200px; left: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
 
 <!-- Butterfly top-right -->
-<img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" 
+<img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" class="right-butterfly"
       alt="Butterfly Right" 
       style="position: absolute; top: 220px; right: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
 

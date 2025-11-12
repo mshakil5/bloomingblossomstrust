@@ -14,9 +14,10 @@
 
 /* Section 1 background */
 .about-section.section-1 {
-  background: #fe6bb53b;
-  color: #000000;
+  background: #fff9f3;
+  color: #cd286a;
   font-weight: 600;
+  font-size: 24px;
 }
 
 /* Section 2 background */
