@@ -47,7 +47,24 @@ $(document).ready(function () {
   $('.summernote').summernote({
     height: 200,
     resize: true,
+    toolbar: [
+      ['style', ['style']],
+      ['font', ['fontname', 'fontsize', 'bold', 'italic', 'underline', 'clear']],
+      ['color', ['color']],
+      ['para', ['ul', 'ol', 'paragraph']],
+      ['insert', ['link', 'picture', 'video']],
+      ['view', ['fullscreen', 'codeview', 'help']]
+    ],
+    fontNames: [
+      'Arial', 'Courier New', 'Times New Roman', 'Raleway', 'Roboto', 'Verdana', 'Helvetica'
+    ],
+    fontNamesIgnoreCheck: ['Raleway', 'Roboto'], // ensures custom fonts appear
+    fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '32', '36', '48', '64'],
   });
+
+
+
+
 
   //Selct2
   $('.select2').select2({

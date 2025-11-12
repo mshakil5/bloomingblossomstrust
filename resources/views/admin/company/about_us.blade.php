@@ -29,6 +29,14 @@
             @csrf
             <div class="card-body">
 
+              
+              <div class="col-sm-12">
+                  <div class="form-group">
+                      <label>Title</label>
+                      <input type="text" class="form-control" id="short_title" name="short_title" value="{{$data->short_title}}" placeholder="Enter title">
+                  </div>
+              </div>
+
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Top Content <span class="text-danger">*</span></label>
@@ -51,11 +59,19 @@
               </div>
 
               <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-6">
                       <div class="form-group">
                           <label for="image">Image (800x600)</label>
                           <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
                           <img id="preview-image" src="{{asset('images/about/'. $data->image)}}" alt="" style="max-width: 300px; width: 100%; height: auto; margin-top: 20px;">
+                      </div>
+                  </div>
+
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label for="photo">Image 2 (800x600)</label>
+                          <input type="file" class="form-control-file" id="photo" name="photo" accept="image/*">
+                          <img id="preview-image2" src="{{asset('images/about/'. $data->photo)}}" alt="" style="max-width: 300px; width: 100%; height: auto; margin-top: 20px;">
                       </div>
                   </div>
               </div>

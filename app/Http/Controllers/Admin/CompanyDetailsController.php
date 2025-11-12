@@ -132,6 +132,7 @@ class CompanyDetailsController extends Controller
         ]);
 
         $data = Master::where('name', 'about1')->first();
+        $data->short_title = $request->short_title;
         $data->long_title = $request->top_content;
         $data->long_description = $request->about_us;
         $data->short_description = $request->bottom_content;
@@ -155,6 +156,26 @@ class CompanyDetailsController extends Controller
                 ->save($destinationPath . $imageName);
 
             $data->image = $imageName;
+        }
+
+        if ($request->hasFile('photo')) {
+            $uploadedFile = $request->file('photo');
+            $imageName = mt_rand(10000000, 99999999) . '.webp';
+            $destinationPath = public_path('images/about/');
+
+            if (!file_exists($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
+
+            Image::make($uploadedFile)
+                ->resize(800, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })
+                ->encode('webp', 80)
+                ->save($destinationPath . $imageName);
+
+            $data->photo = $imageName;
         }
 
         // meta data update

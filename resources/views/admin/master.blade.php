@@ -25,6 +25,11 @@
   <link rel="stylesheet" href="{{ asset('resources/admin/codemirror/theme/monokai.css')}}">
   <link rel="stylesheet" href="{{ asset('resources/admin/toastr/toastr.min.css')}}">
   <link rel="stylesheet" href="{{ asset('resources/admin/css/style.css') }}">
+  <style>
+    .note-editable {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
