@@ -32,7 +32,7 @@
                 <div class="carousel-caption text-center">
                   @if ($slider->title)
                   <h1 class="display-5 fw-bold"
-                      style="color:#8fad60; font-size:5rem; font-family:'Roboto', sans-serif;">
+                      style="color:#8fad60; font-size:6rem; font-family:'Roboto', sans-serif;">
                       {{ $slider->title ?? '' }}
                   </h1>
                   @endif
@@ -55,12 +55,12 @@
   <!-- Butterfly top-left -->
 <img src="{{ asset('resources/frontend/images/butterfly-left.png') }}" class="left-butterfly"
       alt="Butterfly Left" 
-      style="position: absolute; top: 200px; left: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
+      style="position: absolute; top: 200px; left: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
 
 <!-- Butterfly top-right -->
 <img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" class="right-butterfly"
       alt="Butterfly Right" 
-      style="position: absolute; top: 220px; right: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
+      style="position: absolute; top: 200px; right: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
 
   <!-- =======================
        About section (two-column)

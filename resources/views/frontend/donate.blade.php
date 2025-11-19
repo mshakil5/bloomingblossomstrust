@@ -5,14 +5,18 @@
 
 <style>
 
-    .donate-section{padding:40px 0}
+    .donate-section{
+      padding:40px 0;
+      background:#E3DDD8;
+    }
+
     .donation-card{
       display:flex;flex-direction:column; /* default stacked on small screens */
       width:100%;
       border-radius:12px;
       outline:3px dotted rgba(108,117,125,0.45); /* dotted border outside card */
       overflow:hidden;
-      background:#fff;
+      background:#E3DDD8;
       box-shadow:0 6px 18px rgba(33,37,41,0.06);
       margin-bottom:24px;
     }
@@ -56,18 +60,6 @@
 
     /* Small helper for text blocks to ensure no gaps */
     .no-gap{border:0}
-
-</style>
-
-
-<style>
-  :root {
-    --donation-min-h: 60vh;
-    --donation-max-w: 1200px;
-    --donation-text-bg: rgba(255, 255, 255, 0.85);
-    --donation-text-color: #0b1320;
-    --accent: #0f62fe;
-  }
 
   .donation {
     position: relative;
@@ -168,9 +160,6 @@
 </style>
 
 
-
-
-
   <header class="hero_area position-relative">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -193,13 +182,9 @@
 
 
 <!-- Main content -->
-  <main class="container donate-section d-none">
+<section style="background-color: #E3DDD8">
+  <main class="container donate-section">
     <header class="d-flex align-items-center justify-content-between mb-4">
-      <div>
-        <h1 class="h3 mb-1">Ripples and Waves.</h1>
-        <h5 class="text-muted small mb-0">
-          We need your pebble in the pond. </h5>
-      </div>
       {{-- <div class="text-end d-none d-md-block">
         <a href="#" class="btn btn-outline-secondary">How donations are used</a>
       </div> --}}
@@ -263,6 +248,8 @@
 
 
   </main>
+</section>
+
 
 
   <!-- DONATION SECTION -->

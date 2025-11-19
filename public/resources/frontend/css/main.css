@@ -833,9 +833,9 @@
 
 /* Footer base */
 .site-footer {
-  background: linear-gradient(180deg,#fffaf6 0%, #138946 100%);
+  background: #031826;
   position: relative;
-  color: #fe6bb5;
+  color: #97b766;
   font-weight: 600;
 }
 
