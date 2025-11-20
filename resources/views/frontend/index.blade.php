@@ -32,7 +32,7 @@
                 <div class="carousel-caption text-center">
                   @if ($slider->title)
                   <h1 class="display-5 fw-bold"
-                      style="color:#8fad60; font-size:6rem; font-family:'Roboto', sans-serif;">
+                      style="color: #b7236f;font-size: 7rem;font-family: DarkerGrotesque-bold">
                       {{ $slider->title ?? '' }}
                   </h1>
                   @endif
@@ -68,17 +68,16 @@
 <style>
   .accent {
     color: #97b766;
-    font-size: 18px;
+    font-size: 85px;
     font-weight: 700;
     text-align: center;
   }
 
 </style>
 
-<section id="about" class="about-section position-relative" style="color: #000000;">
+<section id="about" class="about-section position-relative py-5">
 
   <div class="container">
-      <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
 
     <div class="text-center mb-5">
       <h2 class="fw-bold">About Us</h2>
@@ -88,82 +87,60 @@
         Ever since, we remain committed to helping SEN and neurodivergent children and young people flourish. 
         We are here to be with them where they are, to help them break free from barriers and source their own strengths. 
         <br>
-        <span class="accent">We are here to help them Soar.</span> <br>
-        <span class="accent">Beyond their potential.</span> <br>
-        
       </p>
     </div>
 
 
+  </div>
+  
+  <div class="small-butterfly" style="background-image: url('butterfly2.gif')"></div>
 
+  <div class="container">
+    <div class="text-center py-5">
+
+      <h2>We are here to help them <span class="accent">soar</span>.</h2>
+      <h2>Beyond their  <span class="accent">potential</span>. </h2>
+        
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="about" class="about-section position-relative py-5" style="color: #000000;">
+
+  <div class="container">
     <div class="row g-4 align-items-start">
 
-      <!-- LEFT: Images area (no header title as requested) -->
-        <div class="col-lg-5">
-            <div class="about-images text-center position-relative">
-                @foreach ($services as $key => $service)
-                    <div class="tab-image {{ $key == 0 ? 'active' : '' }}" id="image-{{ $service->id }}">
-                        <img src="{{ asset('images/service/' . $service->image) }}" alt="{{ $service->title }}" class="img-fluid">
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-
       <!-- RIGHT: Text + small title + big title + centered tabs -->
-      <div class="col-lg-7">
+      <div class="col-lg-12">
         <div class="px-md-3">
           <!-- Centered tabs -->
           <ul class="nav nav-tabs pb-3" id="ageTabs" role="tablist">
 
-            @php
-                $icons = [
-                          0 => '#fe6bb5',
-                          1 => '#97b766',
-                          2 => '#212121',
-                          3 => '#8ce500',
-                          4 => '#e74c3c',
-                          5 => '#f1c40f',
-                  ];
-            @endphp
 
             @foreach ($services as $key => $service)
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link {{ $key == 0 ? 'active' : '' }}" id="{{$service->id}}-tab" data-bs-toggle="tab" data-bs-target="#{{$service->id}}" type="button" role="tab" aria-controls="{{$service->id}}" aria-selected="true" style="background-color: {{$icons[$key] ?? ''}}; color:#fff">
+                  <button class="nav-link {{ $key == 0 ? 'active' : '' }}" id="{{$service->id}}-tab" data-bs-toggle="tab" data-bs-target="#{{$service->id}}" type="button" role="tab" aria-controls="{{$service->id}}" aria-selected="true">
                     {{$service->title}}
                   </button>
                 </li>
             @endforeach
 
-          
           </ul>
 
           <!-- Tab panes -->
           <div class="tab-content mt-3" id="ageTabsContent">
 
-            
-            @php
-                $icons = [
-                          0 => '#fe6bb5',
-                          1 => '#97b766',
-                          2 => '#212121',
-                          3 => '#8ce500',
-                          4 => '#e74c3c',
-                          5 => '#f1c40f',
-                  ];
-            @endphp
-
             @foreach ($services as $key => $service)
-                <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }} " id="{{$service->id}}" role="tabpanel" aria-labelledby="{{$service->id}}-tab" style="background-color: {!! $icons[$key] ?? '' !!}">
+                <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }} " id="{{$service->id}}" role="tabpanel" aria-labelledby="{{$service->id}}-tab" >
                   {!! $service->long_desc !!}
                 </div>
             @endforeach
 
           </div>
-
-
-
-
 
         </div>
       </div>
@@ -173,26 +150,27 @@
 
 
 
-<section class="py-5" style="
+
+<section class="py-2" style="
   background: linear-gradient(
     180deg,
     #fff9f4 0%,
-    #fafbfd 100%
+    #fff9f4 100%
   );
 ">
 </section>
 
 <!-- ===== Our Projects Section ===== -->
-<section id="our-rooms" class="pb-5 bg-light">
-  <div class="container">
+<section id="our-rooms" class="py-5">
+  <div class="container py-5">
     <div class="text-center mb-5">
       {{-- <h3 class="h5 text-uppercase text-muted mb-2">Excellent Nursery Environment</h3> --}}
-      <h2 class="fw-bold">Our Projects</h2>
+      <h2 class="fw-bold py-3">Our Projects</h2>
     </div>
 
     <!-- Swiper container -->
     <div class="swiper roomSwiper">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper py-5">
 
         @foreach ($projects as $project)
             <div class="swiper-slide">
@@ -200,7 +178,7 @@
                 <div class="room-img">
                   <img src="{{asset('images/content/'. $project->feature_image)}}" alt="{{$project->short_title}}">
                 </div>
-                <div class="room-content text-center">
+                <div class="room-content text-center" style="min-height: 164px;">
                   <h4 class="fw-bold mb-2" style="color: #97b766">{{$project->short_title}}</h4>
                   {{-- <p class="text-muted mb-3">
                     {{$project->long_title}}
@@ -213,19 +191,21 @@
 
       </div>
       <!-- Swiper controls -->
-      <div class="swiper-pagination mt-4"></div>
+      <div class="swiper-pagination mt-5"></div>
     </div>
   </div>
 </section>
 
-{{-- <section class="py-5" style="
+
+
+<section class="py-5" style="
   background: linear-gradient(
     180deg,
     #fff9f4 0%,
-    #fafbfd 100%
+    #fff9f4 100%
   );
 ">
-</section> --}}
+</section>
 
 <!-- ===== Call Back Request Section ===== -->
 <section id="callback" class="py-5 position-relative">
@@ -430,9 +410,7 @@
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
-        {{-- <div class="small-title text-uppercase text-muted mb-2">Our Gallery</div> --}}
-        <h2 class="big-title">Our Gallery</h2>
-        <p class="text-muted">Click any image to view it full size. Swipe or use the arrows to navigate.</p>
+        <h2 class="fw-bold py-3">Our Gallery</h2>
       </div>
     </div>
 
@@ -484,7 +462,7 @@
   <div class="container">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="big-title">FAQ</h2>
+        <h2 class="fw-bold py-3">Frequently asked questions:</h2>
       </div>
     </div>
     <div class="row align-items-start gy-4">
@@ -524,6 +502,7 @@
     .clients-section {
       overflow: hidden;
       position: relative;
+      background-color: #fff9f4;
     }
 
     .clients-section h2 {
@@ -601,10 +580,10 @@
 
 
 
-  <section class="clients-section text-center">
+  <section class="clients-section text-center py-5">
     <div class="container">
       <h2 style="color: #97b766"> Our Funders </h2>
-      <p>
+      <p class="py-3">
         Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.
       </p>
       <div class="clients-slider">
@@ -620,8 +599,8 @@
   </section>
 
 <!-- ===== Location & Contact Section ===== -->
-<section id="location" class="py-5 position-relative bg-light">
-  <div class="location-bg" aria-hidden="true">
+<section id="location" class="py-5 position-relative">
+  <div class="location-bg py-5" aria-hidden="true">
     <svg viewBox="0 0 1000 200" preserveAspectRatio="xMidYMid slice" class="w-100 h-100">
       <defs>
         <linearGradient id="locGrad" x1="0" x2="1">
@@ -638,7 +617,7 @@
     </svg>
   </div>
 
-  <div class="container position-relative">
+  <div class="container position-relative py-5">
     <div class="row align-items-center gy-4">
       <!-- Left side: Info -->
       <div class="col-lg-5">

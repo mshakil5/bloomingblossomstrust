@@ -64,7 +64,7 @@
 
 <!-- Optional small inline styles to tune the footer look -->
 <style>
-  .site-footer .footer-links a { text-decoration: none; color: #97b766;font-weight: 600; }
+  .site-footer .footer-links a { text-decoration: none; color: #97b766;font-weight: 600; font-size: 14px;}
   .site-footer .footer-links a:hover { color: #cb749a !important;font-weight: 700; }
   .site-footer .btn-outline-light { border-color: rgba(255,255,255,0.14); }
   .site-footer .footer-top .footer-brand img { filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25)); }
@@ -76,5 +76,8 @@
     .site-footer .footer-top { padding-top:2.25rem; padding-bottom:2.25rem; }
     .site-footer .footer-middle form .col-8 { order:2; width:100%; }
     .site-footer .footer-middle form .col-4 { order:3; width:100%; }
+  }
+  h6 {
+    font-size: 1.2rem;
   }
 </style>

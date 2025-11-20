@@ -26,6 +26,16 @@
 }
 
 
+@font-face {
+    font-family: "DarkerGrotesque-semibold";
+    src: url("/resources/frontend/fonts/DarkerGrotesque-semibold.woff2") format("woff2"),
+         url("/resources/frontend/fonts/DarkerGrotesque-semibold.woff") format("woff"),
+         url("/resources/frontend/fonts/DarkerGrotesque-semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
     /* Custom styles */
     :root{
       --brand:#ff8b94;
@@ -68,8 +78,8 @@
 
 
 
-    /* About section images layout */
-    /* .about-section { background: linear-gradient(180deg, #fff9f3 0%, #fff 100%); position: relative; overflow: hidden; } */
+
+
 
     .about-section {
         position: relative;
@@ -79,7 +89,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed; /* optional parallax effect */
-        color: #222;
+        color: #000000;
         overflow: hidden;
     }
 
@@ -130,7 +140,6 @@
 
     /* center tabs */
     .nav-tabs { justify-content:center; display:flex; gap:.5rem; }
-    .nav-tabs .nav-link { border-radius: 50px; padding: .4rem .9rem; }
 
     /* Responsive adjustments */
     @media (max-width: 767.98px) {
@@ -180,11 +189,11 @@
   
 /* Our Rooms section styling */
 #our-rooms {
-  background: linear-gradient(180deg, #fbfbff 0%, #98b867 100%);
+  background: linear-gradient(180deg, #fff9f4 0%, #fff9f4 100%);
 }
 
 #smart-gallery {
-  background: linear-gradient(180deg, #fbfbff 0%, #fd7ec0 100%);
+  background: linear-gradient(180deg, #fff9f4 0%, #fff9f4 100%);
 }
 
 .room-card {
@@ -405,11 +414,9 @@
 
 
     /* FAQ Section Styling */
-/* .faq-section {
-  background: linear-gradient(180deg, #fff9f3 0%, #fff 100%);
-  position: relative;
-  overflow: hidden;
-} */
+.faq-section {
+  background: linear-gradient(180deg, #fff9f3 0%, #fff9f4 100%);
+}
 
 
 
@@ -437,33 +444,30 @@
 }
 
 .accordion.faq-accordion {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  background: #fff9f4;
+  border-radius: 2px;
 }
 
 .accordion-item {
   border: none;
   margin-bottom: 10px;
-  border-radius: 12px;
+  border-radius: 2px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 
 .accordion-button {
-  background-color: #fe6bb5;
+  background-color: #E3DDD8;
   border: none;
   font-weight: 600;
-  font-size: 1rem;
-  color: #fff;
-  padding: 1rem 1.2rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  font-size: 38px;
+  color: #4CA30D;
+  padding: .5rem 1.4rem;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #fe6bb5;
-  color: #fff;
+  background-color: #E3DDD8;
+  color: #4CA30D;
   box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
 }
 
@@ -491,7 +495,7 @@
   content: '+';
   font-size: 22px;
   font-weight: 600;
-  color: #ff7a00;
+  color: #4CA30D;
   transition: transform 0.3s ease;
 }
 .accordion-button:not(.collapsed)::after {
@@ -555,6 +559,7 @@
 #location {
   position: relative;
   overflow: hidden;
+  background-color: #fff9f4;
 }
 .location-bg {
   position: absolute;
@@ -666,8 +671,7 @@
 .nav-link {
   font-size: 18px;    
   font-weight: 700;
-  color: #fe6bb5;
-  transition: all 0.3s ease;
+  color: #bf1354;
 }
 .navbar-nav .nav-link:hover {
   color: #97b766 !important;
@@ -706,11 +710,22 @@
     background-color: #ceebce;
 }
 
+.nav-tabs .nav-link { 
+  padding: .4rem .9rem; 
+  border: 0px !important;
+}
 
 .nav-link:hover {
-  color: #ffffff !important;
+  color: #97b766 !important;
   transform: translateY(-3px);
 }
+
+.nav-link.active {
+  color: #97b766 !important;
+  background-color: #fff9f4 !important;
+
+}
+
 
 /* new css  */
     /* Base style for all tab panes */
@@ -723,6 +738,7 @@
   border-radius: 10px;
   min-height: 300px; /* optional, for consistent height */
   transition: background-image 0.5s ease-in-out;
+  background-color: #c59b78;
 }
 
 /* Optional: slight background overlay for readability */
@@ -1117,9 +1133,13 @@
     }
   }
 
-  h2 {
-    color: #97b766;
-  }
+
+
+    .h2, h2 {
+      font-size: 80px;
+      color: #97b766;
+      font-family: "DarkerGrotesque-semibold";
+    }
 
 
 
@@ -1129,6 +1149,17 @@
       position: absolute;
       width: 200px;
       height: 200px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: flyAcross 10s linear infinite;
+      opacity: 0.9;
+    }
+
+
+    .small-butterfly {
+      position: absolute;
+      width: 20px;
+      height: 20px;
       background-size: contain;
       background-repeat: no-repeat;
       animation: flyAcross 10s linear infinite;
