@@ -41,8 +41,8 @@
               <address class=" mb-3" style="font-style:normal;">
                 {{$company->address1}}<br>
               </address>
-                <a href="mailto:{{$company->email1}}" class="" style="color: #97b766; text-decoration: none; " >{{$company->email1}}</a><br>
-                <a href="tel:{{$company->phone1}}" class="" style=" text-decoration: none; color: #97b766" >{{$company->phone1}}</a>
+                <a href="mailto:{{$company->email1}}" class="" style="color: #4CA30D; text-decoration: none; " >{{$company->email1}}</a><br>
+                <a href="tel:{{$company->phone1}}" class="" style=" text-decoration: none; color: #4CA30D" >{{$company->phone1}}</a>
 
             </div>
           </div> <!-- /.row inside right side -->
@@ -54,7 +54,7 @@
 
 
   <!-- bottom: copyright, small links -->
-  <div class="footer-bottom py-3" style="background:#031826; color:#97b766;">
+  <div class="footer-bottom py-3" style="background:#031826; color:#4CA30D;">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
         {!! $company->copyright !!}
 
@@ -64,7 +64,7 @@
 
 <!-- Optional small inline styles to tune the footer look -->
 <style>
-  .site-footer .footer-links a { text-decoration: none; color: #97b766;font-weight: 600; font-size: 14px;}
+  .site-footer .footer-links a { text-decoration: none; color: #4CA30D;font-weight: 600; font-size: 14px;}
   .site-footer .footer-links a:hover { color: #cb749a !important;font-weight: 700; }
   .site-footer .btn-outline-light { border-color: rgba(255,255,255,0.14); }
   .site-footer .footer-top .footer-brand img { filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25)); }
