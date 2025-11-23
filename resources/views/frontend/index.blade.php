@@ -132,7 +132,7 @@
   <div class="container">
 
     <div class="text-center mb-5">
-      <h2 class="fw-bold">About Us</h2>
+      <h2 class="">About Us</h2>
       <p>
         Blooming Blossoms Trust sprouted the first seeds of hope in 2007, rising beyond the stigma involved. 
         As teachers and parents we saw the pain of SEN children trapped in mainstream cocoons, of bright and gifted children expected to toe the line and suppress their ideas and questions. 

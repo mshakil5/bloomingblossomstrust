@@ -20,30 +20,19 @@
   font-size: 24px;
 }
 
-.section-2 {
-  background-color: #fff9f4;
-}
 
 /* Section 2 background */
-.section-2 .bg-theme{
+.section-2{
   background: #fffff4;
   color: #000000;
 }
 
 .section-3 {
-  background-color: #fff9f4;
+  background-color: #a1dbe729;
 }
 
-/* Section 3 background */
-.section-3 .bg-theme{
-  background: #a1dbe729;
-}
 
-.section-4 {
-  background-color: #fff9f4;
-}
-
-.section-4 .bg-theme{
+.section-4{
   background-color: #fffbf8;
   color: #000000;
 }
@@ -58,7 +47,7 @@
     .vs-btn{
     display:inline-flex;align-items:center;gap:.6rem;
     padding:10px 18px;border-radius:10px;font-weight:700;
-    background:linear-gradient(90deg, #98b86b, #96b766);
+    background:#4ca30d;
     color:white;text-decoration:none;border:none;
     box-shadow:0 8px 18px rgba(255,107,107,0.18);
     transition:transform .18s ease,box-shadow .18s ease;
@@ -78,7 +67,7 @@
         <div class="banner-item active">
             <div class="carousel-caption text-center">
               <h1 class="display-5 fw-bold"
-                  style="color:#8fad60; font-size:3rem; font-family:'Roboto', sans-serif;">
+                  style="color:#4ca30d; font-size:3rem; font-family:'Roboto', sans-serif;">
                   About Us
               </h1>
             </div>
@@ -103,12 +92,12 @@
 <section class="section-4">
   <div class="container">
     <div class="row p-3">
-      <div class="col-lg-8 col-xl-8  bg-theme">
+      <div class="col-lg-12 col-xl-12  bg-theme">
         <div class="ps-lg-4 pe-lg-2  p-3" >
           {!! $about1->short_description !!}
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 d-none">
         <div class="" >
           <img src="{{ asset('images/about/'. $about1->photo)}}" alt="blooming blossoms trust" style="width: 100%;">
         </div>
@@ -124,12 +113,12 @@
 <section class="section-2">
   <div class="container">
     <div class="row  p-3">
-      <div class="col-lg-4">
+      <div class="col-lg-4 d-none">
         <div class="" >
           <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust" style="width: 100%;">
         </div>
       </div>
-      <div class="col-lg-8 col-xl-8  p-3  bg-theme">
+      <div class="col-lg-12 col-xl-12  p-3  bg-theme">
         <div class="ps-lg-4 pe-lg-2  p-3" >
           {!! $about1->long_title !!}
         </div>
@@ -178,8 +167,7 @@
     <div class="container">
       <div class="text-center mb-4">
         {{-- <div class="small-title text-uppercase text-muted mb-2">Our Gallery</div> --}}
-        <h2 class="big-title">Our Gallery</h2>
-        <p class="text-muted">Click any image to view it full size. Swipe or use the arrows to navigate.</p>
+        <h2>Our Gallery</h2>
       </div>
     </div>
 
