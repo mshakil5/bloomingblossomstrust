@@ -67,7 +67,7 @@
        ======================= -->
 <style>
   .accent {
-    color: #97b766;
+    color: #bf1354;
     font-size: 85px;
     font-weight: 700;
     text-align: center;
@@ -75,7 +75,36 @@
 
 </style>
 
-<section id="about" class="about-section position-relative py-5">
+<section id="about" class="about-section py-5" style="background-image: url('caterpillar.png'); background-repeat: no-repeat; background-position: right; background-size: 300px auto;">
+
+  <style>
+    /* control background size and make it responsive */
+    #about {
+      background-size: 300px auto; /* reduce the image width to 300px, keep aspect ratio */
+    }
+
+    .title {
+          font-size: 80px;
+          text-align: center;
+          line-height: 1;
+          color: #18988B;
+          font-family: "DarkerGrotesque-semibold";
+    }
+
+    @media (max-width: 991.98px) {
+      #about {
+        background-size: 220px auto;
+        background-position: right 20px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      #about {
+        background-size: 150px auto;
+        background-position: right top;
+      }
+    }
+  </style>
 
   <div class="container">
 
@@ -93,23 +122,31 @@
 
   </div>
   
-  <div class="small-butterfly" style="background-image: url('butterfly2.gif')"></div>
+</section>
 
-  <div class="container">
-    <div class="text-center py-5">
+<section class="soar-section position-relative py-3">
+  
+  <div class="small-butterfly py-3" style="background-image: url('butterfly2.gif')"></div>
 
-      <h2>We are here to help them <span class="accent">soar</span>.</h2>
-      <h2>Beyond their  <span class="accent">potential</span>. </h2>
+  <div class="container py-3">
+    <div class="text-center py-3">
+
+      <div class="title">
+        We are here to help them <span class="accent">soar.</span> <br>
+        Beyond their  <span class="accent">potential.</span> 
+      </div>
         
       </p>
     </div>
+
+
 
   </div>
 </section>
 
 
 
-<section id="about" class="about-section position-relative py-5" style="color: #000000;">
+<section class="about-tab-section position-relative py-5">
 
   <div class="container">
     <div class="row g-4 align-items-start">
@@ -179,7 +216,7 @@
                   <img src="{{asset('images/content/'. $project->feature_image)}}" alt="{{$project->short_title}}">
                 </div>
                 <div class="room-content text-center" style="min-height: 164px;">
-                  <h4 class="fw-bold mb-2" style="color: #97b766">{{$project->short_title}}</h4>
+                  <h4 class="fw-bold mb-2" style="color: #4CA30D">{{$project->short_title}}</h4>
                   {{-- <p class="text-muted mb-3">
                     {{$project->long_title}}
                   </p> --}}
@@ -582,7 +619,7 @@
 
   <section class="clients-section text-center py-5">
     <div class="container">
-      <h2 style="color: #97b766"> Our Funders </h2>
+      <h2 style="color: #4CA30D"> Our Funders </h2>
       <p class="py-3">
         Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.
       </p>
