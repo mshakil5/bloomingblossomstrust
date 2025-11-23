@@ -154,6 +154,18 @@
         overflow: hidden;
     }
 
+    /* .quote-section {
+        position: relative;
+        background-color: #DACFC2;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #000000;
+        overflow: hidden;
+        font-size: 24px;
+        font-style: italic;
+    } */
+
    .about-images {
         min-height: 400px; /* or adjust as needed */
         position: relative;

@@ -72,13 +72,13 @@
 </style>
 
 
-  <header class="hero_area position-relative">
+  <header class="banner_area position-relative">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="banner-item active">
                 <div class="carousel-caption text-center">
                   <h1 class="display-5 fw-bold"
-                      style="color:#8fad60; font-size:3rem; font-family:'Roboto', sans-serif;">
+                      style="color:#4ca30d; font-size:3rem; font-family:'Roboto', sans-serif;">
                       {{ $agegroup->short_title }}
                   </h1>
                 </div>
@@ -145,19 +145,124 @@
   </div>
 </section>
 
-<section class="about-section py-5" aria-labelledby="about-heading">
+<style>
+  :root{
+    --quote-accent: #4ca30d;
+    --quote-bg: #fbfbfb;
+    --quote-text: #444;
+  }
+
+  .quote-section{
+    background: linear-gradient(180deg, #ffffff 0%, var(--quote-bg) 100%);
+    border-left: 6px solid var(--quote-accent);
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(10,10,10,0.04);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decorative oversized, low-opacity quote marks */
+  .quote-section .first-quote,
+  .quote-section .last-quote {
+    position: absolute;
+    color: var(--quote-accent);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 1;
+    opacity: 0.12;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+  }
+
+  .quote-section .first-quote {
+    top: 12px;
+    left: 14px;
+    transform: translateY(-6%);
+  }
+
+  .quote-section .last-quote {
+    bottom: 6px;
+    right: 20px;
+    transform: translateY(4%);
+  }
+
+  /* Ensure content sits above decorative marks */
+  .quote-section > *:not(.first-quote):not(.last-quote) {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Text styling for the quote content */
+  .quote-section p,
+  .quote-section .quote-text,
+  .quote-section * {
+    margin: 0;
+    color: var(--quote-text);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-style: italic;
+    letter-spacing: 0.2px;
+  }
+
+  /* Make block comfortable on narrow viewports */
+  @media (max-width: 767.98px) {
+    .quote-section{
+      padding: 1.25rem 1rem;
+    }
+    .quote-section .first-quote,
+    .quote-section .last-quote {
+      font-size: 3.2rem;
+      opacity: 0.10;
+    }
+    .quote-section .last-quote { display: none; } /* avoid clutter on small screens */
+    .quote-section p,
+    .quote-section .quote-text,
+    .quote-section * {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+</style>
+
+<section class="py-2" style="
+  background: linear-gradient(
+    180deg,
+    #fff9f4 0%,
+    #fff9f4 100%
+  );
+">
+</section>
+
+<section class="quote-section py-5" aria-labelledby="about-heading">
   <div class="container">
     <div class="row g-4 align-items-center">
       
       <!-- Right: Content -->
       <div class="col-lg-12 col-xl-12 order-0 order-lg-1">
-        
-        {!! $agegroup->quote !!}
+        <div class="d-flex justify-content-center align-items-center text-center w-100" style="min-height:220px;">
+          <span class="first-quote">"</span>
+          <div class="quote-text mx-3">
+            {!! $agegroup->quote !!}
+          </div>
+          <span class="last-quote">"</span>
+        </div>
 
       </div>
   </div>
 </section>
 
+
+<section class="py-2" style="
+  background: linear-gradient(
+    180deg,
+    #fff9f4 0%,
+    #fff9f4 100%
+  );
+">
+</section>
 
 
 
