@@ -72,10 +72,10 @@
 
 </style>
 
-<header class="hero_area position-relative">
+<header class="banner_area position-relative">
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="banner-item active">
             <div class="carousel-caption text-center">
               <h1 class="display-5 fw-bold"
                   style="color:#8fad60; font-size:3rem; font-family:'Roboto', sans-serif;">

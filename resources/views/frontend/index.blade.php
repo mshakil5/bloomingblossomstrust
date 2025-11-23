@@ -3,18 +3,26 @@
 @section('content')
 
 <style>
+  button {
+    font-family: 'DarkerGrotesque-medium', sans-serif;
+    font-weight: bold !important;
+  }
   @media (max-width: 767.98px) { 
     .hero_area h1 {
       font-size: 2rem !important;
     }
 
     .right-butterfly {
-      right: 0 !important;
+      right: 20px !important;
+      width: 60px !important;
+      height: auto !important;
     }
 
     .left-butterfly {
-      top: 130px !important;
-      left: 0px !important;
+      top: 200px !important;
+      left: 20px !important;
+      width: 60px !important;
+      height: auto !important;
     }
   }
 </style>
@@ -65,22 +73,20 @@
   <!-- =======================
        About section (two-column)
        ======================= -->
-<style>
-  .accent {
-    color: #bf1354;
-    font-size: 85px;
-    font-weight: 700;
-    text-align: center;
-  }
 
-</style>
-
-<section id="about" class="about-section py-5" style="background-image: url('caterpillar.png'); background-repeat: no-repeat; background-position: right; background-size: 300px auto;">
+<section id="about" class="about-section py-5" >
 
   <style>
     /* control background size and make it responsive */
     #about {
       background-size: 300px auto; /* reduce the image width to 300px, keep aspect ratio */
+    }
+
+    .accent {
+      color: #bf1354;
+      font-size: 85px;
+      font-weight: 700;
+      text-align: center;
     }
 
     .title {
@@ -96,6 +102,23 @@
         background-size: 220px auto;
         background-position: right 20px;
       }
+
+      .title {
+        font-size: 30px;
+      }
+
+      .accent {
+        color: #bf1354;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .nav-tabs .nav-link {
+        font-size: 13px !important;
+        padding: 3px !important;
+      }
+
     }
 
     @media (max-width: 575.98px) {
@@ -198,8 +221,8 @@
 </section>
 
 <!-- ===== Our Projects Section ===== -->
-<section id="our-rooms" class="py-5">
-  <div class="container py-5">
+<section id="our-rooms" class="">
+  <div class="container">
     <div class="text-center mb-5">
       {{-- <h3 class="h5 text-uppercase text-muted mb-2">Excellent Nursery Environment</h3> --}}
       <h2 class="fw-bold py-3">Our Projects</h2>
@@ -443,7 +466,7 @@
 
 
 <!-- ===== Smart Full-Width Gallery ===== -->
-<section id="smart-gallery" class="py-5 bg-white">
+<section id="smart-gallery" class=" bg-white">
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
@@ -617,7 +640,7 @@
 
 
 
-  <section class="clients-section text-center py-5">
+  <section class="clients-section text-center py-3">
     <div class="container">
       <h2 style="color: #4CA30D"> Our Funders </h2>
       <p class="py-3">
