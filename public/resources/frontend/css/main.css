@@ -28,13 +28,14 @@
 
 @font-face {
     font-family: "DarkerGrotesque-semibold";
-    src: url("/resources/frontend/fonts/DarkerGrotesque-semibold.woff2") format("woff2"),
-         url("/resources/frontend/fonts/DarkerGrotesque-semibold.woff") format("woff"),
-         url("/resources/frontend/fonts/DarkerGrotesque-semibold.ttf") format("truetype");
+    src: url("/fonts/DarkerGrotesque-semibold.woff2") format("woff2"),
+         url("/fonts/DarkerGrotesque-semibold.woff") format("woff"),
+         url("/fonts/DarkerGrotesque-semibold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
+
 
     /* Custom styles */
     :root{
