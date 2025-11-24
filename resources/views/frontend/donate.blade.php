@@ -165,9 +165,10 @@
       <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="carousel-caption text-center">
+                  
                   <h1 class="display-5 fw-bold"
-                      style="color:#8fad60; font-size:3rem; font-family:'Roboto', sans-serif;">
-                      Donate
+                      style="color: #b7236f;font-size: 7rem;font-family: DarkerGrotesque-semibold">
+                       Together, We Lift Up Disadvantaged Children
                   </h1>
                 </div>
             </div>
