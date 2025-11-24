@@ -38,7 +38,7 @@
             <span>Projects</span>
           </a>
           <ul class="dropdown-menu text-center">
-            @foreach (\App\Models\Content::with('category')->where('type', 2)->orderby('id', 'ASC')->get() as $key => $projects)
+            @foreach (\App\Models\Content::with('category')->where('type', 2)->orderby('id', 'ASC')->where('status', 1)->get() as $key => $projects)
               <li>
                 <a class="dropdown-item d-flex align-items-center" href="{{ route('agegroup', $projects->slug) }}">
                {{ $projects->short_title }}
