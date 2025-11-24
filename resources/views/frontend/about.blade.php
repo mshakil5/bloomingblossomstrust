@@ -59,6 +59,14 @@
     .about-section{padding:20px}
     }
 
+    @media (max-width: 575.98px) {
+      
+    .carousel-caption h1 {
+      font-size: 18px !important;
+    }
+    }
+    
+
 </style>
 
 <header class="banner_area position-relative">
@@ -67,8 +75,8 @@
         <div class="banner-item active">
             <div class="carousel-caption text-center">
               <h1 class="display-5 fw-bold"
-                  style="color:#4ca30d; font-size:3rem; font-family:'Roboto', sans-serif;">
-                  About Us
+                  style="color:#b7236f; font-size:40px; font-family:'Roboto', sans-serif;">
+                  {{ $about1->short_title }}
               </h1>
             </div>
         </div>
@@ -79,7 +87,7 @@
   </div>
 </header>
 
-<section class="about-section section-1">
+<section class="about-section section-1 d-none">
   <div class="container">
     <div class="row g-4 align-items-center">
       <div class="col-lg-12 col-xl-12 order-0 order-lg-1 text-center">
