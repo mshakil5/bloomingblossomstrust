@@ -757,6 +757,9 @@
   font-size: 1.7rem;   
   color: #bf1354;
 }
+
+
+
 .navbar-nav .nav-link:hover {
   color: #4CA30D !important;
   transform: translateY(-3px);

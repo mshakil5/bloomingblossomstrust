@@ -21,20 +21,20 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-lg-center text-center text-lg-start text-uppercase">
 
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-3">
           <a class="nav-link d-flex flex-column align-items-center" href="{{ route('home') }}">
             <span>Home</span>
           </a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-4">
           <a class="nav-link d-flex flex-column align-items-center" href="{{ route('aboutUs') }}">
             <span>About</span>
           </a>
         </li>
 
         
-        <li class="nav-item dropdown mx-2">
-          <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="ageDropdown" data-bs-toggle="dropdown">
+        <li class="nav-item dropdown mx-4">
+          <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="ageDropdown" data-bs-toggle="dropdown" style="padding-top: 14px;">
             <span>Projects</span>
           </a>
           <ul class="dropdown-menu text-center">
@@ -48,13 +48,13 @@
           </ul>
         </li>
 
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-4">
           <a class="nav-link d-flex flex-column align-items-center " href="{{ route('home') }}#contact">
             <span>Contact</span>
           </a>
         </li>
 
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-4">
           <a class="nav-link d-flex flex-column align-items-center" href="{{ route('donate') }}">
             <span>Donate</span>
           </a>
