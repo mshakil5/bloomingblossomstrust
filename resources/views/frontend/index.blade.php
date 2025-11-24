@@ -9,14 +9,6 @@
 
   
 
-  .big-title {
-      font-size: 80px;
-      /* color: #4CA30D; */
-      color: #003057;
-      text-align: center;
-      line-height: 0.8;
-      font-family: "DarkerGrotesque-bold";
-  }
 
 
   @media (max-width: 767.98px) { 
@@ -143,7 +135,7 @@
   <div class="container">
 
     <div class="text-center mb-5">
-      <h2 class="big-title pb-5">About Us</h2>
+      <h2 class="big-title pb-5" style="font-family: DarkerGrotesque-bold;">About Us</h2>
       <p>
         Blooming Blossoms Trust sprouted the first seeds of hope in 2007, rising beyond the stigma involved. 
         As teachers and parents we saw the pain of SEN children trapped in mainstream cocoons, of bright and gifted children expected to toe the line and suppress their ideas and questions. 
@@ -320,7 +312,7 @@
   <div class="container">
     <div class="text-center mb-5">
       {{-- <h3 class="h5 text-uppercase text-muted mb-2">Excellent Nursery Environment</h3> --}}
-      <h2 class="big-title py-3">Our Projects</h2>
+      <h2 class="big-title py-3" style="font-family: DarkerGrotesque-bold;">Our Projects</h2>
     </div>
 
     <!-- Swiper container -->
@@ -565,7 +557,7 @@
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="big-title py-3 pb-5">Our Gallery</h2>
+        <h2 class="big-title py-3 pb-5" style="font-family: DarkerGrotesque-bold;">Our Gallery</h2>
       </div>
     </div>
 
@@ -617,7 +609,7 @@
   <div class="container">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="big-title py-3 pb-5">Frequently asked questions:</h2>
+        <h2 class="big-title py-3 pb-5" style="font-family: DarkerGrotesque-bold;">Frequently asked questions:</h2>
       </div>
     </div>
     <div class="row align-items-start gy-4">
@@ -732,7 +724,7 @@
 
   <section class="clients-section text-center py-3">
     <div class="container">
-      <h2 class="big-title mb-5"> Our Funders </h2>
+      <h2 class="big-title mb-5" style="font-family: DarkerGrotesque-bold;"> Our Funders </h2>
       <p class="py-4">
         Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.
       </p>
