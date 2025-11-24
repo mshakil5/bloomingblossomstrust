@@ -6,6 +6,7 @@
   button {
     font-family: 'DarkerGrotesque-medium', sans-serif;
   }
+
   @media (max-width: 767.98px) { 
     .hero_area h1 {
       font-size: 2rem !important;
@@ -48,7 +49,6 @@
                     @if($slider->link)<p><a class="btn btn-primary btn-lg" href="{{ $slider->link ?? '' }}">Learn more</a></p>@endif
                 </div>
             </div>
-            <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
             <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
             <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
         @endforeach
@@ -131,7 +131,7 @@
   <div class="container">
 
     <div class="text-center mb-5">
-      <h2 class="pb-5">About Us</h2>
+      <h2 class="big-title pb-5">About Us</h2>
       <p>
         Blooming Blossoms Trust sprouted the first seeds of hope in 2007, rising beyond the stigma involved. 
         As teachers and parents we saw the pain of SEN children trapped in mainstream cocoons, of bright and gifted children expected to toe the line and suppress their ideas and questions. 
@@ -167,69 +167,86 @@
 </section>
 
 <style>
-  /* Make tab buttons full width & equal */
+/* TAB WRAPPER */
 .nav-tabs {
     display: flex;
-    justify-content: space-between;
     border-bottom: none !important;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    scrollbar-width: none;      /* FIREFOX SCROLLBAR REMOVE */
+}
+.nav-tabs::-webkit-scrollbar {   /* CHROME SCROLLBAR REMOVE */
+    display: none;
 }
 
 .nav-tabs .nav-item {
     flex: 1;
+    min-width: 200px;   /* ensures proper width on small screen */
 }
 
+/* BUTTON BASE */
 .nav-tabs .nav-link {
-    width: 100%;
-    text-align: center;
-    background: #f5f5f5;
-    padding: .8rem 1rem;
+    background: #18988b;
     border: none !important;
     border-radius: 0;
+    padding: 14px 20px;
     position: relative;
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+    transition: 0.3s ease;
 }
 
-/* Create stepped angled edges */
-.nav-tabs .nav-link::before,
+/* RIGHT ARROW SHAPE */
 .nav-tabs .nav-link::after {
     content: "";
     position: absolute;
+    right: -28px;
     top: 0;
-    width: 20px;
+    width: 28px;
     height: 100%;
-    background: inherit;
-    z-index: -1;
-}
-
-.nav-tabs .nav-link::before {
-    left: -20px;
-    clip-path: polygon(100% 0, 0 50%, 100% 100%);
-}
-
-.nav-tabs .nav-link::after {
-    right: -20px;
+    background: #18988ba1;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
+    z-index: 2;
+    transition: 0.3s ease;
 }
 
-/* Active tab */
-.nav-tabs .nav-link.active {
-    color: #4CA30D !important;
-    background-color: #fff9f4 !important;
-}
-
-/* Hover */
+/* HOVER */
 .nav-tabs .nav-link:hover {
-    color: #4CA30D !important;
-    background-color: #eaf7e3;
+    background: #e9f8e3;
+    color: #2c7d09;
+}
+.nav-tabs .nav-link:hover::after {
+    background: #cbeec0;
 }
 
-/* Remove gap on first & last tab */
-.nav-tabs .nav-item:first-child .nav-link::before {
-    display: none;
+/* ACTIVE TAB */
+.nav-tabs .nav-link.active {
+    background: #dacfc2 !important;
+    color: #18988b !important;
 }
+.nav-tabs .nav-link.active::after {
+    background: #ffe1c3 !important;
+}
+
+/* LAST TAB → remove arrow */
 .nav-tabs .nav-item:last-child .nav-link::after {
     display: none;
 }
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 575px) {
+    .nav-tabs .nav-item {
+        min-width: 150px; /* shrink nicely */
+    }
+    .nav-tabs .nav-link {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+}
+
 
 </style>
 
@@ -244,7 +261,7 @@
       <div class="col-lg-12">
         <div class="px-md-3">
           <!-- Centered tabs -->
-          <ul class="nav nav-tabs pb-3" id="ageTabs" role="tablist">
+          <ul class="nav nav-tabs py-3" id="ageTabs" role="tablist">
 
 
             @foreach ($services as $key => $service)
@@ -291,7 +308,7 @@
   <div class="container">
     <div class="text-center mb-5">
       {{-- <h3 class="h5 text-uppercase text-muted mb-2">Excellent Nursery Environment</h3> --}}
-      <h2 class="py-3">Our Projects</h2>
+      <h2 class="big-title py-3">Our Projects</h2>
     </div>
 
     <!-- Swiper container -->
@@ -536,7 +553,7 @@
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="py-3 pb-5">Our Gallery</h2>
+        <h2 class="big-title py-3 pb-5">Our Gallery</h2>
       </div>
     </div>
 
@@ -588,14 +605,14 @@
   <div class="container">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="py-3 pb-5">Frequently asked questions:</h2>
+        <h2 class="big-title py-3 pb-5">Frequently asked questions:</h2>
       </div>
     </div>
     <div class="row align-items-start gy-4">
 
       <!-- RIGHT: Accordion -->
       <div class="col-lg-12">
-        <div class="accordion faq-accordion" id="faqAccordion">
+        <div class="accordion faq-accordion mt-4" id="faqAccordion">
 
 
           @foreach ($faqs as $key => $faq)
@@ -703,7 +720,7 @@
 
   <section class="clients-section text-center py-3">
     <div class="container">
-      <h2 class="mb-5"> Our Funders </h2>
+      <h2 class="big-title mb-5"> Our Funders </h2>
       <p class="py-3">
         Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.
       </p>
