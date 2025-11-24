@@ -145,9 +145,11 @@
   </div>
 </section>
 
+
+
 <style>
   :root{
-    --quote-accent: #4ca30d;
+    --quote-accent: #4ca30d; /* for left & right borders + quote icons */
     --quote-bg: #fbfbfb;
     --quote-text: #444;
   }
@@ -155,11 +157,13 @@
   .quote-section{
     background: linear-gradient(180deg, #ffffff 0%, var(--quote-bg) 100%);
     border-left: 6px solid var(--quote-accent);
+    border-right: 6px solid var(--quote-accent); /* added right border */
     padding: 2rem 2.5rem;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(10,10,10,0.04);
     position: relative;
     overflow: hidden;
+    text-align: center; /* center all content */
   }
 
   /* Decorative oversized, low-opacity quote marks */
@@ -171,7 +175,6 @@
     font-weight: 700;
     font-size: 5rem;
     line-height: 1;
-    opacity: 0.12;
     pointer-events: none;
     user-select: none;
     z-index: 0;
@@ -195,74 +198,50 @@
     z-index: 1;
   }
 
-  /* Text styling for the quote content */
-  .quote-section p,
-  .quote-section .quote-text,
-  .quote-section * {
-    margin: 0;
+  .quote-text {
+    margin: 0 auto;
+    max-width: 750px;
     color: var(--quote-text);
-    font-size: 1.125rem;
-    line-height: 1.6;
+    font-size: 1.25rem;
+    line-height: 1.7;
     font-style: italic;
-    letter-spacing: 0.2px;
   }
 
-  /* Make block comfortable on narrow viewports */
+  /* Mobile adjustments */
   @media (max-width: 767.98px) {
     .quote-section{
       padding: 1.25rem 1rem;
     }
     .quote-section .first-quote,
     .quote-section .last-quote {
-      font-size: 3.2rem;
+      font-size: 3rem;
       opacity: 0.10;
     }
-    .quote-section .last-quote { display: none; } /* avoid clutter on small screens */
-    .quote-section p,
-    .quote-section .quote-text,
-    .quote-section * {
+    .quote-section .last-quote { display: none; }
+    .quote-text {
       font-size: 1rem;
       line-height: 1.5;
     }
   }
 </style>
 
-<section class="py-2" style="
-  background: linear-gradient(
-    180deg,
-    #fff9f4 0%,
-    #fff9f4 100%
-  );
-">
-</section>
+
+<section class="py-2" style="background:#fff9f4;"></section>
 
 <section class="quote-section py-5" aria-labelledby="about-heading">
+
   <div class="container">
-    <div class="row g-4 align-items-center">
-      
-      <!-- Right: Content -->
-      <div class="col-lg-12 col-xl-12 order-0 order-lg-1">
-        <div class="d-flex justify-content-center align-items-center text-center w-100" style="min-height:220px;">
-          <span class="first-quote">"</span>
-          <div class="quote-text mx-3">
-            {!! $agegroup->quote !!}
-          </div>
-          <span class="last-quote">"</span>
-        </div>
-
-      </div>
+    <div class="quote-text">
+      <span class="first-quote">"</span>
+          {!! $agegroup->quote !!}
+      <span class="last-quote">"</span>
+    </div>
   </div>
+
 </section>
 
+<section class="py-2" style="background:#fff9f4;"></section>
 
-<section class="py-2" style="
-  background: linear-gradient(
-    180deg,
-    #fff9f4 0%,
-    #fff9f4 100%
-  );
-">
-</section>
 
 
 
