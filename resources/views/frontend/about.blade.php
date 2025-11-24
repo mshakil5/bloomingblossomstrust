@@ -4,70 +4,74 @@
 
 <style>
   
-/* ===== Section Background + Gradient Blend ===== */
-
-.about-section {
-  padding: 40px 0;
-  position: relative;
-  isolation: isolate;
-}
-
-/* Section 1 background */
-.about-section.section-1 {
-  background: #fff9f3;
-  color: #fe6bb5;
-  font-weight: 600;
-  font-size: 24px;
-}
-
-
-/* Section 2 background */
-.section-2{
-  background: #fffff4;
-  color: #000000;
-}
-
-.section-3 {
-  background-color: #a1dbe729;
-}
-
-
-.section-4{
-  background-color: #fffbf8;
-  color: #000000;
-}
-
-/* Remove any sharp edges between sections */
-.about-section + .about-section {
-  margin-top: 0;
-}
 
 
     /* button */
     .vs-btn{
-    display:inline-flex;align-items:center;gap:.6rem;
-    padding:10px 18px;border-radius:10px;font-weight:700;
-    background:#4ca30d;
-    color:white;text-decoration:none;border:none;
-    box-shadow:0 8px 18px rgba(255,107,107,0.18);
-    transition:transform .18s ease,box-shadow .18s ease;
+      display:inline-flex;align-items:center;gap:.6rem;
+      padding:10px 18px;border-radius:10px;font-weight:700;
+      background:#4ca30d;
+      color:white;text-decoration:none;border:none;
+      box-shadow:0 8px 18px rgba(255,107,107,0.18);
+      transition:transform .18s ease,box-shadow .18s ease;
     }
 
     .vs-btn:hover{transform:translateY(-3px);box-shadow:0 18px 30px rgba(255,107,107,0.14)}
 
-    @media(min-width:992px){
-    .about-section{padding:20px}
-    }
 
     @media (max-width: 575.98px) {
-      
-    .carousel-caption h1 {
-      font-size: 18px !important;
-    }
+      .carousel-caption h1 {
+        font-size: 18px !important;
+      }
     }
     
 
 </style>
+
+  <style>
+    :root{
+      --bg: #f6efe0; /* pale cream */
+      --accent: #17228a; /* deep bluish */
+      --muted: #6b6b9a;
+      --card-bg: #fffaf0;
+    }
+    body{background:var(--bg);font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--accent);}
+    .site-header{padding:1rem 1.25rem;background:transparent}
+    .brand{font-family:'Playfair Display', serif;font-size:1.6rem;color:var(--accent);letter-spacing:0.02em}
+
+    .hero{padding:3rem 0}
+    .immersetitle{font-family:'Playfair Display', serif;font-size:3.2rem;color:var(--accent);margin-bottom:1rem}
+
+    .lead-text{color:var(--muted);line-height:1.8;font-weight:300}
+
+    /* right card */
+    .info-card{background:var(--card-bg);border-radius:28px;padding:1.6rem;border:1px solid rgba(23,34,138,0.06);box-shadow:0 6px 0 rgba(23,34,138,0.02)}
+    .info-card h5{font-family:'Playfair Display', serif;color:var(--accent);font-size:1.05rem;margin-bottom:0.6rem}
+    .info-list dt{font-family:'Playfair Display', serif;color:var(--accent);font-size:1rem}
+    .info-list dd{margin-left:0;font-size:0.9rem;color:#6b6b9a}
+
+    /* decorative footer label */
+    .section-sep{border-top:2px solid rgba(23,34,138,0.12);margin-top:2.5rem;padding-top:2rem}
+    .astuce{font-family:'Playfair Display', serif;font-size:2.4rem;color:var(--accent);text-align:right;opacity:0.95}
+
+    /* overall container mimic */
+    .page-wrap{max-width:1200px;margin:0 auto;padding:2rem}
+
+    @media (max-width: 991.98px){
+      .immersetitle{font-size:2.4rem}
+      .page-wrap{padding:1rem}
+    }
+    @media (max-width: 767.98px){
+      .immersetitle{font-size:2rem}
+      .info-card{border-radius:18px;padding:1rem}
+      .astuce{text-align:center}
+    }
+
+    /* small utility */
+    .mini-icon{width:58px;height:58px;border-radius:50%;background:transparent;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(23,34,138,0.12)}
+  </style>
+
+
 
 <header class="banner_area position-relative">
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -80,7 +84,6 @@
               </h1>
             </div>
         </div>
-        <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
         <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
         <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
     </div>
@@ -99,72 +102,64 @@
       style="position: absolute; top: 200px; right: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
       
 
-<section class="about-section section-1 d-none">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-12 col-xl-12 order-0 order-lg-1 text-center">
-          {{ $about1->short_title }}
-      </div>
-  </div>
-</section>
+  <main class="page-wrap">
+    <section class="hero">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <h1 class="immersetitle">Immerse now</h1>
 
-<!-- Section-3 Start-->
-<section class="section-4">
-  <div class="container">
-    <div class="row p-3">
-      <div class="col-lg-12 col-xl-12  bg-theme">
-        <div class="ps-lg-4 pe-lg-2  p-3" >
-          {!! $about1->short_description !!}
+          <p class="lead-text">You're going to do this hardcore because it's the only way to quickly shift your brain when you're still speaking or reading languages you are fluent in for work or in your personal life. I know it's frustrating but it really helps and nudges your mind constantly.</p>
+
+          <p class="lead-text">If you have time and money you could also join an immersion school experience where you can only speak french the minute you walk through the door which is truly quite ideal. But I'm guessing if you're reading this, that is not going to be you so you're going on a private immersion whether you're in a french speaking country or not.</p>
+
+          <p class="lead-text">Surround yourself with the language and soak your brain in it. We're adults, so we don't have this as easy as children do with people pointing things out and saying things loudly and slowly while speaking all around us (you'll wish people did, so feel free to stick post-it notes on everything instead). Relax, you need nowhere near this time with a developed brain but just remember this. It's normal - and actually very quick - that you're embarking on a one year journey to read, comprehend and speak.</p>
+
         </div>
-      </div>
-      <div class="col-lg-4 d-none">
-        <div class="" >
-          <img src="{{ asset('images/about/'. $about1->photo)}}" alt="blooming blossoms trust" style="width: 100%;">
-        </div>
-      </div>
 
-    </div>
-  </div>
-</section>
-<!-- Section-3 End-->
+        <div class="col-lg-5">
+          <div class="info-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h5>MORE TO IT THAN PASTRIES</h5>
+              <div class="mini-icon"><img src="/mnt/data/34_52.png" alt="icon" style="max-width:38px;max-height:38px;object-fit:cover;border-radius:6px"></div>
+            </div>
 
+            <dl class="row info-list">
+              <dt class="col-4">Devices</dt>
+              <dd class="col-8">Switch all your devices to french right now (you'll hate it for a little while but you already have context and you'll immediately learn words).</dd>
 
-<!-- Section-1 Start-->
-<section class="section-2">
-  <div class="container">
-    <div class="row  p-3">
-      <div class="col-lg-4 d-none">
-        <div class="" >
-          <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust" style="width: 100%;">
-        </div>
-      </div>
-      <div class="col-lg-12 col-xl-12  p-3  bg-theme">
-        <div class="ps-lg-4 pe-lg-2  p-3" >
-          {!! $about1->long_title !!}
+              <dt class="col-4">Read</dt>
+              <dd class="col-8">Only read books in french from now. Stop any book you're reading in a fluent language.</dd>
+
+              <dt class="col-4">Socials</dt>
+              <dd class="col-8">Follow french learning accounts on your socials.</dd>
+
+              <dt class="col-4">Music</dt>
+              <dd class="col-8">Start listening to french music during work, cooking and showers.</dd>
+
+              <dt class="col-4">Watch</dt>
+              <dd class="col-8">Begin watching easy shows in french. Stop yourself from watching anything in your native languages for six months.</dd>
+
+            </dl>
+          </div>
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- Section-1 End-->
-
-
-<!-- Section-2 Start-->
-<section class="section-3">
-  <div class="container">
-    <div class="row  p-3">
-      <div class="col-lg-12 col-xl-12 order-0 order-lg-1 bg-theme  p-3">
-          {!! $about1->long_description !!}
+      <div class="section-sep">
+        <div class="row">
+          <div class="col-lg-9">
+            <p class="lead-text">Don't fight the language! You will discover stupid and frustrating things. There will be many exceptions to rules. Every language has problems. Your job at the moment is to learn the language as it is. Complain about it later.</p>
+          </div>
+          <div class="col-lg-3 d-flex align-items-center">
+            <div class="astuce ms-auto">Astuce</div>
+          </div>
+        </div>
       </div>
-  </div>
-</section>
-<!-- Section-2 End-->
+
+    </section>
+  </main>
 
 
-
-<section class="about-section" aria-labelledby="about-heading">
+<section class="about-section py-4" aria-labelledby="about-heading">
   <div class="container">
     <div class="row g-4 align-items-center">
       <!-- Right: Content -->

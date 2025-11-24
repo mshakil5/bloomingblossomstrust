@@ -1,0 +1,259 @@
+@extends('frontend.layouts.master')
+
+@section('content')
+
+<style>
+  
+/* ===== Section Background + Gradient Blend ===== */
+
+.about-section {
+  padding: 40px 0;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Section 1 background */
+.about-section.section-1 {
+  background: #fff9f3;
+  color: #fe6bb5;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+
+/* Section 2 background */
+.section-2{
+  background: #fffff4;
+  color: #000000;
+}
+
+.section-3 {
+  background-color: #a1dbe729;
+}
+
+
+.section-4{
+  background-color: #fffbf8;
+  color: #000000;
+}
+
+/* Remove any sharp edges between sections */
+.about-section + .about-section {
+  margin-top: 0;
+}
+
+
+    /* button */
+    .vs-btn{
+    display:inline-flex;align-items:center;gap:.6rem;
+    padding:10px 18px;border-radius:10px;font-weight:700;
+    background:#4ca30d;
+    color:white;text-decoration:none;border:none;
+    box-shadow:0 8px 18px rgba(255,107,107,0.18);
+    transition:transform .18s ease,box-shadow .18s ease;
+    }
+
+    .vs-btn:hover{transform:translateY(-3px);box-shadow:0 18px 30px rgba(255,107,107,0.14)}
+
+    @media(min-width:992px){
+    .about-section{padding:20px}
+    }
+
+    @media (max-width: 575.98px) {
+      
+    .carousel-caption h1 {
+      font-size: 18px !important;
+    }
+    }
+    
+
+</style>
+
+<header class="banner_area position-relative">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="banner-item active">
+            <div class="carousel-caption text-center">
+              <h1 class="display-5 fw-bold"
+                  style="color:#b7236f; font-size:40px; font-family:'Roboto', sans-serif;">
+                  {{ $about1->short_title }}
+              </h1>
+            </div>
+        </div>
+        <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
+        <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
+        <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
+    </div>
+  </div>
+</header>
+
+  
+  <!-- Butterfly top-left -->
+<img src="{{ asset('resources/frontend/images/butterfly-left.png') }}" class="left-butterfly"
+      alt="Butterfly Left" 
+      style="position: absolute; top: 200px; left: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
+
+<!-- Butterfly top-right -->
+<img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" class="right-butterfly"
+      alt="Butterfly Right" 
+      style="position: absolute; top: 200px; right: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
+      
+
+<section class="about-section section-1 d-none">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-12 col-xl-12 order-0 order-lg-1 text-center">
+          {{ $about1->short_title }}
+      </div>
+  </div>
+</section>
+
+<!-- Section-3 Start-->
+<section class="section-4">
+  <div class="container">
+    <div class="row p-3">
+      <div class="col-lg-12 col-xl-12  bg-theme">
+        <div class="ps-lg-4 pe-lg-2  p-3" >
+          {!! $about1->short_description !!}
+        </div>
+      </div>
+      <div class="col-lg-4 d-none">
+        <div class="" >
+          <img src="{{ asset('images/about/'. $about1->photo)}}" alt="blooming blossoms trust" style="width: 100%;">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Section-3 End-->
+
+
+<!-- Section-1 Start-->
+<section class="section-2">
+  <div class="container">
+    <div class="row  p-3">
+      <div class="col-lg-4 d-none">
+        <div class="" >
+          <img src="{{ asset('images/about/'. $about1->image)}}" alt="blooming blossoms trust" style="width: 100%;">
+        </div>
+      </div>
+      <div class="col-lg-12 col-xl-12  p-3  bg-theme">
+        <div class="ps-lg-4 pe-lg-2  p-3" >
+          {!! $about1->long_title !!}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section-1 End-->
+
+
+<!-- Section-2 Start-->
+<section class="section-3">
+  <div class="container">
+    <div class="row  p-3">
+      <div class="col-lg-12 col-xl-12 order-0 order-lg-1 bg-theme  p-3">
+          {!! $about1->long_description !!}
+      </div>
+  </div>
+</section>
+<!-- Section-2 End-->
+
+
+
+<section class="about-section" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <!-- Right: Content -->
+      <div class="col-lg-12 text-center col-xl-12 order-0 order-lg-1">
+          <div class="mt-3">
+            <a href="{{ asset('resources/frontend/document/New organisation chart.pdf') }}" class="vs-btn" role="button" target="_blank">Organigram
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-left:6px"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="{{ asset('resources/frontend/document/Safeguarding Policy - Jan 2021.pdf') }}" class="vs-btn" role="button" target="_blank">Safeguarding Policy
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-left:6px"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- ===== Smart Full-Width Gallery ===== -->
+<section id="smart-gallery" class="py-5">
+  <div class="container-fluid px-0">
+    <div class="container">
+      <div class="text-center mb-4">
+        {{-- <div class="small-title text-uppercase text-muted mb-2">Our Gallery</div> --}}
+        <h2>Our Gallery</h2>
+      </div>
+    </div>
+
+    <!-- Gallery grid: full-width background but images contained -->
+    <div class="gallery-wrap">
+      <div class="container">
+        <div id="galleryGrid" class="row g-3">
+          @php $index = 0; @endphp
+          @foreach ($galleries as $gallery)
+            @foreach ($gallery->images as $item)
+              <div class="col-6 col-md-3">
+                <div class="gallery-item {{ $index >= 4 ? 'hidden' : '' }}" data-index="{{ $index }}" tabindex="0">
+                  <img src="{{ asset('images/content/' . $item->image) }}" alt="{{ $item->short_title }}" loading="lazy" data-full="{{ asset('images/content/' . $item->image) }}">
+                  <div class="thumb-overlay"><span>View</span></div>
+                </div>
+              </div>
+              @php $index++; @endphp
+            @endforeach
+          @endforeach
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.gallery-wrap -->
+
+    <!-- See more button -->
+    <div class="container text-center mt-4">
+      <button id="galleryToggleBtn" class="btn btn-success btn-lg rounded-pill px-4" style="{{ $index <= 4 ? 'display: none;' : '' }}">See more</button>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX / OVERLAY -->
+  <div id="galleryLightbox" class="gallery-lightbox d-none" aria-hidden="true">
+    <button class="lb-close" aria-label="Close (Esc)">&times;</button>
+    <button class="lb-prev" aria-label="Previous (Left)">&lsaquo;</button>
+    <button class="lb-next" aria-label="Next (Right)">&rsaquo;</button>
+    <div class="lb-content">
+      <img id="lbImage" src="" alt="Full size image">
+    </div>
+  </div>
+</section>
+
+<style>
+  .hidden {
+    display: none !important;
+  }
+</style>
+
+@endsection
+@section('script')
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+  // Handle "See more" button click
+  $('#galleryToggleBtn').on('click', function () {
+    // Select the next 4 hidden gallery items
+    const hiddenItems = $('.gallery-item.hidden').slice(0, 4);
+    
+    // Show the next 4 items with a fade-in effect
+    hiddenItems.removeClass('hidden').hide().fadeIn(500);
+    
+    // Hide the button if no more hidden items remain
+    if ($('.gallery-item.hidden').length === 0) {
+      $('#galleryToggleBtn').fadeOut(300);
+    }
+  });
+
+});
+</script>
+@endsection
