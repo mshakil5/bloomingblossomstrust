@@ -64,7 +64,7 @@
 
 <!-- Optional small inline styles to tune the footer look -->
 <style>
-  .site-footer .footer-links a { text-decoration: none; color: #4CA30D;font-weight: 600; font-size: 14px;}
+  .site-footer .footer-links a { text-decoration: none; color: #4CA30D;font-weight: 600; font-size: 16px;}
   .site-footer .footer-links a:hover { color: #cb749a !important;font-weight: 700; }
   .site-footer .btn-outline-light { border-color: rgba(255,255,255,0.14); }
   .site-footer .footer-top .footer-brand img { filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25)); }

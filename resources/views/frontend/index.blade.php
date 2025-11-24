@@ -721,7 +721,7 @@
   <section class="clients-section text-center py-3">
     <div class="container">
       <h2 class="big-title mb-5"> Our Funders </h2>
-      <p class="py-3">
+      <p class="py-4">
         Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.
       </p>
       <div class="clients-slider">

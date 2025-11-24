@@ -51,6 +51,10 @@
       font-size: 20px;
     }
 
+    .footer-bottom p {
+      font-size: 14px;
+    }
+
 
     .hero_area {
       height: 65vh;
