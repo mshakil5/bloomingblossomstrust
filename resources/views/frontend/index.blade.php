@@ -5,7 +5,6 @@
 <style>
   button {
     font-family: 'DarkerGrotesque-medium', sans-serif;
-    font-weight: bold !important;
   }
   @media (max-width: 767.98px) { 
     .hero_area h1 {
@@ -132,7 +131,7 @@
   <div class="container">
 
     <div class="text-center mb-5">
-      <h2 class="">About Us</h2>
+      <h2 class="pb-5">About Us</h2>
       <p>
         Blooming Blossoms Trust sprouted the first seeds of hope in 2007, rising beyond the stigma involved. 
         As teachers and parents we saw the pain of SEN children trapped in mainstream cocoons, of bright and gifted children expected to toe the line and suppress their ideas and questions. 
@@ -166,6 +165,73 @@
 
   </div>
 </section>
+
+<style>
+  /* Make tab buttons full width & equal */
+.nav-tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none !important;
+}
+
+.nav-tabs .nav-item {
+    flex: 1;
+}
+
+.nav-tabs .nav-link {
+    width: 100%;
+    text-align: center;
+    background: #f5f5f5;
+    padding: .8rem 1rem;
+    border: none !important;
+    border-radius: 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Create stepped angled edges */
+.nav-tabs .nav-link::before,
+.nav-tabs .nav-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+}
+
+.nav-tabs .nav-link::before {
+    left: -20px;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.nav-tabs .nav-link::after {
+    right: -20px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* Active tab */
+.nav-tabs .nav-link.active {
+    color: #4CA30D !important;
+    background-color: #fff9f4 !important;
+}
+
+/* Hover */
+.nav-tabs .nav-link:hover {
+    color: #4CA30D !important;
+    background-color: #eaf7e3;
+}
+
+/* Remove gap on first & last tab */
+.nav-tabs .nav-item:first-child .nav-link::before {
+    display: none;
+}
+.nav-tabs .nav-item:last-child .nav-link::after {
+    display: none;
+}
+
+</style>
 
 
 
@@ -225,7 +291,7 @@
   <div class="container">
     <div class="text-center mb-5">
       {{-- <h3 class="h5 text-uppercase text-muted mb-2">Excellent Nursery Environment</h3> --}}
-      <h2 class="fw-bold py-3">Our Projects</h2>
+      <h2 class="py-3">Our Projects</h2>
     </div>
 
     <!-- Swiper container -->
@@ -239,7 +305,7 @@
                   <img src="{{asset('images/content/'. $project->feature_image)}}" alt="{{$project->short_title}}">
                 </div>
                 <div class="room-content text-center" style="min-height: 164px;">
-                  <h4 class="fw-bold mb-2" style="color: #4CA30D">{{$project->short_title}}</h4>
+                  <h4 class="mb-2" style="color: #4CA30D">{{$project->short_title}}</h4>
                   {{-- <p class="text-muted mb-3">
                     {{$project->long_title}}
                   </p> --}}
@@ -470,7 +536,7 @@
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="fw-bold py-3">Our Gallery</h2>
+        <h2 class="py-3 pb-5">Our Gallery</h2>
       </div>
     </div>
 
@@ -522,7 +588,7 @@
   <div class="container">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="fw-bold py-3">Frequently asked questions:</h2>
+        <h2 class="py-3 pb-5">Frequently asked questions:</h2>
       </div>
     </div>
     <div class="row align-items-start gy-4">
@@ -565,12 +631,7 @@
       background-color: #fff9f4;
     }
 
-    .clients-section h2 {
-      font-weight: 700;
-      color: #333;
-      margin-bottom: 40px;
-      position: relative;
-    }
+
 
     /* --- Carousel Container --- */
     .clients-slider {
@@ -642,7 +703,7 @@
 
   <section class="clients-section text-center py-3">
     <div class="container">
-      <h2 style="color: #4CA30D"> Our Funders </h2>
+      <h2 class="mb-5"> Our Funders </h2>
       <p class="py-3">
         Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.
       </p>

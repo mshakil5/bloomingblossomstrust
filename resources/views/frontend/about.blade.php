@@ -87,6 +87,18 @@
   </div>
 </header>
 
+  
+  <!-- Butterfly top-left -->
+<img src="{{ asset('resources/frontend/images/butterfly-left.png') }}" class="left-butterfly"
+      alt="Butterfly Left" 
+      style="position: absolute; top: 200px; left: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
+
+<!-- Butterfly top-right -->
+<img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" class="right-butterfly"
+      alt="Butterfly Right" 
+      style="position: absolute; top: 200px; right: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
+      
+
 <section class="about-section section-1 d-none">
   <div class="container">
     <div class="row g-4 align-items-center">

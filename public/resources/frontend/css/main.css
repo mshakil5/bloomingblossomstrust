@@ -536,12 +536,11 @@
 }
 
 .accordion-button {
-  background-color: #E3DDD8;
-  border: none;
-  font-weight: 600;
-  font-size: 38px;
+  font-size: 40px;
   color: #4CA30D;
-  padding: .5rem 1.4rem;
+  font-family: "DarkerGrotesque-bold";
+  padding: 0.8rem 1.25rem;
+  background-color: #E8E1D9;
 }
 
 .accordion-button:not(.collapsed) {
@@ -823,7 +822,7 @@
   border-radius: 10px;
   min-height: 300px; /* optional, for consistent height */
   transition: background-image 0.5s ease-in-out;
-  background-color: #c59b78;
+  background-color: #DACFC2;
 }
 
 /* Optional: slight background overlay for readability */
@@ -831,7 +830,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.8); /* light white overlay */
+  background: #DACFC2; /* light white overlay */
   border-radius: 10px;
   z-index: 0;
 }
@@ -1222,12 +1221,14 @@
 
     .h2, h2 {
       font-size: 80px;
-      color: #4CA30D;
+      /* color: #4CA30D; */
+      color: #003057;
+      text-align: center;
+      line-height: 0.8;
       font-family: "DarkerGrotesque-semibold";
     }
 
-
-
+    
   
     /* --- Butterfly Animation --- */
     .butterfly {

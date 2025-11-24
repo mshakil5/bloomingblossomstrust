@@ -40,7 +40,7 @@
 }
 
 .right-butterfly {
-  right: 0 !important;
+  right: 150px !important;
 }
 
 
@@ -97,7 +97,7 @@
   <!-- Butterfly top-left -->
 <img src="{{ asset('resources/frontend/images/butterfly-left.png') }}"  class="left-butterfly"
       alt="Butterfly Left" 
-      style="position: absolute; top: 200px; left: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
+      style="position: absolute; top: 220px; left: 100px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
 
 <!-- Butterfly top-right -->
 <img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" class="right-butterfly"
