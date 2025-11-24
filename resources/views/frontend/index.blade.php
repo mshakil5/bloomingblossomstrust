@@ -7,6 +7,18 @@
     font-family: 'DarkerGrotesque-medium', sans-serif;
   }
 
+  
+
+  .big-title {
+      font-size: 80px;
+      /* color: #4CA30D; */
+      color: #003057;
+      text-align: center;
+      line-height: 0.8;
+      font-family: "DarkerGrotesque-bold";
+  }
+
+
   @media (max-width: 767.98px) { 
     .hero_area h1 {
       font-size: 2rem !important;
