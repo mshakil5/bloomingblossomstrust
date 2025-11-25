@@ -187,7 +187,7 @@
     <div class="container">
       <div class="text-center mb-4">
         {{-- <div class="small-title text-uppercase text-muted mb-2">Our Gallery</div> --}}
-        <h2>Our Gallery</h2>
+        <h2 class="big-title py-3 pb-5">Our Gallery</h2>
       </div>
     </div>
 
