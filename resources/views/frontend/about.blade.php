@@ -24,6 +24,15 @@
         font-size: 18px !important;
       }
     }
+
+    .about-title {
+      font-size: 60px;
+      color: #003057;
+      text-align: center;
+      line-height: 1;
+      font-family: "DarkerGrotesque-semibold";
+
+    }
     
 
 </style>
@@ -147,7 +156,7 @@
   <div class="container py-3">
     <div class="text-center py-3">
 
-      <div class="big-title">
+      <div class="about-title">
         Together we cheer them on to reach goals. <br> Together we Soar Beyond Potential. <br> One pretty butterfly at a time. <br>
         {{-- Beyond their  <span class="accent">potential.</span>  --}}
       </div>
