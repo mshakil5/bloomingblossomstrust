@@ -170,104 +170,96 @@
   </div>
 </section>
 
-<style>
-/* TAB WRAPPER */
-.nav-tabs {
-    display: flex;
-    border-bottom: none !important;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 5px;
-    scrollbar-width: none;      /* FIREFOX SCROLLBAR REMOVE */
-}
-.nav-tabs::-webkit-scrollbar {   /* CHROME SCROLLBAR REMOVE */
-    display: none;
-}
-
-.nav-tabs .nav-item {
-    flex: 1;
-    min-width: 200px;   /* ensures proper width on small screen */
-}
-
-/* BUTTON BASE */
-.nav-tabs .nav-link {
-    background: #18988b;
-    border: none !important;
-    border-radius: 0;
-    padding: 14px 20px;
-    position: relative;
-    font-weight: 600;
-    font-size: 16px;
-    color: #fff;
-    text-align: left;
-    transition: 0.3s ease;
-}
-
-/* RIGHT ARROW SHAPE */
-.nav-tabs .nav-link::after {
-    content: "";
-    position: absolute;
-    right: -28px;
-    top: 0;
-    width: 28px;
-    height: 100%;
-    background: #18988ba1;
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
-    z-index: 2;
-    transition: 0.3s ease;
-}
-
-/* HOVER */
-.nav-tabs .nav-link:hover {
-    background: #e9f8e3;
-    color: #2c7d09;
-}
-.nav-tabs .nav-link:hover::after {
-    background: #cbeec0;
-}
-
-/* ACTIVE TAB */
-.nav-tabs .nav-link.active {
-    background: #dacfc2 !important;
-    color: #18988b !important;
-}
-.nav-tabs .nav-link.active::after {
-    background: #ffe1c3 !important;
-}
-
-/* LAST TAB → remove arrow */
-.nav-tabs .nav-item:last-child .nav-link::after {
-    display: none;
-}
-
-/* MOBILE OPTIMIZATION */
-@media (max-width: 575px) {
-    .nav-tabs .nav-item {
-        min-width: 150px; /* shrink nicely */
-    }
-    .nav-tabs .nav-link {
-        font-size: 14px;
-        padding: 12px 16px;
-    }
-}
 
 
+{{-- <style>
+  /* TAB WRAPPER */
+  .nav-tabs {
+      display: flex;
+      border-bottom: none !important;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 5px;
+      scrollbar-width: none;      /* FIREFOX SCROLLBAR REMOVE */
+  }
+  .nav-tabs::-webkit-scrollbar {   /* CHROME SCROLLBAR REMOVE */
+      display: none;
+  }
+
+  .nav-tabs .nav-item {
+      flex: 1;
+      min-width: 200px;   /* ensures proper width on small screen */
+  }
+
+  /* BUTTON BASE */
+  .nav-tabs .nav-link {
+      background: #18988b;
+      border: none !important;
+      border-radius: 0;
+      padding: 14px 20px;
+      position: relative;
+      font-weight: 600;
+      font-size: 16px;
+      color: #fff;
+      text-align: left;
+      transition: 0.3s ease;
+  }
+
+  /* RIGHT ARROW SHAPE */
+  .nav-tabs .nav-link::after {
+      content: "";
+      position: absolute;
+      right: -28px;
+      top: 0;
+      width: 28px;
+      height: 100%;
+      background: #18988ba1;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      z-index: 2;
+      transition: 0.3s ease;
+  }
+
+  /* HOVER */
+  .nav-tabs .nav-link:hover {
+      background: #e9f8e3;
+      color: #2c7d09;
+  }
+  .nav-tabs .nav-link:hover::after {
+      background: #cbeec0;
+  }
+
+  /* ACTIVE TAB */
+  .nav-tabs .nav-link.active {
+      background: #dacfc2 !important;
+      color: #18988b !important;
+  }
+  .nav-tabs .nav-link.active::after {
+      background: #ffe1c3 !important;
+  }
+
+  /* LAST TAB → remove arrow */
+  .nav-tabs .nav-item:last-child .nav-link::after {
+      display: none;
+  }
+
+  /* MOBILE OPTIMIZATION */
+  @media (max-width: 575px) {
+      .nav-tabs .nav-item {
+          min-width: 150px; /* shrink nicely */
+      }
+      .nav-tabs .nav-link {
+          font-size: 14px;
+          padding: 12px 16px;
+      }
+  }
 </style>
 
-
-
 <section class="about-tab-section position-relative py-5">
-
   <div class="container">
     <div class="row g-4 align-items-start">
-
-      <!-- RIGHT: Text + small title + big title + centered tabs -->
       <div class="col-lg-12">
         <div class="px-md-3">
-          <!-- Centered tabs -->
           <ul class="nav nav-tabs py-3" id="ageTabs" role="tablist">
-
-
             @foreach ($services as $key => $service)
                 <li class="nav-item" role="presentation">
                   <button class="nav-link {{ $key == 0 ? 'active' : '' }}" id="{{$service->id}}-tab" data-bs-toggle="tab" data-bs-target="#{{$service->id}}" type="button" role="tab" aria-controls="{{$service->id}}" aria-selected="true">
@@ -275,26 +267,159 @@
                   </button>
                 </li>
             @endforeach
-
           </ul>
-
           <!-- Tab panes -->
           <div class="tab-content mt-3" id="ageTabsContent">
-
             @foreach ($services as $key => $service)
                 <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }} " id="{{$service->id}}" role="tabpanel" aria-labelledby="{{$service->id}}-tab" >
                   {!! $service->long_desc !!}
                 </div>
             @endforeach
-
           </div>
-
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 
+
+<style>
+/* WRAPPER */
+.custom-tabs-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* TAB LIST */
+.custom-tabs {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #e6e6e6;
+    padding: 0;
+    margin: 0;
+}
+
+/* TAB ITEM */
+.custom-tab-item {
+    flex: 1;
+    list-style: none;
+}
+
+/* TAB BUTTON */
+.custom-tab-btn {
+    width: 100%;
+    padding: 7px 20px;
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    background: #18988b;
+    color: #fff;
+    text-align: center;
+    transition: 0.3s ease;
+    border-right: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ARROW SHADE */
+.custom-tab-btn::after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.08));
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    transition: 0.3s;
+}
+
+.custom-tab-btn:hover::after {
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.15));
+}
+
+/* REMOVE ARROW FROM LAST ITEM */
+.custom-tab-item:last-child .custom-tab-btn::after {
+    display: none;
+}
+
+.custom-tab-item:last-child .custom-tab-btn {
+    border-right: none;
+}
+
+/* HOVER */
+.custom-tab-btn:hover {
+    background: #bf1354;
+}
+
+/* ACTIVE TAB */
+.custom-tab-btn.active {
+    background: #bf1354;
+    color: #fff;
+}
+.custom-tab-btn.active::after {
+    background: #0f6f63;
+    opacity: 0.5;
+}
+
+/* TAB CONTENT */
+.custom-tab-content {
+    background: #ffffff;
+    border-top: none;
+}
+
+/* MOBILE */
+@media(max-width: 575px) {
+    .custom-tab-btn {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+}
+</style>
+
+
+
+<section class="service-tabs-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <!-- TAB HEADERS -->
+        <div class="custom-tabs-wrapper">
+          <ul class="custom-tabs nav nav-tabs" id="serviceTabs" role="tablist">
+            @foreach ($services as $key => $service)
+                <li class="custom-tab-item" role="presentation">
+                  <button 
+                    class="custom-tab-btn {{ $key == 0 ? 'active' : '' }}" 
+                    id="tab-{{ $service->id }}" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#pane-{{ $service->id }}"
+                    type="button"
+                    role="tab">
+                      {{ $service->title }}
+                  </button>
+                </li>
+            @endforeach
+          </ul>
+        </div>
+
+        <!-- TAB CONTENT -->
+        <div class="tab-content custom-tab-content mt-3" id="serviceTabContent">
+          @foreach ($services as $key => $service)
+              <div 
+                class="tab-pane fade {{ $key == 0 ? 'show active' : '' }}" 
+                id="pane-{{ $service->id }}"
+                role="tabpanel">
+                {!! $service->long_desc !!}
+              </div>
+          @endforeach
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -649,7 +774,7 @@
     .clients-section {
       overflow: hidden;
       position: relative;
-      background-color: #fff9f4;
+      background-color: #fbfbfb;
     }
 
 
@@ -722,7 +847,7 @@
 
 
 
-  <section class="clients-section text-center py-3">
+  <section class="clients-section text-center py-5">
     <div class="container">
       <h2 class="big-title mb-5" style="font-family: DarkerGrotesque-semibold;"> Our Funders </h2>
       <p class="py-4">

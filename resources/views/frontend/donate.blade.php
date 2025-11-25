@@ -167,18 +167,29 @@
                 <div class="carousel-caption text-center">
                   
                   <h1 class="display-5 fw-bold"
-                      style="color: #b7236f;font-size: 7rem;font-family: DarkerGrotesque-semibold">
+                      style="color: #b7236f;font-size: 5rem;font-family: DarkerGrotesque-semibold">
                        Together, We Lift Up Disadvantaged Children
                   </h1>
                 </div>
             </div>
             <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
             <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
-            <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>
       </div>
     </div>
   </header>
 
+
+
+  
+  <!-- Butterfly top-left -->
+<img src="{{ asset('resources/frontend/images/butterfly-left.png') }}" class="left-butterfly"
+      alt="Butterfly Left" 
+      style="position: absolute; top: 200px; left: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
+
+<!-- Butterfly top-right -->
+<img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" class="right-butterfly"
+      alt="Butterfly Right" 
+      style="position: absolute; top: 200px; right: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
 
 
 
