@@ -10,7 +10,7 @@
     .vs-btn{
       display:inline-flex;align-items:center;gap:.6rem;
       padding:10px 18px;border-radius:10px;font-weight:700;
-      background:#4ca30d;
+      background:#003057;
       color:white;text-decoration:none;border:none;
       box-shadow:0 8px 18px rgba(255,107,107,0.18);
       transition:transform .18s ease,box-shadow .18s ease;
@@ -139,12 +139,20 @@
     </section>
   </main>
 
+  
+<section class="soar-section position-relative py-5">
+  
+  <div class="small-butterfly py-5" style="background-image: url('butterfly2.gif')"></div>
 
-<section class="about-section py-4" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-      <!-- Right: Content -->
-      <div class="col-lg-12 text-center col-xl-12 order-0 order-lg-1">
+  <div class="container py-3">
+    <div class="text-center py-3">
+
+      <div class="big-title">
+        Together we cheer them on to reach goals. <br> Together we Soar Beyond Potential. <br> One pretty butterfly at a time. <br>
+        {{-- Beyond their  <span class="accent">potential.</span>  --}}
+      </div>
+
+      <div class="col-lg-12 text-center col-xl-12 order-0 order-lg-1 py-4">
           <div class="mt-3">
             <a href="{{ asset('resources/frontend/document/New organisation chart.pdf') }}" class="vs-btn" role="button" target="_blank">Organigram
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-left:6px"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -154,8 +162,17 @@
             </a>
           </div>
       </div>
+        
+      </p>
+    </div>
+
+
+
   </div>
 </section>
+
+
+
 
 <!-- ===== Smart Full-Width Gallery ===== -->
 <section id="smart-gallery" class="py-5">
