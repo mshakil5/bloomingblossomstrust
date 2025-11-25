@@ -94,25 +94,20 @@
   <!-- Butterfly top-left -->
 <img src="{{ asset('resources/frontend/images/butterfly-left.png') }}" class="left-butterfly"
       alt="Butterfly Left" 
-      style="position: absolute; top: 200px; left: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
+      style="position: absolute; top: 240px; left: 120px; width: 100px; height: auto; opacity: 0.9; animation: flyLeft 6s infinite ease-in-out;">
 
 <!-- Butterfly top-right -->
 <img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" class="right-butterfly"
       alt="Butterfly Right" 
-      style="position: absolute; top: 200px; right: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
+      style="position: absolute; top: 240px; right: 120px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
       
 
   <main class="page-wrap">
     <section class="hero">
       <div class="row g-4 align-items-start">
         <div class="col-lg-7">
-          <h1 class="immersetitle">Immerse now</h1>
 
-          <p class="lead-text">You're going to do this hardcore because it's the only way to quickly shift your brain when you're still speaking or reading languages you are fluent in for work or in your personal life. I know it's frustrating but it really helps and nudges your mind constantly.</p>
-
-          <p class="lead-text">If you have time and money you could also join an immersion school experience where you can only speak french the minute you walk through the door which is truly quite ideal. But I'm guessing if you're reading this, that is not going to be you so you're going on a private immersion whether you're in a french speaking country or not.</p>
-
-          <p class="lead-text">Surround yourself with the language and soak your brain in it. We're adults, so we don't have this as easy as children do with people pointing things out and saying things loudly and slowly while speaking all around us (you'll wish people did, so feel free to stick post-it notes on everything instead). Relax, you need nowhere near this time with a developed brain but just remember this. It's normal - and actually very quick - that you're embarking on a one year journey to read, comprehend and speak.</p>
+          {!! $about1->short_description !!}
 
         </div>
 
@@ -120,38 +115,24 @@
           <div class="info-card">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <h5>MORE TO IT THAN PASTRIES</h5>
-              <div class="mini-icon"><img src="/mnt/data/34_52.png" alt="icon" style="max-width:38px;max-height:38px;object-fit:cover;border-radius:6px"></div>
+              {{-- <div class="mini-icon"><img src="/mnt/data/34_52.png" alt="icon" style="max-width:38px;max-height:38px;object-fit:cover;border-radius:6px"></div> --}}
             </div>
 
-            <dl class="row info-list">
-              <dt class="col-4">Devices</dt>
-              <dd class="col-8">Switch all your devices to french right now (you'll hate it for a little while but you already have context and you'll immediately learn words).</dd>
+            {!! $about1->long_title !!}
 
-              <dt class="col-4">Read</dt>
-              <dd class="col-8">Only read books in french from now. Stop any book you're reading in a fluent language.</dd>
 
-              <dt class="col-4">Socials</dt>
-              <dd class="col-8">Follow french learning accounts on your socials.</dd>
-
-              <dt class="col-4">Music</dt>
-              <dd class="col-8">Start listening to french music during work, cooking and showers.</dd>
-
-              <dt class="col-4">Watch</dt>
-              <dd class="col-8">Begin watching easy shows in french. Stop yourself from watching anything in your native languages for six months.</dd>
-
-            </dl>
           </div>
         </div>
       </div>
 
       <div class="section-sep">
         <div class="row">
-          <div class="col-lg-9">
-            <p class="lead-text">Don't fight the language! You will discover stupid and frustrating things. There will be many exceptions to rules. Every language has problems. Your job at the moment is to learn the language as it is. Complain about it later.</p>
+          <div class="col-lg-12 align-items-center">
+            <p class="lead-text">{!! $about1->long_description !!}</p>
           </div>
-          <div class="col-lg-3 d-flex align-items-center">
+          {{-- <div class="col-lg-3 d-flex align-items-center">
             <div class="astuce ms-auto">Astuce</div>
-          </div>
+          </div> --}}
         </div>
       </div>
 
