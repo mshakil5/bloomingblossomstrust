@@ -12,11 +12,9 @@
       padding:10px 18px;border-radius:10px;font-weight:700;
       background:#003057;
       color:white;text-decoration:none;border:none;
-      box-shadow:0 8px 18px rgba(255,107,107,0.18);
-      transition:transform .18s ease,box-shadow .18s ease;
     }
 
-    .vs-btn:hover{transform:translateY(-3px);box-shadow:0 18px 30px rgba(255,107,107,0.14)}
+    .vs-btn:hover{transform:translateY(-3px);}
 
 
     @media (max-width: 575.98px) {
