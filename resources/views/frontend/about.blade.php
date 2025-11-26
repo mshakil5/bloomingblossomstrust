@@ -121,7 +121,7 @@
         <div class="col-lg-5">
           <div class="info-card">
             <div class="d-flex justify-content-between align-items-start mb-3">
-              <h5>MORE TO IT THAN PASTRIES</h5>
+              {{-- <h5>MORE TO IT THAN PASTRIES</h5> --}}
               {{-- <div class="mini-icon"><img src="/mnt/data/34_52.png" alt="icon" style="max-width:38px;max-height:38px;object-fit:cover;border-radius:6px"></div> --}}
             </div>
 
