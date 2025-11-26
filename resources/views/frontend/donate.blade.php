@@ -106,8 +106,8 @@
     text-transform: uppercase;
     letter-spacing: .08em;
     font-weight: 700;
-    font-size: .875rem;
-    color: #354154;
+    font-size: 1rem;
+    color: #c8326b;
     margin-bottom: .5rem;
   }
 
@@ -123,7 +123,7 @@
   }
 
   .donation p.lead {
-    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    font-size: 24px;
     margin-bottom: 1rem;
   }
 
@@ -138,7 +138,7 @@
     align-items: start;
     gap: .6rem;
     padding: .35rem 0;
-    font-size: clamp(.975rem, 1.5vw, 1.125rem);
+    font-size: 24px;
   }
 
   .donation .check {

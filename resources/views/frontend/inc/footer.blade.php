@@ -38,11 +38,11 @@
 
             <div class="col-12 col-lg-4">
               <h6 class="mb-3">Contact</h6>
-              <address class=" mb-3" style="font-style:normal;">
+              <address class=" mb-3" style="font-style:normal;font-size: 20px;">
                 {{$company->address1}}<br>
               </address>
-                <a href="mailto:{{$company->email1}}" class="" style="color: #4CA30D; text-decoration: none; " >{{$company->email1}}</a><br>
-                <a href="tel:{{$company->phone1}}" class="" style=" text-decoration: none; color: #4CA30D" >{{$company->phone1}}</a>
+                <a href="mailto:{{$company->email1}}" class="" style="color: #4CA30D; text-decoration: none;font-size: 20px; " >{{$company->email1}}</a><br>
+                <a href="tel:{{$company->phone1}}" class="" style=" text-decoration: none; color: #4CA30D;font-size: 20px;" >{{$company->phone1}}</a>
 
             </div>
           </div> <!-- /.row inside right side -->
@@ -64,7 +64,7 @@
 
 <!-- Optional small inline styles to tune the footer look -->
 <style>
-  .site-footer .footer-links a { text-decoration: none; color: #4CA30D;font-weight: 600; font-size: 16px;}
+  .site-footer .footer-links a { text-decoration: none; color: #4CA30D;font-weight: 600; font-size: 22px;}
   .site-footer .footer-links a:hover { color: #cb749a !important;font-weight: 700; }
   .site-footer .btn-outline-light { border-color: rgba(255,255,255,0.14); }
   .site-footer .footer-top .footer-brand img { filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25)); }
@@ -78,6 +78,6 @@
     .site-footer .footer-middle form .col-4 { order:3; width:100%; }
   }
   h6 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 </style>
