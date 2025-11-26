@@ -682,7 +682,7 @@
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="big-title py-3 pb-5">Our Gallery</h2>
+        <h2 class="big-title py-3 pb-5" style="font-family: DarkerGrotesque-semibold">Our Gallery</h2>
       </div>
     </div>
 
@@ -749,12 +749,12 @@
           <!-- Item 1 -->
           <div class="accordion-item">
             <h2 class="accordion-header" id="faq-{{ $key }}">
-              <button class="{{ $key == 0 ? 'accordion-button' : 'accordion-button collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $key }}" aria-expanded="{{ $key == 0 ? 'true' : 'false' }}" aria-controls="collapse-{{ $key }}">
+              <button class="{{ $key == 0 ? 'accordion-button' : 'accordion-button collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $key }}" aria-expanded="{{ $key == 0 ? 'true' : 'false' }}" aria-controls="collapse-{{ $key }}"  style="font-family: 'DarkerGrotesque-semibold';">
                 {{ $faq->question }}
               </button>
             </h2>
             <div id="collapse-{{ $key }}" class="accordion-collapse collapse {{ $key == 0 ? 'show' : '' }}" aria-labelledby="faq-{{ $key }}" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
+              <div class="accordion-body" style="font-family: 'DarkerGrotesque-semibold';">
                 {!! $faq->answer !!}
               </div>
             </div>
