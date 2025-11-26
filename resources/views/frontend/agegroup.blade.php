@@ -11,7 +11,7 @@
 
 .age-group p {
   color: #333;
-  font-size: 1rem;
+  font-size: 24px;
   line-height: 1.7;
   margin-bottom: 1rem;
 }
@@ -202,8 +202,8 @@
     margin: 0 auto;
     max-width: 750px;
     color: var(--quote-text);
-    font-size: 1.25rem;
-    line-height: 1.7;
+    font-size: 1.5rem;
+    line-height: 1.3;
     font-style: italic;
   }
 
