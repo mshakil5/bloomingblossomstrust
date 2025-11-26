@@ -25,15 +25,14 @@
   --nav-dropdown-hover-color: #34bf49; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
-
-@font-face {
-    font-family: "DarkerGrotesque-semibold";
-    src: url("/fonts/DarkerGrotesque-semibold.woff2") format("woff2"),
-         url("/fonts/DarkerGrotesque-semibold.woff") format("woff"),
-         url("/fonts/DarkerGrotesque-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+@font-face{
+  font-family: "DarkerGrotesque";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/DarkerGrotesque-semibold.woff2") format("woff2"),
+       url("/fonts/DarkerGrotesque-semibold.woff") format("woff"),
+       url("/fonts/DarkerGrotesque-SemiBold.ttf") format("truetype");
 }
 
 
