@@ -618,6 +618,14 @@ body {
     outline-offset: 3px;
   }
 
+  .form-check-label {
+    font-size: 1.3rem;
+  }
+
+  .form-control{
+    font-size: 1.3rem;
+  }
+
 
 
   
@@ -640,6 +648,14 @@ body {
 
 #location h3 {
   color: #4CA30D;
+}
+
+#location strong {
+  font-size: 26px;
+}
+
+#location li {
+  font-size: 22px;
 }
 
 .icon-wrap {

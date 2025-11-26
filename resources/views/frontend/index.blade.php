@@ -890,7 +890,7 @@
       <div class="col-lg-5">
         <div class="p-4 p-lg-0">
           {{-- <div class="small-title text-uppercase text-muted mb-1">Find us</div> --}}
-          <h3 class="fw-bold mb-3">Get in touch</h3>
+          <h1 class="big-title text-start mb-3">Get in touch</h1>
           <p class="text-muted mb-4">
             
               We'd love to hear from you.
