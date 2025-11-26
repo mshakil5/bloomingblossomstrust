@@ -12,6 +12,7 @@
       padding:10px 18px;border-radius:10px;font-weight:700;
       background:#003057;
       color:white;text-decoration:none;border:none;
+          font-size: 20px;
     }
 
     .vs-btn:hover{transform:translateY(-3px);}
@@ -27,7 +28,7 @@
       font-size: 60px;
       color: #003057;
       text-align: center;
-      line-height: 1;
+      line-height: 1.2;
       font-family: "DarkerGrotesque-semibold";
 
     }
@@ -36,15 +37,6 @@
 </style>
 
   <style>
-    :root{
-      --bg: #f6efe0; /* pale cream */
-      --accent: #17228a; /* deep bluish */
-      --muted: #6b6b9a;
-      --card-bg: #fffaf0;
-    }
-    body{background:var(--bg);font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--accent);}
-    .site-header{padding:1rem 1.25rem;background:transparent}
-    .brand{font-family:'Playfair Display', serif;font-size:1.6rem;color:var(--accent);letter-spacing:0.02em}
 
     .hero{padding:3rem 0}
     .immersetitle{font-family:'Playfair Display', serif;font-size:3.2rem;color:var(--accent);margin-bottom:1rem}
@@ -52,7 +44,7 @@
     .lead-text{color:var(--muted);line-height:1.8;font-weight:300}
 
     /* right card */
-    .info-card{background:var(--card-bg);border-radius:28px;padding:1.6rem;border:1px solid rgba(23,34,138,0.06);box-shadow:0 6px 0 rgba(23,34,138,0.02)}
+    .info-card{background:var(--card-bg);border-radius:28px;padding:1.6rem;border:1px solid rgba(23,34,138,0.06);box-shadow:0 6px 0 rgba(23,34,138,0.02); font-size: 24px;}
     .info-card h5{font-family:'Playfair Display', serif;color:var(--accent);font-size:1.05rem;margin-bottom:0.6rem}
     .info-list dt{font-family:'Playfair Display', serif;color:var(--accent);font-size:1rem}
     .info-list dd{margin-left:0;font-size:0.9rem;color:#6b6b9a}
@@ -62,7 +54,7 @@
     .astuce{font-family:'Playfair Display', serif;font-size:2.4rem;color:var(--accent);text-align:right;opacity:0.95}
 
     /* overall container mimic */
-    .page-wrap{max-width:1200px;margin:0 auto;padding:2rem}
+    .page-wrap{background-color: #fff9f4 }
 
     @media (max-width: 991.98px){
       .immersetitle{font-size:2.4rem}
@@ -109,8 +101,8 @@
       style="position: absolute; top: 240px; right: 120px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
       
 
-  <main class="page-wrap">
-    <section class="hero">
+  <section class=" page-wrap">
+    <div class="container hero">
       <div class="row g-4 align-items-start">
         <div class="col-lg-7">
 
@@ -143,8 +135,8 @@
         </div>
       </div>
 
-    </section>
-  </main>
+    </div>
+  </section>
 
   
 <section class="soar-section position-relative py-5">
@@ -213,7 +205,7 @@
 
     <!-- See more button -->
     <div class="container text-center mt-4">
-      <button id="galleryToggleBtn" class="btn btn-success btn-lg rounded-pill px-4" style="{{ $index <= 4 ? 'display: none;' : '' }}">See more</button>
+      <button id="galleryToggleBtn" class="vs-btn px-4" style="{{ $index <= 4 ? 'display: none;' : '' }}">See more</button>
     </div>
   </div>
 
