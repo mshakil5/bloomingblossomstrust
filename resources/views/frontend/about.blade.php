@@ -84,7 +84,7 @@
               <h1 class="display-5 fw-bold"
                   style="color:#b7236f; font-size:40px; font-family:'Roboto', sans-serif;">
                   {{-- {{ $about1->short_title }} --}}
-                  Blooming Blossoms Trust helps disadvantaged and vulnerable young people <span style="color:#208100;">achieve goals, overcome disabilities and develop skills.</span> 
+                  Blooming Blossoms Trust helps disadvantaged and vulnerable young people <span style="color:#208100;">Achieve Goals, Overcome Disabilities And Develop Skills.</span> 
               </h1>
             </div>
         </div>
@@ -151,7 +151,7 @@
   <div class="container py-3">
     <div class="text-center py-3">
 
-      <div class="about-title">
+      <div class="about-title" style="font-family: 'Roboto', sans-serif">
         Together we cheer them on to reach goals. <br> <span>Together we Soar Beyond Potential.</span>  <br> One pretty butterfly at a time. <br>
         {{-- Beyond their  <span class="accent">potential.</span>  --}}
       </div>
