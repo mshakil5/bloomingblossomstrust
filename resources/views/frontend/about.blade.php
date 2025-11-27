@@ -32,6 +32,10 @@
       font-family: "DarkerGrotesque-semibold";
 
     }
+
+    .about-title span{
+      color: #b7236f;
+    }
     
 
 </style>
@@ -44,7 +48,7 @@
     .lead-text{color:var(--muted);line-height:1.8;font-weight:300}
 
     /* right card */
-    .info-card{background:var(--card-bg);border-radius:28px;padding:1.6rem;border:1px solid rgba(23,34,138,0.06);box-shadow:0 6px 0 rgba(23,34,138,0.02); font-size: 24px;}
+    .info-card{background:#fff;border-radius:28px;padding:1.6rem;border:1px solid rgba(23,34,138,0.06);box-shadow:0 6px 0 rgba(23,34,138,0.02); font-size: 24px;}
     .info-card h5{font-family:'Playfair Display', serif;color:var(--accent);font-size:1.05rem;margin-bottom:0.6rem}
     .info-list dt{font-family:'Playfair Display', serif;color:var(--accent);font-size:1rem}
     .info-list dd{margin-left:0;font-size:0.9rem;color:#6b6b9a}
@@ -79,7 +83,8 @@
             <div class="carousel-caption text-center">
               <h1 class="display-5 fw-bold"
                   style="color:#b7236f; font-size:40px; font-family:'Roboto', sans-serif;">
-                  {{ $about1->short_title }}
+                  {{-- {{ $about1->short_title }} --}}
+                  Blooming Blossoms Trust helps disadvantaged and vulnerable young people <span style="color:#208100;">achieve goals, overcome disabilities and develop skills.</span> 
               </h1>
             </div>
         </div>
@@ -147,7 +152,7 @@
     <div class="text-center py-3">
 
       <div class="about-title">
-        Together we cheer them on to reach goals. <br> Together we Soar Beyond Potential. <br> One pretty butterfly at a time. <br>
+        Together we cheer them on to reach goals. <br> <span>Together we Soar Beyond Potential.</span>  <br> One pretty butterfly at a time. <br>
         {{-- Beyond their  <span class="accent">potential.</span>  --}}
       </div>
 
