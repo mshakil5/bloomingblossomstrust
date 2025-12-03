@@ -4,7 +4,7 @@
 
 <style>
   button {
-    font-family: 'DarkerGrotesque-medium', sans-serif;
+    font-family: 'DarkerGrotesque-semibold';
   }
 
   
@@ -96,7 +96,7 @@
           font-size: 80px;
           text-align: center;
           line-height: 1;
-          color: #18988B;
+          color: #4CA30D;
           font-family: "DarkerGrotesque-semibold";
     }
 
@@ -172,116 +172,6 @@
 
 
 
-{{-- <style>
-  /* TAB WRAPPER */
-  .nav-tabs {
-      display: flex;
-      border-bottom: none !important;
-      overflow-x: auto;
-      white-space: nowrap;
-      padding-bottom: 5px;
-      scrollbar-width: none;      /* FIREFOX SCROLLBAR REMOVE */
-  }
-  .nav-tabs::-webkit-scrollbar {   /* CHROME SCROLLBAR REMOVE */
-      display: none;
-  }
-
-  .nav-tabs .nav-item {
-      flex: 1;
-      min-width: 200px;   /* ensures proper width on small screen */
-  }
-
-  /* BUTTON BASE */
-  .nav-tabs .nav-link {
-      background: #18988b;
-      border: none !important;
-      border-radius: 0;
-      padding: 14px 20px;
-      position: relative;
-      font-weight: 600;
-      font-size: 16px;
-      color: #fff;
-      text-align: left;
-      transition: 0.3s ease;
-  }
-
-  /* RIGHT ARROW SHAPE */
-  .nav-tabs .nav-link::after {
-      content: "";
-      position: absolute;
-      right: -28px;
-      top: 0;
-      width: 28px;
-      height: 100%;
-      background: #18988ba1;
-      clip-path: polygon(0 0, 100% 50%, 0 100%);
-      z-index: 2;
-      transition: 0.3s ease;
-  }
-
-  /* HOVER */
-  .nav-tabs .nav-link:hover {
-      background: #e9f8e3;
-      color: #2c7d09;
-  }
-  .nav-tabs .nav-link:hover::after {
-      background: #cbeec0;
-  }
-
-  /* ACTIVE TAB */
-  .nav-tabs .nav-link.active {
-      background: #dacfc2 !important;
-      color: #18988b !important;
-  }
-  .nav-tabs .nav-link.active::after {
-      background: #ffe1c3 !important;
-  }
-
-  /* LAST TAB → remove arrow */
-  .nav-tabs .nav-item:last-child .nav-link::after {
-      display: none;
-  }
-
-  /* MOBILE OPTIMIZATION */
-  @media (max-width: 575px) {
-      .nav-tabs .nav-item {
-          min-width: 150px; /* shrink nicely */
-      }
-      .nav-tabs .nav-link {
-          font-size: 14px;
-          padding: 12px 16px;
-      }
-  }
-</style>
-
-<section class="about-tab-section position-relative py-5">
-  <div class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-12">
-        <div class="px-md-3">
-          <ul class="nav nav-tabs py-3" id="ageTabs" role="tablist">
-            @foreach ($services as $key => $service)
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link {{ $key == 0 ? 'active' : '' }}" id="{{$service->id}}-tab" data-bs-toggle="tab" data-bs-target="#{{$service->id}}" type="button" role="tab" aria-controls="{{$service->id}}" aria-selected="true">
-                    {{$service->title}}
-                  </button>
-                </li>
-            @endforeach
-          </ul>
-          <!-- Tab panes -->
-          <div class="tab-content mt-3" id="ageTabsContent">
-            @foreach ($services as $key => $service)
-                <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }} " id="{{$service->id}}" role="tabpanel" aria-labelledby="{{$service->id}}-tab" >
-                  {!! $service->long_desc !!}
-                </div>
-            @endforeach
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> --}}
-
 
 <style>
 /* WRAPPER */
@@ -313,7 +203,7 @@
     font-weight: 600;
     font-size: 17px;
     border: none;
-    background: #18988b;
+    background: #4CA30D;
     color: #fff;
     text-align: center;
     transition: 0.3s ease;
@@ -696,7 +586,7 @@
               <div class="col-6 col-md-3">
                 <div class="gallery-item {{ $index >= 4 ? 'hidden' : '' }}" data-index="{{ $index }}" tabindex="0">
                   <img src="{{ asset('images/content/' . $item->image) }}" alt="{{ $item->short_title }}" loading="lazy" data-full="{{ asset('images/content/' . $item->image) }}">
-                  <div class="thumb-overlay"><span>View</span></div>
+                  {{-- <div class="thumb-overlay"><span>View</span></div> --}}
                 </div>
               </div>
               @php $index++; @endphp
@@ -712,7 +602,7 @@
     </div>
   </div>
 
-  <!-- LIGHTBOX / OVERLAY -->
+  <!-- LIGHTBOX / OVERLAY 
   <div id="galleryLightbox" class="gallery-lightbox d-none" aria-hidden="true">
     <button class="lb-close" aria-label="Close (Esc)">&times;</button>
     <button class="lb-prev" aria-label="Previous (Left)">&lsaquo;</button>
@@ -720,7 +610,7 @@
     <div class="lb-content">
       <img id="lbImage" src="" alt="Full size image">
     </div>
-  </div>
+  </div>-->
 </section>
 
 <style>
@@ -749,12 +639,12 @@
           <!-- Item 1 -->
           <div class="accordion-item">
             <h2 class="accordion-header" id="faq-{{ $key }}">
-              <button class="{{ $key == 0 ? 'accordion-button' : 'accordion-button collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $key }}" aria-expanded="{{ $key == 0 ? 'true' : 'false' }}" aria-controls="collapse-{{ $key }}"  style="font-family: 'DarkerGrotesque-semibold';">
+              <button class="{{ $key == 0 ? 'accordion-button' : 'accordion-button collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $key }}" aria-expanded="{{ $key == 0 ? 'true' : 'false' }}" aria-controls="collapse-{{ $key }}"  >
                 {{ $faq->question }}
               </button>
             </h2>
             <div id="collapse-{{ $key }}" class="accordion-collapse collapse {{ $key == 0 ? 'show' : '' }}" aria-labelledby="faq-{{ $key }}" data-bs-parent="#faqAccordion">
-              <div class="accordion-body" style="font-family: 'DarkerGrotesque-semibold';">
+              <div class="accordion-body" >
                 {!! $faq->answer !!}
               </div>
             </div>

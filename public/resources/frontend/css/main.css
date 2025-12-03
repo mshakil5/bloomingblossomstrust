@@ -1,10 +1,14 @@
 :root {
-  --default-font: "DarkerGrotesque", "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "DarkerGrotesque", "Roboto", sans-serif;
-  --nav-font: "Lato", sans-serif;
+  --default-font: "DarkerGrotesque", "Roboto", system-ui, -apple-system,
+    "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --heading-font: "DarkerGrotesque", "Roboto";
+
+  --nav-font: "Lato";
 }
 
-:root { 
+:root {
   --background-color: #ffffff;
   --default-color: #212529;
   --heading-color: #2d465e;
@@ -20,11 +24,11 @@
   --nav-dropdown-background-color: #ffffff;
   --nav-dropdown-color: #212529;
   --nav-dropdown-hover-color: #34bf49;
-  --brand:#ff8b94;
-  --accent:#ffd36b;
+  --brand: #ff8b94;
+  --accent: #ffd36b;
 }
 
-@font-face{
+@font-face {
   font-family: "DarkerGrotesque";
   font-weight: 600;
   font-style: normal;
@@ -32,10 +36,13 @@
   src: url("/fonts/DarkerGrotesque-SemiBold.ttf") format("truetype");
 }
 
+/* Updated body font stack — only sans-serif fonts */
 body {
-  font-family: "DarkerGrotesque", "Raleway", Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
+  font-family: "DarkerGrotesque", "Roboto", "Lato", Inter, system-ui,
+    -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: #222;
 }
+
 
 
     p {
@@ -518,7 +525,7 @@ body {
 .accordion-button {
   font-size: 30px;
   color: #4CA30D;
-  font-family: "DarkerGrotesque-bold";
+  font-family: "DarkerGrotesque-semibold";
   padding: 0.8rem 1.25rem;
   background-color: #E8E1D9;
 }
@@ -1219,8 +1226,7 @@ body {
 
   .big-title {
       font-size: 60px;
-      /* color: #4CA30D; */
-      color: #003057;
+      color: #4CA30D;
       text-align: center;
       line-height: 0.8;
       font-family: "DarkerGrotesque-semibold";

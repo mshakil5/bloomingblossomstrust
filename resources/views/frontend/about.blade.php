@@ -82,7 +82,7 @@
         <div class="banner-item active">
             <div class="carousel-caption text-center">
               <h1 class="display-5 fw-bold"
-                  style="color:#b7236f; font-size:40px; font-family:'Roboto', sans-serif;">
+                  style="color:#b7236f; font-size:40px;">
                   {{-- {{ $about1->short_title }} --}}
                   Blooming Blossoms Trust helps disadvantaged and vulnerable young people <span style="color:#208100;">Achieve Goals, Overcome Disabilities And Develop Skills.</span> 
               </h1>
@@ -151,7 +151,7 @@
   <div class="container py-3">
     <div class="text-center py-3">
 
-      <div class="about-title" style="font-family: 'Roboto', sans-serif">
+      <div class="about-title">
         Together we cheer them on to reach goals. <br> <span>Together we Soar Beyond Potential.</span>  <br> One pretty butterfly at a time. <br>
         {{-- Beyond their  <span class="accent">potential.</span>  --}}
       </div>
@@ -215,14 +215,14 @@
   </div>
 
   <!-- LIGHTBOX / OVERLAY -->
-  <div id="galleryLightbox" class="gallery-lightbox d-none" aria-hidden="true">
+  {{-- <div id="galleryLightbox" class="gallery-lightbox d-none" aria-hidden="true">
     <button class="lb-close" aria-label="Close (Esc)">&times;</button>
     <button class="lb-prev" aria-label="Previous (Left)">&lsaquo;</button>
     <button class="lb-next" aria-label="Next (Right)">&rsaquo;</button>
     <div class="lb-content">
       <img id="lbImage" src="" alt="Full size image">
     </div>
-  </div>
+  </div> --}}
 </section>
 
 <style>

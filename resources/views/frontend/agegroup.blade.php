@@ -78,7 +78,7 @@
             <div class="banner-item active">
                 <div class="carousel-caption text-center">
                   <h1 class="display-5 fw-bold"
-                      style="color:#4ca30d; font-size:3rem; font-family:'Roboto', sans-serif;">
+                      style="color:#4ca30d; font-size:3rem;">
                       {{ $agegroup->short_title }}
                   </h1>
                 </div>
@@ -286,14 +286,14 @@
   </div>
 
   <!-- LIGHTBOX / OVERLAY -->
-  <div id="galleryLightbox" class="gallery-lightbox d-none" aria-hidden="true">
+  {{-- <div id="galleryLightbox" class="gallery-lightbox d-none" aria-hidden="true">
     <button class="lb-close" aria-label="Close (Esc)">&times;</button>
     <button class="lb-prev" aria-label="Previous (Left)">&lsaquo;</button>
     <button class="lb-next" aria-label="Next (Right)">&rsaquo;</button>
     <div class="lb-content">
       <img id="lbImage" src="" alt="Full size image">
     </div>
-  </div>
+  </div> --}}
 </section>  
 
 @endif

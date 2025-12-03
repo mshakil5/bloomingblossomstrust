@@ -98,7 +98,7 @@
     color: var(--donation-text-color);
     border-radius: 1.25rem;
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(12px);
     padding: clamp(1rem, 2vw + .5rem, 2rem);
   }
 
@@ -168,7 +168,7 @@
                   
                   <h1 class="display-5 fw-bold"
                       style="color: #b7236f;font-size: 5rem;font-family: DarkerGrotesque-semibold">
-                       Together, We Lift Up Disadvantaged Children
+                       We need your pebble in the pond
                   </h1>
                 </div>
             </div>
@@ -190,6 +190,45 @@
 <img src="{{ asset('resources/frontend/images/butterfly-right.png') }}" class="right-butterfly"
       alt="Butterfly Right" 
       style="position: absolute; top: 200px; right: 180px; width: 100px; height: auto; opacity: 0.9; animation: flyRight 6s infinite ease-in-out;">
+
+
+      
+
+  <!-- DONATION SECTION -->
+<section class="donation" aria-label="Donation Section">
+  <div class="donation__bg" ></div>
+  <div class="donation__overlay"></div>
+
+  <div class="donation__inner container">
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-lg-8">
+
+        <div class="donation__panel">
+          <div class="eyebrow">Blooming Blossoms Trust</div>
+
+          <h1>
+            Ripples and Waves.<br>
+            We need your pebble in the <span class="accent">pond</span>.
+          </h1>
+
+          <p class="lead">
+            At Blooming Blossoms Trust we see abilities, not disabilities. We work to remove the barrier called “No” or “Can’t” for children with (dis)abilities. With your support, we help every child see that they can.
+          </p>
+
+          <ul class="can-list">
+            <li><span class="check">✓</span> <strong>Can</strong> learn.</li>
+            <li><span class="check">✓</span> <strong>Can</strong> have control over their lives.</li>
+            <li><span class="check">✓</span> <strong>Can</strong> have friends, fun and a future.</li>
+            <li><span class="check">✓</span> <strong>Can</strong> blossom despite the turbulent environment.</li>
+          </ul>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -264,50 +303,13 @@
 
 
 
-  <!-- DONATION SECTION -->
-<section class="donation" aria-label="Donation Section">
-  <div class="donation__bg" ></div>
-  <div class="donation__overlay"></div>
-
-  <div class="donation__inner container">
-    <div class="row g-4 align-items-center">
-      <div class="col-12 col-lg-8">
-
-        <div class="donation__panel">
-          <div class="eyebrow">Blooming Blossoms Trust</div>
-
-          <h1>
-            Ripples and Waves.<br>
-            We need your pebble in the <span class="accent">pond</span>.
-          </h1>
-
-          <p class="lead">
-            At Blooming Blossoms Trust we see abilities, not disabilities. We work to remove the barrier called “No” or “Can’t” for children with (dis)abilities. With your support, we help every child see that they can.
-          </p>
-
-          <ul class="can-list">
-            <li><span class="check">✓</span> <strong>Can</strong> learn.</li>
-            <li><span class="check">✓</span> <strong>Can</strong> have control over their lives.</li>
-            <li><span class="check">✓</span> <strong>Can</strong> have friends, fun and a future.</li>
-            <li><span class="check">✓</span> <strong>Can</strong> blossom despite the turbulent environment.</li>
-          </ul>
-
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
 <!-- ===== Our Projects Section ===== -->
 <section id="our-rooms" class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
       {{-- <h3 class="h5 text-uppercase text-muted mb-2">Excellent Nursery Environment</h3> --}}
-      <h2 class="fw-bold">Our Projects</h2>
+      <h2 class="big-title mb-5">Our Projects</h2>
     </div>
 
     <!-- Swiper container -->
