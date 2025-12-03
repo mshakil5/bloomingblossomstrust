@@ -204,7 +204,12 @@
       <div class="col-12 col-lg-8">
 
         <div class="donation__panel">
-          <div class="eyebrow">Blooming Blossoms Trust</div>
+          {{-- <div class="eyebrow">Blooming Blossoms Trust</div> --}}
+
+           Ripples and Waves.
+We need your pebble in the pond.
+At Blooming Blossoms Trust we see abilities, not disabilities. We work to remove the barrier called “No” or “Can’t” for children with (dis)abilities. With your support, we help every child see that they can.
+
 
           <h1>
             Ripples and Waves.<br>
