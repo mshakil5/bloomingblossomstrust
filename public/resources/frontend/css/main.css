@@ -39,7 +39,7 @@
 /* Updated body font stack — only sans-serif fonts */
 body {
   font-family: "DarkerGrotesque", "Roboto", "Lato", Inter, system-ui,
-    -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -apple-system, "Segoe UI", "Helvetica Neue", Arial;
   color: #222;
 }
 
