@@ -10,7 +10,7 @@
     .vs-btn{
       display:inline-flex;align-items:center;gap:.6rem;
       padding:10px 18px;border-radius:10px;font-weight:700;
-      background:#003057;
+      background:#4CA30D;
       color:white;text-decoration:none;border:none;
           font-size: 20px;
     }
@@ -26,7 +26,7 @@
 
     .about-title {
       font-size: 60px;
-      color: #003057;
+      color: #4CA30D;
       text-align: center;
       line-height: 1.2;
       font-family: "DarkerGrotesque-semibold";
@@ -84,7 +84,7 @@
               <h1 class="display-5 fw-bold"
                   style="color:#b7236f; font-size:40px;">
                   {{-- {{ $about1->short_title }} --}}
-                  Blooming Blossoms Trust helps disadvantaged and vulnerable young people <span style="color:#208100;">Achieve Goals, Overcome Disabilities And Develop Skills.</span> 
+                  Blooming Blossoms Trust helps disadvantaged and vulnerable young people <span style="color:#4CA30D;">Achieve Goals, Overcome Disabilities And Develop Skills.</span> 
               </h1>
             </div>
         </div>
