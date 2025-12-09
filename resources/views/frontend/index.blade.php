@@ -5,13 +5,6 @@
 <style>
 
 
-  .big-title {
-      font-size: 80px;
-      color: #4CA30D;
-      text-align: center;
-      line-height: 0.8;
-  }
-
 
 
   @media (max-width: 767.98px) { 
