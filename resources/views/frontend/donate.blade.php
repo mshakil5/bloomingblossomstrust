@@ -166,10 +166,10 @@
             <div class="carousel-item active">
                 <div class="carousel-caption text-center">
                   
-                  <h1 class="display-5 fw-bold"
-                      style="color: #b7236f;font-size: 5rem;font-family: DarkerGrotesque-semibold">
+                  <div class="display-5 fw-bold"
+                      style="color: #b7236f;font-size: 5rem;">
                        We need your pebble in the pond
-                  </h1>
+                </div>
                 </div>
             </div>
             <div class="butterfly" style="background-image: url('butterfly2.gif')"></div>

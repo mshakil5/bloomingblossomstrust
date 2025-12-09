@@ -525,7 +525,6 @@ body {
 .accordion-button {
   font-size: 30px;
   color: #4CA30D;
-  font-family: "DarkerGrotesque-semibold";
   padding: 0.8rem 1.25rem;
   background-color: #E8E1D9;
 }
@@ -1225,11 +1224,10 @@ body {
 
 
   .big-title {
-      font-size: 60px;
+      font-size: 80px;
       color: #4CA30D;
       text-align: center;
       line-height: 0.8;
-      font-family: "DarkerGrotesque-semibold";
   }
     
   

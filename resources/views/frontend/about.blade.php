@@ -29,7 +29,6 @@
       color: #4CA30D;
       text-align: center;
       line-height: 1.2;
-      font-family: "DarkerGrotesque-semibold";
 
     }
 

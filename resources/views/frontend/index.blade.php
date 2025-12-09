@@ -3,11 +3,7 @@
 @section('content')
 
 <style>
-  button {
-    font-family: 'DarkerGrotesque-semibold';
-  }
 
-  
 
 
 
@@ -28,6 +24,11 @@
       width: 60px !important;
       height: auto !important;
     }
+    .banner-title{
+      color: #b7236f !important;
+      font-size: 7rem;
+      font-family: "DarkerGrotesque-semibold";
+    }
   }
 </style>
 
@@ -42,12 +43,16 @@
         @foreach ($sliders as $key => $slider)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                 <div class="carousel-caption text-center">
-                  @if ($slider->title)
+                  {{-- @if ($slider->title)
                   <h1 class="display-5 fw-bold"
                       style="color: #b7236f;font-size: 7rem;font-family: DarkerGrotesque-semibold">
                       {{ $slider->title ?? '' }}
                   </h1>
-                  @endif
+                  @endif --}}
+
+                  <div class="display-5 fw-bold banner-title" style="font-size: 7rem;color: #bf1354">
+                      Soaring Beyond Potential
+                  </div>
 
                     @if($slider->description)<p class="lead">{{ $slider->description ?? '' }}</p>@endif
                     @if($slider->link)<p><a class="btn btn-primary btn-lg" href="{{ $slider->link ?? '' }}">Learn more</a></p>@endif
@@ -97,7 +102,6 @@
           text-align: center;
           line-height: 1;
           color: #4CA30D;
-          font-family: "DarkerGrotesque-semibold";
     }
 
     @media (max-width: 991.98px) {
@@ -135,7 +139,7 @@
   <div class="container">
 
     <div class="text-center mb-5">
-      <h2 class="big-title pb-5">About Us</h2>
+      <div class="big-title pb-5">About Us</div>
       <p>
         Blooming Blossoms Trust sprouted the first seeds of hope in 2007, rising beyond the stigma involved. 
         As teachers and parents we saw the pain of SEN children trapped in mainstream cocoons, of bright and gifted children expected to toe the line and suppress their ideas and questions. 
@@ -572,7 +576,7 @@
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="big-title py-3 pb-5" style="font-family: DarkerGrotesque-semibold">Our Gallery</h2>
+        <h2 class="big-title py-3 pb-5" >Our Gallery</h2>
       </div>
     </div>
 
@@ -739,7 +743,7 @@
 
   <section class="clients-section text-center py-5">
     <div class="container">
-      <h2 class="big-title mb-5" style="font-family: DarkerGrotesque-semibold;"> Our Funders </h2>
+      <h2 class="big-title mb-5"> Our Funders </h2>
       <p class="py-4">
         Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.
       </p>
@@ -780,7 +784,7 @@
       <div class="col-lg-5">
         <div class="p-4 p-lg-0">
           {{-- <div class="small-title text-uppercase text-muted mb-1">Find us</div> --}}
-          <h1 class="big-title text-start mb-3">Get in touch</h1>
+          <div class="big-title text-start mb-3">Get in touch</div>
           <p class="text-muted mb-4">
             
               We'd love to hear from you.
