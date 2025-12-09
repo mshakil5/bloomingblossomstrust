@@ -331,7 +331,7 @@
   <div class="container">
     <div class="text-center mb-5">
       {{-- <h3 class="h5 text-uppercase text-muted mb-2">Excellent Nursery Environment</h3> --}}
-      <h2 class="big-title py-3">Our Projects</h2>
+      </div> class="big-title py-3">Our Projects</div>
     </div>
 
     <!-- Swiper container -->
@@ -576,7 +576,7 @@
   <div class="container-fluid px-0">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="big-title py-3 pb-5" >Our Gallery</h2>
+        </div> class="big-title py-3 pb-5" >Our Gallery</div>
       </div>
     </div>
 
@@ -628,7 +628,7 @@
   <div class="container">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="big-title py-3 pb-5">Frequently asked questions:</h2>
+        </div> class="big-title py-3 pb-5">Frequently asked questions:</div>
       </div>
     </div>
     <div class="row align-items-start gy-4">
@@ -743,7 +743,7 @@
 
   <section class="clients-section text-center py-5">
     <div class="container">
-      <h2 class="big-title mb-5"> Our Funders </h2>
+      </div> class="big-title mb-5"> Our Funders </div>
       <p class="py-4">
         Blooming Blossoms is deeply grateful to all our funders for their support, without which our work would not be possible. Together we can help disadvantaged children young people unfurl and approach a blossoming future with skills and confidence.
       </p>
