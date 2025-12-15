@@ -43,24 +43,30 @@ function previewImage(inputSelector, imgSelector) {
 }
 
 $(document).ready(function () {
+
+
   // Summernote
-  $('.summernote').summernote({
-    height: 200,
-    resize: true,
-    toolbar: [
-      ['style', ['style']],
-      ['font', ['fontname', 'fontsize', 'bold', 'italic', 'underline', 'clear']],
-      ['color', ['color']],
-      ['para', ['ul', 'ol', 'paragraph']],
-      ['insert', ['link', 'picture', 'video']],
-      ['view', ['fullscreen', 'codeview', 'help']]
-    ],
-    fontNames: [
-      'Arial', 'Courier New', 'Times New Roman', 'Raleway', 'Roboto', 'Verdana', 'Helvetica'
-    ],
-    fontNamesIgnoreCheck: ['Raleway', 'Roboto'], // ensures custom fonts appear
-    fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '32', '36', '48', '64'],
-  });
+  // $('.summernote').summernote({
+  //     height: 200,
+  //     resize: true,
+  //     toolbar: [
+  //       ['style', ['style']],
+  //       ['font', ['fontname', 'fontsize', 'bold', 'italic', 'underline', 'clear']],
+  //       ['color', ['color']],
+  //       ['para', ['ul', 'ol', 'paragraph', 'blockquote']], // Keep other paragraph controls
+  //       ['line', ['lineheight']],
+  //       ['insert', ['link', 'picture', 'video']],
+  //       ['view', ['fullscreen', 'codeview', 'help']]
+  //     ],
+  //     fontNames: [
+  //       'DarkerGrotesque', 'Arial', 'Courier New', 'Times New Roman', 
+  //       'Raleway', 'Roboto', 'Verdana', 'Helvetica'
+  //     ],
+  //     fontNamesIgnoreCheck: ['DarkerGrotesque', 'Raleway', 'Roboto'], 
+  //     fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '32', '36', '48', '64'],
+      
+  //     lineHeights: ['1.0', '1.2', '1.4', '1.5', '1.6', '1.8', '2.0', '3.0'],
+  // });
 
 
 

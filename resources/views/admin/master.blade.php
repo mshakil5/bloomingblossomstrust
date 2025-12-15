@@ -27,7 +27,13 @@
   <link rel="stylesheet" href="{{ asset('resources/admin/css/style.css') }}">
   <style>
     .note-editable {
-      font-family: 'Roboto', sans-serif;
+        /* Apply your base font families */
+        font-family: "DarkerGrotesque", "Roboto", "Lato", Inter, system-ui,
+            -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+        
+        /* Ensure line-height and font-size are set for consistent editing */
+        line-height: 1.5; /* Example line-height */
+        font-size: 16px; /* Example base font size */
     }
   </style>
 
@@ -110,15 +116,49 @@
 <script src="{{ asset('resources/admin/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 
 <script src="{{ asset('resources/admin/select2/select2.min.js')}}"></script>
-<script src="{{ asset('resources/admin/summernote/summernote-bs4.min.js')}}"></script>
 <script src="{{ asset('resources/admin/codemirror/codemirror.js')}}"></script>
 <script src="{{ asset('resources/admin/codemirror/mode/css/css.js')}}"></script>
 <script src="{{ asset('resources/admin/codemirror/mode/htmlmixed/htmlmixed.js')}}"></script>
 <script src="{{ asset('resources/admin/codemirror/mode/php/php.js')}}"></script>
 <script src="{{ asset('resources/admin/toastr/toastr.min.js')}}"></script>
+{{-- <script src="{{ asset('resources/admin/summernote/summernote-bs4.min.js')}}"></script> --}}
+
+<!-- Summernote -->
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs4.min.js"></script>
+
+<!-- Line height plugin -->
+<script src="https://cdn.jsdelivr.net/gh/summernote/summernote@0.8.20/examples/js/summernote-line-height.js"></script>
 
 <script src="{{ asset('resources/admin/js/app.js')}}"></script>
 
 @yield('script')
+
+<script>
+
+  $('.summernote').summernote({
+      height: 200,
+      resize: true,
+      toolbar: [
+        ['style', ['style']],
+        ['font', ['fontname', 'fontsize', 'bold', 'italic', 'underline', 'clear']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph', 'blockquote']], // Keep paragraph tools
+        // Use a standard/placeholder group like 'misc' or simply '' for a new section
+        ['misc', ['lineheight']], // <-- FIXED HERE - The 'lineheight' button will show up directly
+        ['insert', ['link', 'picture', 'video']],
+        ['view', ['fullscreen', 'codeview', 'help']]
+      ],
+      fontNames: [
+        'DarkerGrotesque', 'Arial', 'Courier New', 'Times New Roman', 
+        'Raleway', 'Roboto', 'Verdana', 'Helvetica'
+      ],
+      fontNamesIgnoreCheck: ['DarkerGrotesque', 'Raleway', 'Roboto'], 
+      fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '32', '36', '48', '64'],
+      
+      lineHeights: ['1.0', '1.2', '1.4', '1.5', '1.6', '1.8', '2.0', '3.0'],
+  });
+
+</script>
+
 </body>
 </html>

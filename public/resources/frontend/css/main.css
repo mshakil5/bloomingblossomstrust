@@ -36,6 +36,8 @@
   src: url("/fonts/DarkerGrotesque-SemiBold.ttf") format("truetype");
 }
 
+
+
 /* Updated body font stack — only sans-serif fonts */
 body {
   font-family: "DarkerGrotesque", "Roboto", "Lato", Inter, system-ui,

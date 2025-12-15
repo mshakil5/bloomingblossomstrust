@@ -205,7 +205,7 @@
     width: 100%;
     padding: 7px 20px;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 24px;
     border: none;
     background: #4CA30D;
     color: #fff;
