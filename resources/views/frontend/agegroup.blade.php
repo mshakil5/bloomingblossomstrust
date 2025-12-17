@@ -267,7 +267,6 @@
               <div class="col-6 col-md-3">
                 <div class="gallery-item" data-index="0" tabindex="0">
                   <img src="{{asset('images/content/'. $image->image)}}" alt="{{ $agegroup->short_title }}" loading="lazy" data-full="{{asset('images/content/'. $image->image)}}">
-                  <div class="thumb-overlay"><span>View</span></div>
                 </div>
               </div>
           @endforeach
