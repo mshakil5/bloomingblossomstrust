@@ -1,50 +1,55 @@
 :root {
-  --default-font: "DarkerGrotesque", "Roboto", system-ui, -apple-system,
-    "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Updated Font Stacks */
+  --default-font: "Manrope Custom", "Roboto", system-ui, sans-serif;
+  --heading-font: "Noto Sans Custom", sans-serif;
+  --nav-font: "Manrope Custom", "Lato", sans-serif;
 
-  --heading-font: "DarkerGrotesque", "Roboto";
-
-  --nav-font: "Lato";
-}
-
-:root {
+  /* Color variables stay the same */
   --background-color: #ffffff;
   --default-color: #212529;
   --heading-color: #2d465e;
   --accent-color: #34bf49;
-  --surface-color: #ffffff;
-  --contrast-color: #ffffff;
+  /* ... rest of your colors */
 }
-
-:root {
-  --nav-color: #212529;
-  --nav-hover-color: #34bf49;
-  --nav-mobile-background-color: #ffffff;
-  --nav-dropdown-background-color: #ffffff;
-  --nav-dropdown-color: #212529;
-  --nav-dropdown-hover-color: #34bf49;
-  --brand: #ff8b94;
-  --accent: #ffd36b;
-}
-
+/* Noto Sans Bold for Headlines */
 @font-face {
-  font-family: "DarkerGrotesque";
-  font-weight: 600;
+  font-family: "Noto Sans Custom";
+  src: url("/fonts/noto-sans/NotoSans-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/DarkerGrotesque-SemiBold.ttf") format("truetype");
+}
+
+/* Manrope for Body Text */
+@font-face {
+  font-family: "Manrope Custom";
+  src: url("/fonts/manrope/Manrope-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Optional: Manrope Bold if you use bold text in paragraphs */
+@font-face {
+  font-family: "Manrope Custom";
+  src: url("/fonts/manrope/Manrope-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 
-
-/* Updated body font stack — only sans-serif fonts */
 body {
-  font-family: "DarkerGrotesque", "Roboto", "Lato", Inter, system-ui,
-    -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+  font-family: var(--default-font);
   color: #222;
+  line-height: 1.6; /* Good practice for Manrope */
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 700; /* Ensures it uses the Bold file */
+  color: var(--heading-color);
+}
 
 
     p {
@@ -1226,7 +1231,7 @@ body {
 
 
   .big-title {
-      font-size: 80px;
+      font-size: 60px;
       color: #4CA30D;
       text-align: center;
       line-height: 0.8;
