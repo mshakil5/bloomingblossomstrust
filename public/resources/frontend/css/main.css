@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Small aesthetic */
     .btn-primary {
-      background: linear-gradient(90deg,var(--brand),#fd6cb4);
+      background: linear-gradient(90deg,#fd6cb4,#fd6cb4);
       border: none;
       box-shadow: 0 6px 18px rgba(255,139,148,0.12);
     }
