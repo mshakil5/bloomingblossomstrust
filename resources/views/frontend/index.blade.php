@@ -161,10 +161,10 @@
   <div class="container py-3">
     <div class="text-center py-3">
 
-      <div class="title">
+      <h2 class="title">
         We are here to help them <span class="accent">soar.</span> <br>
         Beyond their  <span class="accent">potential.</span> 
-      </div>
+      </h2>
         
       </p>
     </div>
