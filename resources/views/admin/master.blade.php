@@ -25,17 +25,28 @@
   <link rel="stylesheet" href="{{ asset('resources/admin/codemirror/theme/monokai.css')}}">
   <link rel="stylesheet" href="{{ asset('resources/admin/toastr/toastr.min.css')}}">
   <link rel="stylesheet" href="{{ asset('resources/admin/css/style.css') }}">
-  <style>
-    .note-editable {
-        /* Apply your base font families */
-        font-family: "DarkerGrotesque", "Roboto", "Lato", Inter, system-ui,
-            -apple-system, "Segoe UI", "Helvetica Neue", Arial;
-        
-        /* Ensure line-height and font-size are set for consistent editing */
-        line-height: 1.5; /* Example line-height */
-        font-size: 16px; /* Example base font size */
-    }
-  </style>
+
+
+<style>
+  .note-editable {
+      /* Apply Manrope as requested for Body Text */
+      font-family: "Manrope Custom", "Roboto", "Lato", Inter, system-ui,
+          -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      
+      /* Ensure line-height and font-size are set for consistent editing */
+      line-height: 1.6; /* Manrope looks better with slightly more spacing */
+      font-size: 16px; 
+      color: #222; /* Matches your body text color */
+  }
+
+  /* If the editor allows headlines, apply Noto Sans to them specifically */
+  .note-editable h1, 
+  .note-editable h2, 
+  .note-editable h3 {
+      font-family: "Noto Sans Custom", sans-serif;
+      font-weight: 700;
+  }
+</style>
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
