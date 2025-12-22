@@ -145,7 +145,6 @@
 @yield('script')
 
 <script>
-
   $('.summernote').summernote({
       height: 200,
       resize: true,
@@ -153,22 +152,23 @@
         ['style', ['style']],
         ['font', ['fontname', 'fontsize', 'bold', 'italic', 'underline', 'clear']],
         ['color', ['color']],
-        ['para', ['ul', 'ol', 'paragraph', 'blockquote']], // Keep paragraph tools
-        // Use a standard/placeholder group like 'misc' or simply '' for a new section
-        ['misc', ['lineheight']], // <-- FIXED HERE - The 'lineheight' button will show up directly
+        ['para', ['ul', 'ol', 'paragraph', 'blockquote']], 
+        ['misc', ['lineheight']], 
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']]
       ],
       fontNames: [
-        'DarkerGrotesque', 'Arial', 'Courier New', 'Times New Roman', 
-        'Raleway', 'Roboto', 'Verdana', 'Helvetica'
+        'Noto Sans Custom', 'Manrope Custom', 'Arial', 'Courier New', 
+        'Times New Roman', 'Roboto', 'Verdana', 'Helvetica'
       ],
-      fontNamesIgnoreCheck: ['DarkerGrotesque', 'Raleway', 'Roboto'], 
-      fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '32', '36', '48', '64'],
+      /* 'fontNamesIgnoreCheck' allows Summernote to use fonts 
+         that aren't installed on the system but are loaded via CSS 
+      */
+      fontNamesIgnoreCheck: ['Noto Sans Custom', 'Manrope Custom', 'Roboto'], 
       
+      fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '32', '36', '48', '64'],
       lineHeights: ['1.0', '1.2', '1.4', '1.5', '1.6', '1.8', '2.0', '3.0'],
   });
-
 </script>
 
 </body>
