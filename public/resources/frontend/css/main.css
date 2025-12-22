@@ -834,7 +834,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
   min-height: 300px; /* optional, for consistent height */
   transition: background-image 0.5s ease-in-out;
-  background-color: #DACFC2;
+  background-color: #fff9f4;
 }
 
 /* Optional: slight background overlay for readability */
@@ -842,7 +842,7 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   position: absolute;
   inset: 0;
-  background: #DACFC2; /* light white overlay */
+  background: #fff9f4; /* light white overlay */
   border-radius: 10px;
   z-index: 0;
 }
