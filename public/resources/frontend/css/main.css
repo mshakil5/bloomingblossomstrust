@@ -499,88 +499,106 @@ h1, h2, h3, h4, h5, h6 {
 
 
     /* FAQ Section Styling */
-.faq-section {
-  background: linear-gradient(180deg, #fff9f3 0%, #fff9f4 100%);
-}
-
-
-
-.faq-section::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: -80px;
-  width: 250px;
-  height: 250px;
-  opacity: 0.08;
-  transform: rotate(-20deg);
-}
-
-.accordion.faq-accordion {
-  background: #fff9f4;
-  border-radius: 2px;
-}
-
-.accordion-item {
-  border: none;
-  margin-bottom: 10px;
-  border-radius: 2px;
-  overflow: hidden;
-  /* transition: all 0.3s ease; */
-}
-
-.accordion-button {
-  font-size: 30px;
-  color: #4CA30D;
-  padding: 0.8rem 1.25rem;
-  background-color: #E8E1D9;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #E3DDD8;
-  color: #4CA30D;
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
-}
-
-.accordion-body {
-  background-color: #fff;
-  font-size: 20px;
-  color: #555;
-  line-height: 1.6;
-  padding: 1rem 1.2rem 1.2rem;
-}
-
-/* Hover & focus */
-.accordion-button:focus {
-  box-shadow: none;
-  outline: none;
-}
-.accordion-button:hover {
-  background-color: #4CA30D;
-  color: #fff;
-}
-
-/* Icons for + / - toggle */
-.accordion-button::after {
-  background-image: none;
-  content: '+';
-  font-size: 22px;
-  font-weight: 600;
-  color: #4CA30D;
-  transition: transform 0.3s ease;
-}
-  @media (max-width: 991.98px) {
-    .accordion-button::after {
-      font-size: 50px;
-      margin-bottom: 53px;
+    .faq-section {
+        background: linear-gradient(180deg, #fff9f3 0%, #fff9f4 100%);
+        position: relative;
+        overflow: hidden;
     }
-  }
 
-.accordion-button:not(.collapsed)::after {
-  content: '–';
-  transform: rotate(180deg);
-  background-image: none !important;
-}
+    .accordion.faq-accordion {
+        background: transparent;
+    }
+
+    .accordion-item {
+        border: 1px solid rgba(0,0,0,0.05); /* Added subtle border */
+        margin-bottom: 12px;
+        border-radius: 8px !important; /* Rounded corners look more modern */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+
+    .accordion-button {
+        font-size: 24px; /* Reduced for professional look */
+        font-weight: 600;
+        color: #4CA30D;
+        padding: 1.2rem;
+        background-color: #E8E1D9;
+        display: flex;
+        align-items: center;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #E3DDD8;
+        color: #4CA30D;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .accordion-body {
+        background-color: #fff;
+        font-size: 16px; /* Standard readable size */
+        color: #444;
+        line-height: 1.6;
+        padding: 1.2rem;
+    }
+
+    /* Hover & focus */
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+
+    /* Icon Fix: This keeps the + / - perfectly centered */
+    .accordion-button::after {
+        background-image: none !important;
+        content: '+';
+        font-size: 24px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(76, 163, 13, 0.1); /* Subtle circle background */
+        color: #4CA30D;
+        transition: all 0.3s ease;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        content: '−'; /* Using a proper minus sign */
+        background: #4CA30D;
+        color: #fff;
+        transform: rotate(180deg);
+    }
+
+    /* --- Mobile Specific Fixes --- */
+    @media (max-width: 767.98px) {
+        .big-title {
+            font-size: 28px !important;
+            padding-bottom: 20px !important;
+        }
+
+        .accordion-button {
+            font-size: 16px; /* Best size for mobile questions */
+            padding: 1rem;
+        }
+
+        /* Fixed the huge icon from your original code */
+        .accordion-button::after {
+            font-size: 20px;
+            margin-bottom: 0; /* Resetting your 53px margin */
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0; /* Prevents icon from squishing */
+        }
+
+        .accordion-body {
+            font-size: 15px;
+            padding: 1rem;
+        }
+    }
+
+
+
+
+
 
 
 
