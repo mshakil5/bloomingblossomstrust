@@ -157,6 +157,28 @@
       background: rgba(255,255,255,0.92);
     }
   }
+
+  @media (max-width: 767.98px) {
+    .banner-title {
+        color: #bf1354 !important;
+        font-size: 3rem !important;
+        font-family: "DarkerGrotesque-semibold";
+    }
+    .left-butterfly{
+          position: absolute;
+          top: 200px !important;
+          left: 232px !important;
+          width: 40px !important;
+          height: auto;
+          opacity: 0.9;
+          animation: flyLeft 6s infinite ease-in-out;
+    }
+    
+    .right-butterfly{
+          right: 239px !important;
+          width: 50px !important;
+    }
+  }
 </style>
 
 
@@ -166,7 +188,7 @@
             <div class="carousel-item active">
                 <div class="carousel-caption text-center">
                   
-                  <div class="display-5 fw-bold"
+                  <div class="display-5 fw-bold banner-title"
                       style="color: #b7236f;font-size: 5rem;">
                        We need your pebble in the pond
                 </div>
@@ -234,7 +256,7 @@
 
 <!-- Main content -->
 <section style="background-color: #E3DDD8">
-  <main class="container donate-section">
+  <main class="container donate-section  px-2">
     <header class="d-flex align-items-center justify-content-between mb-4">
       {{-- <div class="text-end d-none d-md-block">
         <a href="#" class="btn btn-outline-secondary">How donations are used</a>

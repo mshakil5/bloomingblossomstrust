@@ -13,6 +13,7 @@
       background:#4CA30D;
       color:white;text-decoration:none;border:none;
           font-size: 20px;
+          margin: 2px;
     }
 
     .vs-btn:hover{transform:translateY(-3px);}
@@ -21,6 +22,10 @@
     @media (max-width: 575.98px) {
       .carousel-caption h1 {
         font-size: 18px !important;
+      }
+
+      .about-title{
+        font-size: 24px !important;
       }
     }
 
