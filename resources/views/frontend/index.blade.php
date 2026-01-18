@@ -25,8 +25,8 @@
       height: auto !important;
     }
     .banner-title{
-      color: #b7236f !important;
-      font-size: 7rem;
+      color: #bf1354 !important;
+      font-size: 4rem !important;
       font-family: "DarkerGrotesque-semibold";
     }
   }
@@ -364,7 +364,7 @@
 
 
 
-<section class="py-5" style="
+<section class="py-5 d-none d-md-block" style="
   background: linear-gradient(
     180deg,
     #fff9f4 0%,

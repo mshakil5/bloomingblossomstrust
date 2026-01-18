@@ -1,83 +1,84 @@
 <footer class="site-footer">
   <div class="footer-top py-5">
     <div class="container">
-      <div class="row gy-4 align-items-start">
-        <!-- Brand + short -->
+      <div class="row gy-4 align-items-start text-center text-md-start">
+        
         <div class="col-12 col-md-4">
           <a class="footer-brand d-inline-flex align-items-center mb-3" href="#">
             <img src="{{ asset('images/company/' . $company->company_logo) }}" alt="{{$company->company_name}}" style="height:144px; object-fit:contain;">
           </a>
         </div>
 
-        <!-- Columns: on small screens these become accordion items -->
         <div class="col-12 col-md-8">
-          <div class="row gy-3">
-            <!-- Use collapse on xs for nicer UX -->
-            <div class="col-6 col-lg-4">
+          <div class="row gy-5"> <div class="col-12 col-lg-4">
               <h6 class="mb-3">Quick Links</h6>
               <ul class="list-unstyled footer-links mb-0">
-                <li><a href="{{ route('aboutUs') }}" class="">About Us</a></li>
-                <li><a href="{{ route('getOurDonors') }}" class="">Funders</a></li>
-                <li><a href="{{ route('donate') }}" class="">Donate</a></li>
-                <li><a href="{{ route('home') }}#contact" class="">Contact</a></li>
+                <li><a href="{{ route('aboutUs') }}">About Us</a></li>
+                <li><a href="{{ route('getOurDonors') }}">Funders</a></li>
+                <li><a href="{{ route('donate') }}">Donate</a></li>
+                <li><a href="{{ route('home') }}#contact">Contact</a></li>
               </ul>
             </div>
 
-            <div class="col-6 col-lg-4">
+            <div class="col-12 col-lg-4">
               <h6 class="mb-3">Projects</h6>
               <ul class="list-unstyled footer-links mb-0">
-                
-                @foreach (\App\Models\Content::with('category')->where('type', 2)->orderby('id', 'ASC')->get() as $key => $projects)
-
-                <li><a href="{{ route('agegroup', $projects->slug) }}" class="">{{ $projects->short_title }}</a></li>
-                    
+                @foreach (\App\Models\Content::with('category')->where('type', 2)->orderby('id', 'ASC')->get() as $projects)
+                  <li><a href="{{ route('agegroup', $projects->slug) }}">{{ $projects->short_title }}</a></li>
                 @endforeach
-
               </ul>
             </div>
 
             <div class="col-12 col-lg-4">
               <h6 class="mb-3">Contact</h6>
-              <address class=" mb-3" style="font-style:normal;font-size: 20px;">
-                {{$company->address1}}<br>
+              <address class="mb-3" style="font-style:normal; font-size: 20px;">
+                {{$company->address1}}
               </address>
-                <a href="mailto:{{$company->email1}}" class="" style="color: #4CA30D; text-decoration: none;font-size: 20px; " >{{$company->email1}}</a><br>
-                <a href="tel:{{$company->phone1}}" class="" style=" text-decoration: none; color: #4CA30D;font-size: 20px;" >{{$company->phone1}}</a>
-
+              <div class="d-flex flex-column gap-1">
+                <a href="mailto:{{$company->email1}}" style="color: #4CA30D; text-decoration: none; font-size: 20px;">{{$company->email1}}</a>
+                <a href="tel:{{$company->phone1}}" style="text-decoration: none; color: #4CA30D; font-size: 20px;">{{$company->phone1}}</a>
+              </div>
             </div>
-          </div> <!-- /.row inside right side -->
-        </div> <!-- /.col-md-8 -->
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
-  </div> <!-- /.footer-top -->
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-  <!-- bottom: copyright, small links -->
-  <div class="footer-bottom py-3" style="background:#4CA30D; color:#031826;">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+  <div class="footer-bottom py-2" style="background:#4CA30D; color:#031826;">
+    <div class="container text-center d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
         {!! $company->copyright !!}
-
     </div>
   </div>
 </footer>
 
 <!-- Optional small inline styles to tune the footer look -->
 <style>
-  .site-footer .footer-links a { text-decoration: none; color: #031826;font-weight: 600; font-size: 22px;}
-  .site-footer .footer-links a:hover { color: #cb749a !important;font-weight: 700; }
-  .site-footer .btn-outline-light { border-color: rgba(255,255,255,0.14); }
-  .site-footer .footer-top .footer-brand img { filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25)); }
-  /* subtle hover */
+  .site-footer .footer-links a { text-decoration: none; color: #031826; font-weight: 600; font-size: 22px; }
+  .site-footer .footer-links a:hover { color: #cb749a !important; font-weight: 700; }
   .site-footer .footer-links li { margin-bottom: .5rem; }
-  .site-footer .social .btn { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; padding:0; }
-  @media (max-width:575.98px) {
-    /* stack brand & quick links more tightly on very small screens */
-    .site-footer .footer-top { padding-top:2.25rem; padding-bottom:2.25rem; }
-    .site-footer .footer-middle form .col-8 { order:2; width:100%; }
-    .site-footer .footer-middle form .col-4 { order:3; width:100%; }
-  }
-  h6 {
-    font-size: 1.5rem;
+  
+  h6 { font-size: 1.5rem; }
+
+  /* Mobile Specific Adjustments */
+  @media (max-width: 767.98px) {
+    .footer-brand {
+      width: 100%;
+      justify-content: center; /* Centers the logo image container */
+    }
+    
+    .site-footer .footer-top {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    /* Adjust font size slightly if it overflows on very small phones */
+    .site-footer .footer-links a, 
+    address, 
+    .site-footer a[href^="tel"], 
+    .site-footer a[href^="mailto"] {
+      font-size: 18px !important; 
+    }
   }
 </style>

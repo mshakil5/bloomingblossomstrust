@@ -44,7 +44,6 @@ class FrontendController extends Controller
         });
 
         // $about1 = Master::firstOrCreate(['name' => 'about1']);
-
         // $about2 = Master::firstOrCreate(['name' => 'about2']);
 
         $blogs = Cache::remember('active_blogs', now()->addDay(), function () {
