@@ -651,6 +651,80 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 
+  /* Optimized Mobile View */
+@media (max-width: 767.98px) {
+    #callback {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Reduce padding inside the form card for more horizontal space */
+    .callback-card .p-5 {
+        padding: 1.5rem !important;
+    }
+
+    /* Adjust typography for readability on small screens */
+    #callback h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    #callback p.text-muted {
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Make form controls slightly less bulky for mobile */
+    form#callbackForm .form-control, 
+    .form-control {
+        padding: 0.35rem 0.4rem !important;
+        font-size: 16px !important; /* Prevents iOS auto-zoom on focus */
+    }
+
+    /* Ensure the button is prominent but not overwhelming */
+    #callbackSubmit {
+        width: 100%;
+        padding: 0.38rem;
+        font-size: 1.1rem;
+    }
+
+    /* Adjust the decorative background for mobile */
+    .callback-bg {
+        top: 0;
+        opacity: 0.5; /* Lower opacity to keep focus on the form */
+    }
+
+    /* Better spacing for the consent checkbox */
+    .form-check {
+        padding-left: 1.75rem;
+        margin-top: 0.5rem;
+    }
+
+    .form-check-label {
+        font-size: .73rem !important;
+    }
+
+}
+
+/* Specific fix for very small devices */
+@media (max-width: 375px) {
+    .callback-card .p-5 {
+        padding: 1rem !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
   /* Accessibility focus */
   form#callbackForm .form-control:focus-visible, form#callbackForm .form-select:focus-visible {
     outline: 3px solid rgba(255,139,148,0.15);
