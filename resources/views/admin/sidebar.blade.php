@@ -26,43 +26,8 @@
             <p>Sliders</p>
         </a>
     </li>
-    <li class="nav-item d-none">
-        <a href="{{ route('allsubscriptions') }}" class="nav-link {{ Route::is('allsubscriptions') ? 'active' : '' }}">
-            <i class="nav-icon fas fa-donate"></i>
-            <p>Subscriptions</p>
-        </a>
-    </li>
-    <li class="nav-item d-none">
-        <a href="{{ route('allplans') }}" class="nav-link {{ Route::is('allplans') ? 'active' : '' }}">
-            <i class="nav-icon fas fa-layer-group"></i>
-            <p>Plans</p>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="{{ route('allservice') }}" class="nav-link {{ Route::is('allservice') ? 'active' : '' }}">
-            <i class="nav-icon fas fa-tools"></i>
-            <p>About Homepage</p>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="{{ route('allfeature') }}" class="nav-link {{ Route::is('allfeature') ? 'active' : '' }}">
-            <i class="nav-icon fas fa-gem"></i>
-            <p>Donor List</p>
-            {{-- <p>Features</p> --}}
-        </a>
-    </li>
-    <li class="nav-item d-none">
-        <a href="{{ route('team-members.index') }}" class="nav-link {{ request()->routeIs('team-members.index') ? 'active' : '' }}">
-            <i class="fas fa-users nav-icon"></i>
-            <p>Team</p>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="{{ route('client-reviews.index') }}" class="nav-link {{ Route::is('client-reviews.index') ? 'active' : '' }}">
-            <i class="nav-icon fas fa-star"></i>
-            <p>Client Reviews</p>
-        </a>
-    </li>
+    
+    
     <li class="nav-item dropdown {{ Route::is('content.category.index') || Route::is('content.index') || Route::is('tags.index') ? 'menu-open' : '' }}">
         <a href="#" class="nav-link {{ Route::is('content.category.index') || Route::is('content.index') || Route::is('tags.index') ? 'active' : '' }}">
             <i class="nav-icon fas fa-images"></i>
@@ -109,32 +74,47 @@
             </li>
         </ul>
     </li>
-    <li class="nav-item dropdown {{ Route::is('admin.companyDetails') || Route::is('admin.company.seo-meta') || Route::is('admin.aboutUs') || Route::is('admin.foodChoice') || Route::is('admin.fees') || Route::is('admin.privacy-policy') || Route::is('documents.index') || Route::is('admin.terms-and-conditions') || Route::is('allFaq') || Route::is('allcontactemail') || Route::is('sections.index') || Route::is('banner.index') ? 'menu-open' : '' }}">
-        <a href="#" class="nav-link dropdown-toggle {{ Route::is('admin.companyDetails') || Route::is('admin.company.seo-meta') || Route::is('admin.aboutUs') || Route::is('admin.foodChoice') || Route::is('admin.fees') || Route::is('admin.privacy-policy') || Route::is('documents.index') || Route::is('admin.terms-and-conditions') || Route::is('allFaq') || Route::is('allcontactemail') || Route::is('sections.index') || Route::is('banner.index') ? 'active' : '' }}">
-            <i class="nav-icon fas fa-cog"></i>
-            <p>
-                Settings <i class="fas fa-angle-left right"></i>
-            </p>
+    <li class="nav-item d-none">
+        <a href="{{ route('allsubscriptions') }}" class="nav-link {{ Route::is('allsubscriptions') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-donate"></i>
+            <p>Subscriptions</p>
         </a>
-        <ul class="nav nav-treeview">
-            <li class="nav-item">
-                <a href="{{ route('admin.companyDetails') }}" class="nav-link {{ Route::is('admin.companyDetails') ? 'active' : '' }}">
-                    <i class="fas fa-building nav-icon"></i>
-                    <p>Company Details</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('admin.company.seo-meta') }}" class="nav-link {{ Route::is('admin.company.seo-meta') ? 'active' : '' }}">
-                    <i class="fas fa-search nav-icon"></i>
-                    <p>SEO</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('admin.aboutUs') }}" class="nav-link {{ Route::is('admin.aboutUs') ? 'active' : '' }}">
-                    <i class="fas fa-info-circle nav-icon"></i>
-                    <p>About Us</p>
-                </a>
-            </li>
+    </li>
+    <li class="nav-item d-none">
+        <a href="{{ route('allplans') }}" class="nav-link {{ Route::is('allplans') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-layer-group"></i>
+            <p>Plans</p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ route('allservice') }}" class="nav-link {{ Route::is('allservice') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-tools"></i>
+            <p>About Homepage</p>
+        </a>
+    </li>
+
+
+
+    <li class="nav-item">
+        <a href="{{ route('admin.aboutUs') }}" class="nav-link {{ Route::is('admin.aboutUs') ? 'active' : '' }}">
+            <i class="fas fa-info-circle nav-icon"></i>
+            <p>About Us</p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ route('allfeature') }}" class="nav-link {{ Route::is('allfeature') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-gem"></i>
+            <p>Donor List</p>
+            {{-- <p>Features</p> --}}
+        </a>
+    </li>
+    <li class="nav-item d-none">
+        <a href="{{ route('team-members.index') }}" class="nav-link {{ request()->routeIs('team-members.index') ? 'active' : '' }}">
+            <i class="fas fa-users nav-icon"></i>
+            <p>Team</p>
+        </a>
+    </li>
+    
             <li class="nav-item d-none">
                 <a href="{{ route('admin.foodChoice') }}" class="nav-link {{ Route::is('admin.foodChoice') ? 'active' : '' }}">
                     <i class="fas fa-info-circle nav-icon"></i>
@@ -166,6 +146,44 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{ route('banner.index') }}" class="nav-link {{ Route::is('banner.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-sliders-h"></i>
+                    <p>Banner</p>
+                </a>
+            </li>
+
+
+    <li class="nav-item">
+        <a href="{{ route('client-reviews.index') }}" class="nav-link {{ Route::is('client-reviews.index') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-star"></i>
+            <p>Client Reviews</p>
+        </a>
+    </li>
+
+
+
+
+    <li class="nav-item dropdown {{ Route::is('admin.companyDetails') || Route::is('admin.company.seo-meta') || Route::is('admin.foodChoice')   || Route::is('documents.index')  || Route::is('allFaq') || Route::is('allcontactemail') || Route::is('sections.index') || Route::is('banner.index') ? 'menu-open' : '' }}">
+        <a href="#" class="nav-link dropdown-toggle {{ Route::is('admin.companyDetails') || Route::is('admin.company.seo-meta')  || Route::is('admin.foodChoice')  || Route::is('documents.index')  || Route::is('allFaq') || Route::is('allcontactemail') || Route::is('sections.index') || Route::is('banner.index') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-cog"></i>
+            <p>
+                Settings <i class="fas fa-angle-left right"></i>
+            </p>
+        </a>
+        <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="{{ route('admin.companyDetails') }}" class="nav-link {{ Route::is('admin.companyDetails') ? 'active' : '' }}">
+                    <i class="fas fa-building nav-icon"></i>
+                    <p>Company Details</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('admin.company.seo-meta') }}" class="nav-link {{ Route::is('admin.company.seo-meta') ? 'active' : '' }}">
+                    <i class="fas fa-search nav-icon"></i>
+                    <p>SEO</p>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ route('admin.mail-body') }}" class="nav-link {{ Route::is('admin.mail-body') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-file-alt"></i>
                     <p>Mail Body</p>
@@ -181,12 +199,6 @@
                 <a href="{{ route('sections.index') }}" class="nav-link {{ Route::is('sections.index') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-sliders-h"></i>
                     <p>Section Settings</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('banner.index') }}" class="nav-link {{ Route::is('banner.index') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-sliders-h"></i>
-                    <p>Banner</p>
                 </a>
             </li>
         </ul>

@@ -37,11 +37,11 @@
             </div>
 
             <div class="text-center mt-3">
-              <a href="{{ route('password.request') }}">Forgot Your Password?</a>
+              {{-- <a href="{{ route('password.request') }}">Forgot Your Password?</a> --}}
             </div>
 
             <div class="text-center mt-3">
-              <a href="{{ route('register') }}">Don't have an account? Register</a>
+              {{-- <a href="{{ route('register') }}">Don't have an account? Register</a> --}}
             </div>
           </form>
 
