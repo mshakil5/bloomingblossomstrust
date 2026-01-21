@@ -89,6 +89,14 @@
     <li class="nav-item">
         <a href="{{ route('allservice') }}" class="nav-link {{ Route::is('allservice') ? 'active' : '' }}">
             <i class="nav-icon fas fa-tools"></i>
+            <p>Features</p>
+        </a>
+    </li>
+
+    
+    <li class="nav-item">
+        <a href="{{ route('admin.aboutUsHomepage') }}" class="nav-link {{ Route::is('admin.aboutUsHomepage') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-tools"></i>
             <p>About Homepage</p>
         </a>
     </li>

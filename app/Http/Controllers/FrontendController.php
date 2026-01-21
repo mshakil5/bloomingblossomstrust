@@ -61,9 +61,8 @@ class FrontendController extends Controller
             return ClientReview::where('status', 1)->latest()->get();
         });
 
-        $toddlers = Service::where('type', 1)->where('title', 'Toddlers')->first();
-        $twothrees = Service::where('type', 1)->where('title', 'Two to Three’s')->first();
-        $preschool = Service::where('type', 1)->where('title', 'Preschool')->first();
+
+        $aboutSection = Master::where('name', '=','about3')->first();
 
         $galleries = Content::with('category','images')->where('type', 1)->latest()->get();
         $faqs = Cache::remember('faqs', now()->addDay(), function () {
@@ -82,7 +81,7 @@ class FrontendController extends Controller
             $company?->meta_keywords ?? '',
             $company?->meta_image ? asset('images/company/meta/' . $company->meta_image) : null
         );
-      return view('frontend.index', compact('sliders', 'services', 'blogs', 'reviews', 'sections', 'galleries', 'faqs' ,'toddlers','twothrees','preschool','projects','company'));
+      return view('frontend.index', compact('sliders', 'services', 'blogs', 'reviews', 'sections', 'galleries', 'faqs' , 'projects','company', 'aboutSection'));
     }
 
     public function type($slug)

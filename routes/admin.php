@@ -125,6 +125,10 @@ Route::group(['prefix' =>'admin/', 'middleware' => ['auth', 'is_admin']], functi
     Route::get('/about-us', [CompanyDetailsController::class, 'aboutUs'])->name('admin.aboutUs');
     Route::post('/about-us', [CompanyDetailsController::class, 'aboutUsUpdate'])->name('admin.aboutUs');
 
+    
+    Route::get('/about-us-section', [CompanyDetailsController::class, 'aboutUsHomepage'])->name('admin.aboutUsHomepage');
+    Route::post('/about-us-section', [CompanyDetailsController::class, 'aboutUsHomepageUpdate'])->name('admin.aboutUsHomepageUpdate');
+
 
     Route::get('/food-choice', [CompanyDetailsController::class, 'foodChoice'])->name('admin.foodChoice');
     Route::post('/food-choice', [CompanyDetailsController::class, 'foodChoiceUpdate'])->name('admin.foodChoice');
