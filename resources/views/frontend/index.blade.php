@@ -173,98 +173,98 @@
 
 
 <style>
-/* WRAPPER */
-.custom-tabs-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-}
+  /* WRAPPER */
+  .custom-tabs-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+  }
 
-/* TAB LIST */
-.custom-tabs {
-    display: flex;
-    width: 100%;
-    border-bottom: 2px solid #e6e6e6;
-    padding: 0;
-    margin: 0;
-}
+  /* TAB LIST */
+  .custom-tabs {
+      display: flex;
+      width: 100%;
+      border-bottom: 2px solid #e6e6e6;
+      padding: 0;
+      margin: 0;
+  }
 
-/* TAB ITEM */
-.custom-tab-item {
-    flex: 1;
-    list-style: none;
-}
+  /* TAB ITEM */
+  .custom-tab-item {
+      flex: 1;
+      list-style: none;
+  }
 
-/* TAB BUTTON */
-.custom-tab-btn {
-    width: 100%;
-    padding: 7px 20px;
-    font-weight: 600;
-    font-size: 24px;
-    border: none;
-    background: #4CA30D;
-    color: #fff;
-    text-align: center;
-    transition: 0.3s ease;
-    border-right: 1px solid #ddd;
-    position: relative;
-    overflow: hidden;
-}
+  /* TAB BUTTON */
+  .custom-tab-btn {
+      width: 100%;
+      padding: 7px 20px;
+      font-weight: 600;
+      font-size: 24px;
+      border: none;
+      background: #4CA30D;
+      color: #fff;
+      text-align: center;
+      transition: 0.3s ease;
+      border-right: 1px solid #ddd;
+      position: relative;
+      overflow: hidden;
+  }
 
-/* ARROW SHADE */
-.custom-tab-btn::after {
-    content: "";
-    position: absolute;
-    right: -25px;
-    top: 0;
-    width: 25px;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.08));
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
-    transition: 0.3s;
-}
+  /* ARROW SHADE */
+  .custom-tab-btn::after {
+      content: "";
+      position: absolute;
+      right: -25px;
+      top: 0;
+      width: 25px;
+      height: 100%;
+      background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.08));
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      transition: 0.3s;
+  }
 
-.custom-tab-btn:hover::after {
-    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.15));
-}
+  .custom-tab-btn:hover::after {
+      background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.15));
+  }
 
-/* REMOVE ARROW FROM LAST ITEM */
-.custom-tab-item:last-child .custom-tab-btn::after {
-    display: none;
-}
+  /* REMOVE ARROW FROM LAST ITEM */
+  .custom-tab-item:last-child .custom-tab-btn::after {
+      display: none;
+  }
 
-.custom-tab-item:last-child .custom-tab-btn {
-    border-right: none;
-}
+  .custom-tab-item:last-child .custom-tab-btn {
+      border-right: none;
+  }
 
-/* HOVER */
-.custom-tab-btn:hover {
-    background: #bf1354;
-}
+  /* HOVER */
+  .custom-tab-btn:hover {
+      background: #bf1354;
+  }
 
-/* ACTIVE TAB */
-.custom-tab-btn.active {
-    background: #bf1354;
-    color: #fff;
-}
-.custom-tab-btn.active::after {
-    background: #0f6f63;
-    opacity: 0.5;
-}
+  /* ACTIVE TAB */
+  .custom-tab-btn.active {
+      background: #bf1354;
+      color: #fff;
+  }
+  .custom-tab-btn.active::after {
+      background: #0f6f63;
+      opacity: 0.5;
+  }
 
-/* TAB CONTENT */
-.custom-tab-content {
-    background: #ffffff;
-    border-top: none;
-}
+  /* TAB CONTENT */
+  .custom-tab-content {
+      background: #ffffff;
+      border-top: none;
+  }
 
-/* MOBILE */
-@media(max-width: 575px) {
-    .custom-tab-btn {
-        font-size: 14px;
-        padding: 12px 10px;
-    }
-}
+  /* MOBILE */
+  @media(max-width: 575px) {
+      .custom-tab-btn {
+          font-size: 14px;
+          padding: 12px 10px;
+      }
+  }
 </style>
 
 
@@ -673,7 +673,7 @@
       display: flex;
       align-items: center;
       white-space: nowrap;
-      animation: scrollLeft 25s linear infinite;
+      animation: scrollLeft 5s linear infinite;
     }
 
     /* --- Single Logo --- */
